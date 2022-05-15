@@ -67,25 +67,17 @@ class UserController extends Controller
 
         // Validación del formulario
         $validate = $this->validate($request, [
-            'old-password' => 'required',
             'new_password' => 'required|min:4|max:100',
-            'confirm_password' => 'required|same:new_password',
+            'password-confirm' => 'required|same:new_password',
         ]);
 
-        $password = Auth::user()->password;
-        if(Hash::check($request->oldpassword,$password)) {
-            $user = User::find(Auth::id());
-            $user->password = Hash::make($request->password);
-            $user->save();
+        User::find(auth()->user()->id)->update(['password'=> Hash::make($request->new_password)]);
 
 
             return redirect()->route('config')
                 ->with(['message' => 'Contraseña actualizada correctamente']);
 
-        }else{
-            return redirect()->route('config')
-                ->with(['message' => 'Contraseña no actualizada ']);
-        }
+
     }
 
 

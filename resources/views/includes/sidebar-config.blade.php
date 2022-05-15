@@ -60,19 +60,6 @@
                         <form method="POST" action="{{ route('update-password') }}">
                             @csrf
 
-                            <div class="row mb-3">
-                                <label for="old-password" class="col-md-4 col-form-label text-md-end">{{ __('Password Actual') }}</label>
-
-                                <div class="col-md-6">
-                                    <input id="old-password"  class="form-control @error('old-password') is-invalid @enderror" name="old-password" required autocomplete="old-password">
-
-                                    @error('old-password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                            </div>
 
                             <div class="row mb-3">
                                 <label for="new_password" class="col-md-4 col-form-label text-md-end">{{ __('Nuevo Password') }}</label>
@@ -92,7 +79,7 @@
                                 <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirmar Password') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password-confirm"  class="form-control" name="password_confirmation" required autocomplete="password_confirmation">
+                                    <input id="password-confirm"  class="form-control" name="password-confirm" required autocomplete="password-confirm">
                                 </div>
                             </div>
 
