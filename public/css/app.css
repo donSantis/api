@@ -1,16 +1,8 @@
 /*-----------------------------    HEADER    -----------------------------*/
-.header-main{
-    background-color: #012C56;!important;
-    color: #ffffff;
-    font-weight: bold;
-}
+
 
 /*-----------------------------    LOGIN    -----------------------------*/
-.card-header-login{
-    background: #012C56;!important;
-    color: #ffffff;
-    font-weight: bold;
-}
+
 .footer-main{
     background: #012C56;!important;
 }
@@ -24,7 +16,10 @@
     color: #ffffff;
     font-weight: bold;
 }
-.intro-example {
+.header-cards-all {
+    background-color: #012C56;!important;
+    color: #ffffff;
+    font-weight: bold;
 }
 .mask{
     background-color: rgba(0, 0, 0, 0.7);

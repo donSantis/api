@@ -1,4 +1,4 @@
-<div class="header-main">
+<div class="header-cards-all">
     <nav class="navbar navbar-expand-md navbar-light shadow-sm">
         <div class="container">
             <a class="navbar-brand text-white" href="{{ url('/') }}">

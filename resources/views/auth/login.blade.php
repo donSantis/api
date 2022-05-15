@@ -8,7 +8,7 @@
                 <div class="card-login  ">
                     <div class="card ">
 
-                    <div class="card-header-login rounded-top">
+                    <div class="header-cards-all rounded-top">
                         <div class="card-header ">
                             {{ __('Iniciar Sesion') }}
                         </div>
