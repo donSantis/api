@@ -14,59 +14,14 @@ class UserController extends Controller
     }
     public function index (){
 
-        $users = DB::table('users')
-            ->select('*')
-            ->get();
+    }
+    public function config (){
 
-        $posts = DB::table('posts')
-            ->select('*')
-            ->get();
-        $contenido = 'index';
-        $titulo = 'index';
-
-        return view('index',[
-            'users' => $users,
-            'posts' => $posts,
-            'contenido' => $contenido,
-            'titulo' => $titulo,
-        ]);
+        return view('user.user-config');
     }
 
-    public function index2 (){
-        $users = DB::table('users')
-            ->select('*')
-            ->get();
-        $posts = DB::table('posts')
-            ->select('*')
-            ->get();
-        $contenido = 'posts';
-        $titulo = 'posts';
 
-        return view('index',[
-            'users' => $users,
-            'posts' => $posts,
-            'contenido' => $contenido,
-            'titulo' => $titulo,
-        ]);
-    }
 
-    public function index3 (){
-        $users = DB::table('users')
-            ->select('*')
-            ->get();
-        $posts = DB::table('posts')
-            ->select('*')
-            ->get();
-        $contenido = 'users';
-        $titulo = 'Users';
-
-        return view('index',[
-            'users' => $users,
-            'posts' => $posts,
-            'contenido' => $contenido,
-            'titulo' => $titulo,
-        ]);
-    }
 
     public function index5 ($search = null){
         if(!empty($search)){
