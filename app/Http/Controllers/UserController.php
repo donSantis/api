@@ -20,13 +20,51 @@ class UserController extends Controller
         return view('user.user-config');
     }
 
+    public function update(Request $request){
 
+        // Conseguir usuario identificado
+        $user = \Auth::user();
+        $id = $user->id;
+
+        // Validación del formulario
+        $validate = $this->validate($request, [
+            'name' => 'required|string|max:255',
+            'nickname' => 'required|string|max:255|unique:users,nickname,'.$id,
+            'lastname' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,email,'.$id,
+            'phone' => 'required|integer|max:15',
+        ]);
+
+        // Recoger datos del formulario
+        $name = $request->input('name');
+        $nickname = $request->input('nickname');
+        $lastname = $request->input('lastname');
+        $email = $request->input('email');
+        $phone = $request->input('phone');
+        $section = $request->input('section');
+        $role = $request->input('role');
+
+        // Asignar nuevos valores al objeto del usuario
+        $user->name = $name;
+        $user->nickname = $nickname;
+        $user->lastname = $lastname;
+        $user->email = $email;
+        $user->phone = $phone;
+        $user->section = $section;
+        $user->role = $role;
+
+
+        // Ejecutar consulta y cambios en la base de datos
+        $user->update();
+
+        return redirect()->route('config')
+            ->with(['message'=>'Usuario actualizado correctamente']);
+    }
 
 
     public function index5 ($search = null){
         if(!empty($search)){
-            $users = User::where('nick', 'LIKE', '%'.$search.'%')
-                ->OrWhere('username', 'LIKE', '%' . $search . '%')
+            $users = User::where('username', 'LIKE', '%' . $search . '%')
                 ->OrWhere('lastname', 'LIKE', '%' . $search . '%')
                 ->OrWhere('role', 'LIKE', '%' . $search . '%')
                 ->OrWhere('phone', 'LIKE', '%' . $search . '%')
