@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+Use Illuminate\Support\Facades\Hash;
+Use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -59,6 +61,31 @@ class UserController extends Controller
 
         return redirect()->route('config')
             ->with(['message'=>'Usuario actualizado correctamente']);
+    }
+
+    public function updatePassword(Request $request){
+
+        // Validación del formulario
+        $validate = $this->validate($request, [
+            'old-password' => 'required',
+            'new_password' => 'required|min:4|max:100',
+            'confirm_password' => 'required|same:new_password',
+        ]);
+
+        $password = Auth::user()->password;
+        if(Hash::check($request->oldpassword,$password)) {
+            $user = User::find(Auth::id());
+            $user->password = Hash::make($request->password);
+            $user->save();
+
+
+            return redirect()->route('config')
+                ->with(['message' => 'Contraseña actualizada correctamente']);
+
+        }else{
+            return redirect()->route('config')
+                ->with(['message' => 'Contraseña no actualizada ']);
+        }
     }
 
 
