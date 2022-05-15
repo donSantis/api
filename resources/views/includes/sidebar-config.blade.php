@@ -7,32 +7,25 @@
                         <div class="card-header">Imagen Perfil</div>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('user.update') }}">
+                        <form method="POST" enctype="multipart/form-data" action="{{ route('update-image')  }} ">
                             @csrf
                             <div class="row mb-3">
-                                <label for="password"
-                                       class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+
+                                <label for="image_path" class="col-md-4 col-form-label text-md-right">{{ __('Avatar') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password" type="password"
-                                           class="form-control @error('password') is-invalid @enderror" name="password"
-                                           required autocomplete="new-password">
+                                    @include('includes.avatar')
+                                    <input id="image_path" type="file" class="form-control{{ $errors->has('image_path') ? ' is-invalid' : '' }}" name="image_path">
 
-                                    @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                    @if ($errors->has('image_path'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('image_path') }}</strong>
                                     </span>
-                                    @enderror
+                                    @endif
                                 </div>
                             </div>
 
-                            <div class="row mb-3">
-                                <label for="password-confirm"
-                                       class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
 
-                                <div class="col-md-6">+
-                                </div>
-                            </div>
 
                             <div class="row mb-0">
                                 <div class="col-md-6 offset-md-4">

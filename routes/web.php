@@ -24,3 +24,4 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/config', [UserController::class, 'config'])->name('config');
 Route::post('/user/update', [UserController::class, 'update'])->name('user.update');
 Route::post('/user/update-password', [UserController::class, 'updatePassword'])->name('update-password');
+Route::post('/user/update-image', [UserController::class, 'updateImage'])->name('update-image');

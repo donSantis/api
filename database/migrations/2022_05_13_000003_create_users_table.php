@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('phone');
             $table->string('section');
             $table->integer('role');
+            $table->string('image');
             $table->timestamps();
             $table->foreign('career_id')->references('id')->on('careers');
         });

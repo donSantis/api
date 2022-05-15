@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-Use Illuminate\Support\Facades\Hash;
-Use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -14,15 +15,20 @@ class UserController extends Controller
     {
         $this->middleware('auth');
     }
-    public function index (){
+
+    public function index()
+    {
 
     }
-    public function config(){
+
+    public function config()
+    {
 
         return view('user.user-config');
     }
 
-    public function update(Request $request){
+    public function update(Request $request)
+    {
 
         // Conseguir usuario identificado
         $user = \Auth::user();
@@ -31,9 +37,9 @@ class UserController extends Controller
         // Validación del formulario
         $validate = $this->validate($request, [
             'name' => 'required|string|max:255',
-            'nickname' => 'required|string|max:255|unique:users,nickname,'.$id,
+            'nickname' => 'required|string|max:255|unique:users,nickname,' . $id,
             'lastname' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users,email,'.$id,
+            'email' => 'required|string|email|max:255|unique:users,email,' . $id,
             'phone' => 'required|integer|',
         ]);
 
@@ -60,10 +66,11 @@ class UserController extends Controller
         $user->update();
 
         return redirect()->route('config')
-            ->with(['message'=>'Usuario actualizado correctamente']);
+            ->with(['message' => 'Usuario actualizado correctamente']);
     }
 
-    public function updatePassword(Request $request){
+    public function updatePassword(Request $request)
+    {
 
         // Validación del formulario
         $validate = $this->validate($request, [
@@ -71,29 +78,53 @@ class UserController extends Controller
             'password-confirm' => 'required|same:new_password',
         ]);
 
-        User::find(auth()->user()->id)->update(['password'=> Hash::make($request->new_password)]);
+        User::find(auth()->user()->id)->update(['password' => Hash::make($request->new_password)]);
 
 
-            return redirect()->route('config')
-                ->with(['message' => 'Contraseña actualizada correctamente']);
+        return redirect()->route('config')
+            ->with(['message' => 'Contraseña actualizada correctamente']);
 
 
     }
 
+    public function updateImage(Request $request)
+    {
+        $user = \Auth::user();
+        $id = $user->id;
+        $image_path = $request->file('image_path');
+        if ($image_path) {
+            // Poner nombre unico
+            $image_path_name = time() . $image_path->getClientOriginalName();
 
-    public function index5 ($search = null){
-        if(!empty($search)){
+            // Guardar en la carpeta storage (storage/app/users)
+            Storage::disk('users')->put($image_path_name, File::get($image_path));
+
+            // Seteo el nombre de la imagen en el objeto
+            $user->image = $image_path_name;
+        }
+
+// Ejecutar consulta y cambios en la base de datos
+        $user->update();
+
+        return redirect()->route('config')
+            ->with(['message' => 'Usuario actualizado correctamente']);
+    }
+
+
+    public function index5($search = null)
+    {
+        if (!empty($search)) {
             $users = User::where('username', 'LIKE', '%' . $search . '%')
                 ->OrWhere('lastname', 'LIKE', '%' . $search . '%')
                 ->OrWhere('role', 'LIKE', '%' . $search . '%')
                 ->OrWhere('phone', 'LIKE', '%' . $search . '%')
                 ->OrWhere('mail', 'LIKE', '%' . $search . '%')
                 ->paginate(5);
-        }else{
+        } else {
             $users = User::orderBy('id', 'desc')->paginate(5);
         }
 
-        return view('user.index',[
+        return view('user.index', [
             'users' => $users
         ]);
     }
@@ -106,6 +137,7 @@ class UserController extends Controller
         ]);
 
     }
+
     public function callUser(Request $request)
     {
         $user = $request->user();

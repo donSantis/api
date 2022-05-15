@@ -74,6 +74,7 @@ class RegisterController extends Controller
             'phone' => 'NULL',
             'section' => '1',
             'role' => '1',
+            'image' => 'defaultImage.jpg',
 
         ]);
     }

@@ -28,6 +28,7 @@ class User extends Authenticatable
         'phone',
         'section',
         'role',
+        'image',
     ];
 
     /**
