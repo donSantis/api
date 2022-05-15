@@ -44,17 +44,17 @@
 
 
                             <div class="dropdown-menu dropdown-menu-end  " aria-labelledby="navbarDropdown">
-                                @foreach($posts as $r)
+
 
                                     <a href="#" class="sidebar-card    list-group-item list-group-item-action py-3 lh-tight">
                                         <div class="d-flex  w-100 align-items-center justify-content-between">
-                                            <strong class="mb-1">{{$r->title}}</strong>
+                                            <strong class="mb-1">Ejemplo notifi</strong>
 
                                         </div>
-                                        <div class="col-10 mb-1 small">{{ \Carbon\Carbon::parse($r->created_at)->format('j F, Y') }}</div>
+                                        <div class="col-10 mb-1 small">14-05-2022</div>
 
                                     </a>
-                                @endforeach
+
                             </div>
 
 
@@ -68,7 +68,7 @@
 
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <a href="" class="dropdown-item">Mi perfil</a>
-                                <a href="" class="dropdown-item">Configuración</a>
+                                <a href="{{'config'}}" class="dropdown-item">Configuración</a>
 
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
