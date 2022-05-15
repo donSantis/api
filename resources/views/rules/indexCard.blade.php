@@ -1,7 +1,7 @@
 
 
 <div class="card mb-4">
-    <div class="card-header-content">
+    <div class="header-cards-all">
         <div class=" card-header">Reglas</div>
     </div>
     <div class="card-body">

@@ -34,6 +34,7 @@
                 <div class="col-md-8 float-left">
                     @yield('content')
                 </div>
+                @include('includes.sidebar')
             </div>
         </div>
     </main>
