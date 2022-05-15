@@ -1,0 +1,16 @@
+@extends('layouts.app2')
+@section('title',$titulo)
+@section('content')
+    @switch($contenido)
+        @case('index')
+        @include('notices.indexCard')
+        @include('rules.indexCard')
+        @break
+        @case('posts')
+        @include('post.showPosts')
+        @break
+        @case('users')
+        @include('user.showUsers')
+        @break
+    @endswitch
+@endsection()
