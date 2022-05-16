@@ -97,7 +97,7 @@
             <div class="d-flex justify-content-center align-items-center h-100">
                 <div class="text-white">
                     <h1 class="mb-3">Bienvenidos</h1>
-                    <h4 class="mb-3">Generacion 2022</h4>
+                    <h4 class="mb-3">Generación 2022</h4>
 
                 </div>
             </div>

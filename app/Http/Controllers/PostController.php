@@ -39,6 +39,7 @@ class PostController extends Controller
         $post->user_id = $user->id;
         $post->title = $title;
         $post->description = $description;
+        $post->image = 'defaultImage.jpg';
 
         $post->save();
         return redirect()->route('home')

@@ -33,3 +33,4 @@ Route::get('/user/avatar/{filename}', [UserController::class, 'getImage'])->name
 
 // POST CONTROLLER
 Route::get('/create-post', [PostController::class, 'create'])->name('create-post');
+Route::post('/save-post', [PostController::class, 'save'])->name('save-post');

@@ -4,7 +4,7 @@
 
     <div class=" card">
         <div class="header-cards-all">
-            <div class="card-header">{{ __('Ultimos Post') }}
+            <div class="card-header">{{ __('Últimos Post') }}
         </div>
         </div>
         <div class="sticky-top">
