@@ -1,0 +1,65 @@
+drop database portafolio
+Create database portafolio
+use portafolio
+
+// SCHOOLS
+
+INSERT INTO schools VALUES (1,'Administración y Negocios','Escuela de Administración y Negocios',sysdate(),sysdate());
+INSERT INTO schools VALUES (2,'Comunicación','Escuela de Comunicación',sysdate(),sysdate());
+INSERT INTO schools VALUES (3,'Construcción','Escuela de Construcción',sysdate(),sysdate());
+INSERT INTO schools VALUES (4,'Diseño','Escuela de Diseño',sysdate(),sysdate());
+INSERT INTO schools VALUES (5,'Gastronomía','Escuela de Gastronomía',sysdate(),sysdate());
+INSERT INTO schools VALUES (6,'Informática y Telecomunicaciones','Escuela de Informática y Telecomunicaciones',sysdate(),sysdate());
+INSERT INTO schools VALUES (7,'Ingeniería y Recursos Naturales','Escuela de Ingeniería y Recursos Naturales',sysdate(),sysdate());
+INSERT INTO schools VALUES (8,'Salud','Escuela de Salud',sysdate(),sysdate());
+INSERT INTO schools VALUES (9,'Turismo y Hotelería','Escuela de Turismo y Hotelería',sysdate(),sysdate());
+
+// CAREERS
+
+INSERT INTO careers VALUES (1,1,'Administración Mención Marketing','Ingeniería en Administración Mención Marketing',sysdate(),sysdate());
+INSERT INTO careers VALUES (2,2,'Audiovisual','Comunicación Audiovisual',sysdate(),sysdate());
+INSERT INTO careers VALUES (3,3,'Prevención de Riesgos','Ingeniería en Prevención de Riesgos',sysdate(),sysdate());
+INSERT INTO careers VALUES (4,4,'Diseño','Diseño Gráfico',sysdate(),sysdate());
+INSERT INTO careers VALUES (5,5,'Gastronomía','Gastronomía Internacional',sysdate(),sysdate());
+INSERT INTO careers VALUES (6,6,'Analista Programador','Analista Programador Computacional',sysdate(),sysdate());
+INSERT INTO careers VALUES (7,7,'Ingeniería y Recursos Naturales','Ingeniería Agrícola',sysdate(),sysdate());
+INSERT INTO careers VALUES (8,8,'Técnico en Enfermería','Técnico en Enfermería',sysdate(),sysdate());
+INSERT INTO careers VALUES (9,9,'Turismo y Hotelería','Turismo y Hotelería',sysdate(),sysdate());
+
+// USERS
+
+INSERT INTO users VALUES (1,'admin',6,'Admin','Admin',12345,'admin@admin.com',12345786,'001V',1,'defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (2,'iv.santis',6,'donSantis','Santis',12345,'iv.santis@duocuc.com',123448201,'002V',1,'defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (3,'di.jacques',6,'donJacques','Jacques',12345,'di.jacques@duocuc.com',33345786,'003V',1,'defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (4,'di.retamal',6,'donRetamal','Retamal',12345,'di.retamal@duocuc.com',12345786,'004V',1,'defaultImage.jpg',sysdate(),sysdate());
+
+
+
+// POSTS
+
+INSERT INTO posts VALUES (1,2,'Title prueba','Description prueba','defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (2,2,'Title prueba2','Description prueba2','defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (3,3,'Title prueba3','Description prueba3','defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (4,4,'Title prueba4','Description prueba4','defaultImage.jpg',sysdate(),sysdate());
+
+
+// COMMENTARYS
+
+INSERT INTO comments VALUES (1,5,1,'Title prueba','Description prueba',sysdate(),sysdate());
+INSERT INTO comments VALUES (2,2,1,'Title prueba2','Description prueba2',sysdate(),sysdate());
+INSERT INTO comments VALUES (3,3,1,'Title prueba3','Description prueba3',sysdate(),sysdate());
+INSERT INTO comments VALUES (4,4,1,'Title prueba4','Description prueba4',sysdate(),sysdate());
+
+// NOTICES
+
+INSERT INTO notices VALUES (1,2,'Title Notice prueba1','Description Notice prueba1',sysdate(),sysdate());
+INSERT INTO notices VALUES (2,2,'Title Notice prueba2','Description Notice prueba2',sysdate(),sysdate());
+INSERT INTO notices VALUES (3,2,'Title Notice prueba3','Description Notice prueba3',sysdate(),sysdate());
+INSERT INTO notices VALUES (4,2,'Title Notice prueba4','Description Notice prueba4',sysdate(),sysdate());
+
+// RULES
+
+INSERT INTO rules VALUES (1,2,'Title Rule prueba1','Description Rule prueba1',sysdate(),sysdate());
+INSERT INTO rules VALUES (2,2,'Title Rule prueba2','Description Rule prueba2',sysdate(),sysdate());
+INSERT INTO rules VALUES (3,2,'Title Rule prueba3','Description Rule prueba3',sysdate(),sysdate());
+INSERT INTO rules VALUES (4,2,'Title Rule prueba4','Description Rule prueba4',sysdate(),sysdate());
