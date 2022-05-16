@@ -21,6 +21,32 @@ class PostController extends Controller
     {
         return view('post.create');
     }
+    public function save(Request $request)
+    {
+        // Validación del formulario
+        $validate = $this->validate($request, [
+            'title' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
+        ]);
+
+        // Recoger datos del formulario
+        $title = $request->input('title');
+        $description = $request->input('description');
+
+        $user = \Auth::user();
+        $post = new Post();
+
+        $post->user_id = $user->id;
+        $post->title = $title;
+        $post->description = $description;
+
+        $post->save();
+        return redirect()->route('home')
+            ->with(['message' => 'Usuario actualizado correctamente']);
+
+
+
+    }
 
 
     public function callAllPosts()
