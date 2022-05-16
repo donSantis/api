@@ -3,6 +3,7 @@
 @section('content')
     @switch($contenido)
         @case('index')
+        @include('post.indexCard')
         @include('notices.indexCard')
         @include('rules.indexCard')
         @break

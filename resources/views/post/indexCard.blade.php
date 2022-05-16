@@ -1,7 +1,7 @@
 
 
 <div class="card mb-4">
-    <div class="card-header-content">
+    <div class="header-cards-all">
         <div class=" card-header">Posts</div>
     </div>
     <div class="card-body">
@@ -70,7 +70,9 @@
         </div>
 
         <div>
-
+            <div class="row">
+                <a href="create-post" class="btn btn-success btn-sm col-2 p-2 m-2 text-bald" >AGREGAR</a>
+            </div>
         </div>
     </div>
 </div>
