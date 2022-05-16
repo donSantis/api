@@ -20,7 +20,12 @@
     background-image: url('../img/sede_san_bernard.jpg');
 }
 
-.avatar{
+form .avatar{
     width: 55px;
+    height: 55px;
+}
+.navbar .avatar{
+    width: 30px;
+    height: 30px;
 
 }
