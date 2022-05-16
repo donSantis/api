@@ -10,12 +10,16 @@ class PostController extends Controller
 {
     public function __construct()
     {
-
+        $this->middleware('auth');
     }
 
     public function index()
     {
         return view('showPosts');
+    }
+    public function create()
+    {
+        return view('post.create.plate.php');
     }
 
 
