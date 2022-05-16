@@ -28,7 +28,7 @@
                                                 </span>
                                 <i class="row-icon-font-mini " title="No unread posts"></i>
                                 <span class="desc-wrapper">
-                                                  <a href="" class="topictitle">{{$p->title}}</a>
+                                                  <a href="detail-post" class="topictitle">{{$p->title}}</a>
                                                                                  <br/>
                                     <!--  <strong class="pagination">
                                             <span>

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class PostController extends Controller
 {
@@ -44,10 +47,11 @@ class PostController extends Controller
         $post->save();
         return redirect()->route('home')
             ->with(['message' => 'Usuario actualizado correctamente']);
-
-
-
     }
+
+
+
+
 
 
     public function callAllPosts()
