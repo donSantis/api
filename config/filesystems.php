@@ -66,7 +66,7 @@ return [
 
         'post' => [
             'driver' => 'local',
-            'root' => storage_path('app/images'),
+            'root' => storage_path('app/post'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
             'throw' => false,

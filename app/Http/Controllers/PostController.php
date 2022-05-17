@@ -78,5 +78,11 @@ class PostController extends Controller
             ->with(['message' => 'Usuario actualizado correctamente']);
     }
 
+    public function getImagePost($filename)
+    {
+        $file = Storage::disk('post')->get($filename);
+        return new Response($file, 200);
+    }
+
 
 }

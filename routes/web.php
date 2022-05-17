@@ -36,6 +36,7 @@ Route::get('/user-card/{id}', [UserController::class, 'showUser'])->name('user-c
 Route::get('/create-post', [PostController::class, 'create'])->name('create-post');
 Route::get('/card-post2', [PostController::class, 'getPost2'])->name('card-post2');
 Route::post('/save-post', [PostController::class, 'save'])->name('save-post');
+Route::get('/post/image/{filename}', [PostController::class, 'getImagePost'])->name('post.image');
 
 Route::get('/post-card/{id}', [PostController::class, 'showPost'])->name('post-card');
 
