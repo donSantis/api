@@ -13,7 +13,6 @@ class Comment extends Model
         'user_id',
         'post_id',
         'title_id',
-        'image',
         'description',
     ];
 }
