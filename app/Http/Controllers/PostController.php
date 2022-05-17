@@ -50,14 +50,29 @@ class PostController extends Controller
         // Recoger datos del formulario
         $title = $request->input('title');
         $description = $request->input('description');
+        $image_path = $request->file('image_path');
+
 
         $user = \Auth::user();
         $post = new Post();
+        if ($image_path) {
+            // Poner nombre unico
+            $image_path_name = time() . $image_path->getClientOriginalName();
+
+            // Guardar en la carpeta storage (storage/app/users)
+            Storage::disk('POST')->put($image_path_name, File::get($image_path));
+
+            // Seteo el nombre de la imagen en el objeto
+            $post->image = $image_path_name;
+        }
 
         $post->user_id = $user->id;
         $post->title = $title;
         $post->description = $description;
         $post->image = 'defaultImage.jpg';
+
+
+
 
         $post->save();
         return redirect()->route('home')

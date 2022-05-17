@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Rules extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'user_id',
+        'title_id',
+        'image',
+        'description',
+    ];
 }
