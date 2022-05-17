@@ -8,16 +8,22 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'user_id',
-        'title',
-        'description',
-        'image',
-    ];
+
 
     public function user()
     {
         return $this->belongsTo('App\Models\User', 'user_id');
     }
+
+    // Relación One To Many / de uno a muchos
+    public function comments(){
+        return $this->hasMany('App\Models\Comment')->orderBy('id', 'desc');
+    }
+
+    // Relación One To Many
+    public function likes(){
+        return $this->hasMany('App\Models\Like');
+    }
+
 
 }

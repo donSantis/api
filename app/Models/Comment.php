@@ -9,10 +9,22 @@ class Comment extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'user_id',
-        'post_id',
-        'title_id',
-        'description',
-    ];
+    protected $table = 'comments';
+
+
+
+    // Relación One To Many / de uno a muchos
+    public function posts(){
+        return $this->hasMany('App\models\Comment')->orderBy('id', 'desc');
+    }
+
+    // Relación One To Many
+    public function likes(){
+        return $this->hasMany('App\models\Like');
+    }
+
+    // Relación de Muchos a Uno
+    public function user(){
+        return $this->belongsTo('App\models\User', 'user_id');
+    }
 }

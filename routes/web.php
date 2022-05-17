@@ -41,7 +41,5 @@ Route::get('/post/image/{filename}', [PostController::class, 'getImagePost'])->n
 Route::get('/post-card/{id}', [PostController::class, 'showPost'])->name('post-card');
 
 //COMMENT CONTROLLER
-Route::get('/create-comment', [CommentController::class, 'create'])->name('create-comment');
 Route::post('/save-comment', [CommentController::class, 'save'])->name('save-comment');
-Route::get('/comment/image/{filename}', [CommentController::class, 'getImageComment'])->name('comment.image');
-Route::get('/comment-card/{id}', [CommentController::class, 'showComment'])->name('comment-card');
+Route::post('/list-comment', [CommentController::class, 'list'])->name('list-comment');

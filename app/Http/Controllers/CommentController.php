@@ -13,33 +13,38 @@ use Illuminate\Http\Response;
 
 class CommentController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function save(Request $request)
     {
 
         // Validación
         $validate = $this->validate($request, [
             'post_id' => 'integer|required',
-            'content' => 'string|required'
+            'title' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
         ]);
 
         // Recoger datos
         $user = \Auth::user();
-        $image_id = $request->input('image_id');
-        $content = $request->input('content');
+        $post_id = $request->input('post_id');
+        $title = $request->input('title');
+        $description = $request->input('description');
 
         // Asigno los valores a mi nuevo objeto a guardar
         $comment = new Comment();
         $comment->user_id = $user->id;
-        $comment->image_id = $image_id;
-        $comment->content = $content;
+        $comment->post_id = $post_id;
+        $comment->title = $title;
+        $comment->description = $description;
 
         // Guardar en la bd
         $comment->save();
 
         // Redirección
-        return redirect()->route('image.detail', ['id' => $image_id])
-            ->with([
-                'message' => 'Has publicado tu comentario correctamente!!'
-            ]);
+        return redirect()->route('home');
     }
 }
