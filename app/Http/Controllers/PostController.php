@@ -60,7 +60,7 @@ class PostController extends Controller
             $image_path_name = time() . $image_path->getClientOriginalName();
 
             // Guardar en la carpeta storage (storage/app/users)
-            Storage::disk('POST')->put($image_path_name, File::get($image_path));
+            Storage::disk('post')->put($image_path_name, File::get($image_path));
 
             // Seteo el nombre de la imagen en el objeto
             $post->image = $image_path_name;
@@ -69,7 +69,6 @@ class PostController extends Controller
         $post->user_id = $user->id;
         $post->title = $title;
         $post->description = $description;
-        $post->image = 'defaultImage.jpg';
 
 
 

@@ -64,7 +64,7 @@ return [
             'throw' => false,
         ],
 
-        'images' => [
+        'post' => [
             'driver' => 'local',
             'root' => storage_path('app/images'),
             'url' => env('APP_URL').'/storage',
