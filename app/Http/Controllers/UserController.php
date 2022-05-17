@@ -29,6 +29,16 @@ class UserController extends Controller
         return view('user.user-config');
     }
 
+    public function showUser($id)
+    {
+        $user = User::findOrFail($id);
+
+        return view('user.card')->with([
+            'user' => $user,
+        ]);
+
+    }
+
     public function update(Request $request)
     {
 
@@ -112,7 +122,8 @@ class UserController extends Controller
             ->with(['message' => 'Usuario actualizado correctamente']);
     }
 
-    public function getImage($filename){
+    public function getImage($filename)
+    {
         $file = Storage::disk('users')->get($filename);
         return new Response($file, 200);
     }
@@ -137,30 +148,5 @@ class UserController extends Controller
     }
 
 
-    public function callAllUsers()
-    {
-        return view('user.showUsers')->with([
-            'users' => User::all(),
-        ]);
 
-    }
-
-    public function callUser(Request $request)
-    {
-        $user = $request->user();
-        $text = $request->text;
-        $users = DB::table('users')
-            ->select('users.*')
-            ->Where('name', 'LIKE', '%' . $text . '%')
-            ->OrWhere('lastname', 'LIKE', '%' . $text . '%')
-            ->OrWhere('role', 'LIKE', '%' . $text . '%')
-            ->OrWhere('phone', 'LIKE', '%' . $text . '%')
-            ->OrWhere('mail', 'LIKE', '%' . $text . '%')
-            ->paginate(5);
-
-        return view('user.user')->with([
-            'users' => $users,
-        ]);
-
-    }
 }

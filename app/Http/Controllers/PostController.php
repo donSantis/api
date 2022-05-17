@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Response;
 
 class PostController extends Controller
 {
@@ -20,10 +22,23 @@ class PostController extends Controller
     {
         return view('showPosts');
     }
+
+
+    public function showPost($id)
+    {
+        $post = Post::findOrFail($id);
+
+        return view('post.card')->with([
+            'post' => $post,
+        ]);
+    }
+
     public function create()
     {
         return view('post.create');
     }
+
+
     public function save(Request $request)
     {
         // Validación del formulario
@@ -50,31 +65,4 @@ class PostController extends Controller
     }
 
 
-
-
-
-
-    public function callAllPosts()
-    {
-        return view('post.showPosts')->with([
-            'posts' => Post::all(),
-        ]);
-
-    }
-    public function callPost(Request $request)
-    {
-        $post = $request->post();
-        $text = $request->text;
-        $posts = DB::table('posts')
-            ->select('posts.*')
-            ->Where('user_id', 'LIKE', '%' . $text . '%')
-            ->OrWhere('title', 'LIKE', '%' . $text . '%')
-            ->OrWhere('created_at', 'LIKE', '%' . $text . '%')
-            ->paginate(5);
-
-        return view('post.showPosts')->with([
-            'posts' => $posts,
-        ]);
-
-    }
 }

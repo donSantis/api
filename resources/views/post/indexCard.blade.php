@@ -28,7 +28,7 @@
                                                 </span>
                                 <i class="row-icon-font-mini " title="No unread posts"></i>
                                 <span class="desc-wrapper">
-                                                  <a href="detail-post" class="topictitle">{{$p->title}}</a>
+                                                  <a href="{{'post-card/'}}{{$p->id}}" class="topictitle">{{$p->title}}</a>
                                                                                  <br/>
                                     <!--  <strong class="pagination">
                                             <span>
@@ -45,7 +45,7 @@
                         </i>
                         by
 
-                        <a href="" style="color: #AA0000;" class="username-coloured">{{$p->name}}</a>
+                        <a href="{{'user-card/'}}{{$p->postUserId}}" style="color: #AA0000;" class="username-coloured">{{$p->name}}</a>
                         <small> - {{$p->created_at}}</small>
                     </span>
                             </td>
