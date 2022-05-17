@@ -1,7 +1,4 @@
-@extends('layouts.app3')
 
-@section('content')
-    <div class="col-md-8 float-left">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12">
@@ -12,21 +9,6 @@
                         <div class="card-body">
                             <form method="POST" action="save-comment" enctype="multipart/form-data">
                                 @csrf
-
-                                <div class="row mb-3">
-
-                                    <label for="image_path" class="col-md-4 col-form-label text-md-right">{{ __('Imagen') }}</label>
-
-                                    <div class="col-md-7">
-                                        <input id="image_path" type="file" class="form-control{{ $errors->has('image_path') ? ' is-invalid' : '' }}" name="image_path">
-
-                                        @if ($errors->has('image_path'))
-                                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('image_path') }}</strong>
-                                    </span>
-                                        @endif
-                                    </div>
-                                </div>
 
                                 <div class="row mb-3">
                                     <label for="title"
@@ -63,22 +45,6 @@
 
                                 </div>
 
-                            <!--
-                                <div class="row mb-3">
-
-                                    <label for="image_path" class="col-md-4 col-form-label text-md-right">{{ __('Imagen') }}</label>
-
-                                    <div class="col-md-7">
-                                        <input id="image_path" type="file" class="form-control{{ $errors->has('image_path') ? ' is-invalid' : '' }}" name="image_path">
-
-                                        @if ($errors->has('image_path'))
-                                <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('image_path') }}</strong>
-                                    </span>
-                                        @endif
-                                </div>
-                            </div>-->
-
 
                                 <div class="row mb-0">
                                     <div class="col-md-6 offset-md-4">
@@ -94,5 +60,4 @@
             </div>
         </div>
 
-    </div>
-@endsection
+

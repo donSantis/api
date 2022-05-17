@@ -56,6 +56,7 @@
                 </div>
             </div>
         </div>
-
+        @include('comment.create')
     </div>
+
 @endsection
