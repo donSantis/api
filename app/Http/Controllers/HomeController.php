@@ -32,7 +32,8 @@ class HomeController extends Controller
         $posts = DB::table('posts')
                 ->join('users','posts.user_id','=','users.id')
             ->select('posts.*','users.name as name','posts.user_id as postUserId')
-            ->get();
+            ->paginate(10);
+
         $contenido = 'index';
         $titulo = 'Inicio';
 

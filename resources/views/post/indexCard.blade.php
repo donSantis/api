@@ -30,14 +30,15 @@
                                 <span class="desc-wrapper">
                                                   <a href="{{'post-card/'}}{{$p->id}}" class="topictitle">{{$p->title}}</a>
                                                                                  <br/>
-                                    <!--  <strong class="pagination">
+                                    <strong class="pagination">
                                             <span>
                                                 <a href="">1</a>
                                                 <span class="page-sep">,
                                                 </span>
                                                 <a href="">2</a>
                                             </span>
-                                        </strong> -->
+                                        </strong>
+
                                             <i class="fa fa-paperclip fa-flip-horizontal" rel="tooltip"
                                                data-placement="top"
                                                data-original-title="Attachment(s)">
@@ -72,6 +73,7 @@
         <div>
             <div class="row">
                 <a href="create-post" class="btn btn-success btn-sm col-2 p-2 m-2 text-bald" >AGREGAR</a>
+
             </div>
         </div>
     </div>
