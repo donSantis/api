@@ -60,43 +60,7 @@
         @include('comment.create')
 
         @foreach($post->comments as $comment)
-
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="header-cards-all">
-                                <div class="card-header">Comentario :</div>
-                            </div>
-                            <div class="card-body">
-                                @csrf
-
-                                <div class="row mb-3">
-                                    <label for="title"
-                                           class="col-md-4 col-form-label text-md-end">{{ __('Título') }}</label>
-
-                                    <div class="col-md-6">
-                                        <label for="">{{$comment->title}}</label>
-
-
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <label for="title"
-                                           class="col-md-4 col-form-label text-md-end">{{ __('Descripcion') }}</label>
-
-                                    <div class="col-md-6">
-                                        <label for="">{{$comment->description}}</label>
-
-
-                                    </div>
-                                </div>
-
-
-
-                            </div>
-                        </div>
-                    </div>
-
+            @include('comment.card')
         @endforeach
 
 

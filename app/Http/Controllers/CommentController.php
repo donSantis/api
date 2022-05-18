@@ -47,4 +47,6 @@ class CommentController extends Controller
         // Redirección
         return redirect()->route('home');
     }
+
+
 }
