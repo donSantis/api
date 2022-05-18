@@ -31,14 +31,12 @@ class CommentController extends Controller
         // Recoger datos
         $user = \Auth::user();
         $post_id = $request->input('post_id');
-        $title = $request->input('description');
         $description = $request->input('description');
 
         // Asigno los valores a mi nuevo objeto a guardar
         $comment = new Comment();
         $comment->user_id = $user->id;
         $comment->post_id = $post_id;
-        $comment->title = $title;
         $comment->description = $description;
 
         // Guardar en la bd
