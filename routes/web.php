@@ -1,8 +1,6 @@
 <?php
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
-
-use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,12 +25,13 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // USER CONTROLLER
-Route::get('/config', [UserController::class,'config'])->name('config');
+Route::get('/config', [UserController::class, 'config'])->name('config');
 Route::post('/user/update', [UserController::class, 'update'])->name('user.update');
 Route::post('/user/update-password', [UserController::class, 'updatePassword'])->name('update-password');
 Route::post('/user/update-image', [UserController::class, 'updateImage'])->name('update-image');
 Route::get('/user/avatar/{filename}', [UserController::class, 'getImage'])->name('user.avatar');
-Route::get('/user-card/{id}', [UserController::class, 'showUser'])->name('user-card');
+Route::get('/docente', [\App\Http\Controllers\DocenteController::class, 'index'])->name('docente');
+Route::get('/perfil', [\App\Http\Controllers\PerfilController::class, 'index'])->name('perfil');
 
 // POST CONTROLLER
 Route::get('/create-post', [PostController::class, 'create'])->name('create-post');
