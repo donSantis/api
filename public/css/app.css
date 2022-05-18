@@ -29,3 +29,8 @@ form .avatar{
     height: 30px;
 
 }
+
+.line-bottom {
+    border: 1px solid #BDBDBD;
+    width: 100%;
+}
