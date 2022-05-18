@@ -47,14 +47,14 @@
                             <div class="dropdown-menu dropdown-menu-end  " aria-labelledby="navbarDropdown">
 
 
-                                    <a href="#" class="sidebar-card    list-group-item list-group-item-action py-3 lh-tight">
-                                        <div class="d-flex  w-100 align-items-center justify-content-between">
-                                            <strong class="mb-1">Ejemplo notifi</strong>
+                                <a href="#" class="sidebar-card    list-group-item list-group-item-action py-3 lh-tight">
+                                    <div class="d-flex  w-100 align-items-center justify-content-between">
+                                        <strong class="mb-1">Ejemplo notifi</strong>
 
-                                        </div>
-                                        <div class="col-10 mb-1 small">14-05-2022</div>
+                                    </div>
+                                    <div class="col-10 mb-1 small">14-05-2022</div>
 
-                                    </a>
+                                </a>
 
                             </div>
 
@@ -105,4 +105,3 @@
     </div>
     <!-- Background image -->
 </div>
-

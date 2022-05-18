@@ -30,7 +30,7 @@ class HomeController extends Controller
             ->get();
 
         $posts = DB::table('posts')
-                ->join('users','posts.user_id','=','users.id')
+            ->join('users','posts.user_id','=','users.id')
             ->select('posts.*','users.name as name','posts.user_id as postUserId')
             ->paginate(10);
 
