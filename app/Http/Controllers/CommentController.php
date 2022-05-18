@@ -31,7 +31,7 @@ class CommentController extends Controller
         // Recoger datos
         $user = \Auth::user();
         $post_id = $request->input('post_id');
-        $title = $request->input('title');
+        $title = $request->input('description');
         $description = $request->input('description');
 
         // Asigno los valores a mi nuevo objeto a guardar
@@ -50,3 +50,7 @@ class CommentController extends Controller
 
 
 }
+
+
+
+
