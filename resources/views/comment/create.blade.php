@@ -7,7 +7,7 @@
                             <div class="card-header">Crear Comentario</div>
                         </div>
                         <div class="card-body">
-                            <form method="POST" action="save-comment" enctype="multipart/form-data">
+                            <form method="POST" action="{{'/save-comment'}}" enctype="multipart/form-data">
                                 @csrf
 
 

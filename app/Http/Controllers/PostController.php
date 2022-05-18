@@ -55,6 +55,7 @@ class PostController extends Controller
 
         $user = \Auth::user();
         $post = new Post();
+
         if ($image_path) {
             // Poner nombre unico
             $image_path_name = time() . $image_path->getClientOriginalName();

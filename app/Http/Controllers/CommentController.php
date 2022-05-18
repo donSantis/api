@@ -24,7 +24,6 @@ class CommentController extends Controller
         // Validación
         $validate = $this->validate($request, [
             'post_id' => 'integer|required',
-            'title' => 'required|string|max:255',
             'description' => 'required|string|max:255',
         ]);
 
@@ -38,12 +37,8 @@ class CommentController extends Controller
         $comment->user_id = $user->id;
         $comment->post_id = $post_id;
         $comment->description = $description;
-
-        // Guardar en la bd
-        $comment->save();
-
+        var_dump($comment);
         // Redirección
-        return redirect()->route('home');
     }
 
 

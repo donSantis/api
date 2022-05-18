@@ -30,6 +30,13 @@ form .avatar{
 
 }
 
+.avatar-user-post{
+    width: 200px;
+    height: 200px;
+
+}
+
+
 .line-bottom {
     border: 1px solid #BDBDBD;
     width: 100%;
