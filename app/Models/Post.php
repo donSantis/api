@@ -9,13 +9,11 @@ class Post extends Model
 {
     use HasFactory;
 
-
     public function user()
     {
         return $this->belongsTo('App\Models\User', 'user_id');
     }
 
-    // Relación One To Many / de uno a muchos
     public function comments(){
         return $this->hasMany('App\Models\Comment')->orderBy('id', 'desc');
     }
