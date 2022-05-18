@@ -37,13 +37,16 @@ class CommentController extends Controller
         $comment->user_id = $user->id;
         $comment->post_id = $post_id;
         $comment->description = $description;
-        var_dump($comment);
+
+        // Guardar en la bd
+        $comment->save();
+
         // Redirección
+        return redirect()->route('home');
     }
 
 
 }
-
 
 
 
