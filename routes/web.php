@@ -30,8 +30,6 @@ Route::post('/user/update', [UserController::class, 'update'])->name('user.updat
 Route::post('/user/update-password', [UserController::class, 'updatePassword'])->name('update-password');
 Route::post('/user/update-image', [UserController::class, 'updateImage'])->name('update-image');
 Route::get('/user/avatar/{filename}', [UserController::class, 'getImage'])->name('user.avatar');
-Route::get('/docente', [\App\Http\Controllers\DocenteController::class, 'index'])->name('docente');
-Route::get('/perfil', [\App\Http\Controllers\PerfilController::class, 'index'])->name('perfil');
 
 // POST CONTROLLER
 Route::get('/create-post', [PostController::class, 'create'])->name('create-post');
