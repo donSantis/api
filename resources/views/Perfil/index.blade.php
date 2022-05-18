@@ -26,7 +26,7 @@
                                         <p class="text-secondary mb-1">Programacion </p>
                                         <p class="text-muted font-size-sm">bla bñla bla</p>
                                         <button class="btn btn-primary">Contactar</button>
-                                        <button class="btn btn-outline-primary">Comentar</button>
+                                        <button class="btn btn-outline-primary">Comentarr</button>
                                     </div>
                                 </div>
                             </div>
