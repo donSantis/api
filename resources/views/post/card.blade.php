@@ -7,50 +7,22 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="header-cards-all">
-                            <div class="card-header">Post #{{$post->id}}</div>
+                            <label class="card-header">#{{$post->title}}</label>
+                            <label class="text-rigth">{{$post->created_at}}</label>
                         </div>
                         <div class="card-body">
                             @csrf
-                            <div class="container-avatar pb-4 ">
-                                <img  src="{{ route('post.image',['filename'=>$post->image]) }}" class="avatar rounded-circle align-middle" alt="avatar-img"/>
+
+                            <div class="post-card-content pb-5" >
+                                <p class="card-text">{{$post->description}}</p>
                             </div>
-                            <div class="row mb-3">
-                                <label for="title"
-                                       class="col-md-4 col-form-label text-md-end">{{ __('Título') }}</label>
-
-                                <div class="col-md-6">
-                                    <input id="title" type="text"
-                                           class="form-control @error('title') is-invalid @enderror"
-                                           value="{{$post->title}}" name="title"
-                                           required autocomplete="title" autofocus>
-
-                                    @error('title')
-                                    <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
+                            <hr class="line-bottom">
+                            <div class="container-img-post pb-2 ">
+                                <img  src="{{ route('post.image',['filename'=>$post->image]) }}" class="" alt="avatar-img"/>
                             </div>
-
-                            <div class="row mb-3">
-                                <label for="description"
-                                       class="col-md-4 col-form-label text-md-end">{{ __('Descripción') }}</label>
-
-                                <div class="col-md-6">
-                                    <input id="title" type="text"
-                                           class="form-control @error('title') is-invalid @enderror"
-                                           value="{{$post->description}}" name="title"
-                                           required autocomplete="title" autofocus>
-                                    @error('description')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-
-                            </div>
-
-
+                        </div>
+                        <div class="card-footer">
+                            <h6 class="card-text">{{$post->created_at}}</h6>
                         </div>
                     </div>
                 </div>
@@ -64,11 +36,8 @@
         @endforeach
 
 
-
-
-
-
-
     </div>
+
+    @include('includes.sidebar-user-post')
 
 @endsection
