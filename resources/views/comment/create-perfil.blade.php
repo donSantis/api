@@ -4,19 +4,18 @@
         <div class="col-md-12">
             <div class="card mt-4">
                 <div class="header-cards-all">
+
                     <div class="card-header">Crear Comentario</div>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{url('save-comment')}}" enctype="multipart/form-data">
+                    <form method="POST" action="{{url('save-perfil-comment')}}" enctype="multipart/form-data">
                         @csrf
-
-
-
+                        <input type="hidden" name="perfil_id" value="{{$user->id}}" />
                         <div class="row mb-3">
                             <div class="form-floating">
                                         <textarea  name="description"
                                                    required autocomplete="description"
-                                                   autofocus id="description" cols="30" rows="10"style="    100px" class="form-control @error('description') is-invalid @enderror"></textarea>
+                                                   autofocus id="description" cols="30" rows="10"  class="form-control @error('description') is-invalid @enderror"></textarea>
                                 @error('description')
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

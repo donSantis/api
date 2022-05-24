@@ -3,6 +3,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\PerfilCommentController;
 
 use App\Http\Controllers\VotesController;
 use Illuminate\Support\Facades\Route;
@@ -34,7 +35,8 @@ Route::post('/user/update-password', [UserController::class, 'updatePassword'])-
 Route::post('/user/update-image', [UserController::class, 'updateImage'])->name('update-image');
 Route::get('/user/avatar/{filename}', [UserController::class, 'getImage'])->name('user.avatar');
 Route::get('/user-card/{id}', [UserController::class, 'showUser'])->name('user-card');
-Route::get('/perfil', [UserController::class, 'perfil'])->name('user-card');
+Route::post('/save-perfil-comment', [PerfilCommentController::class, 'save'])->name('save-perfil-comment');
+Route::post('/list-perfil-comment', [PerfilCommentController::class, 'list'])->name('list-perfil-comment');
 
 // POST CONTROLLER
 Route::get('/create-post', [PostController::class, 'create'])->name('create-post');

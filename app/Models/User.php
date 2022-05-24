@@ -54,13 +54,8 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Post')->orderBy('id', 'desc');
     }
     // Relación One To Many / de uno a muchos
-    public function commentary(){
-        return $this->hasMany('App\Models\Commentary')->orderBy('id', 'desc');
-    }
-
-    // Relación One To Many
-    public function votes(){
-        return $this->hasMany('App\Models\Votes');
+    public function perfilComment(){
+        return $this->hasMany('App\Models\PerfilComment')->orderBy('id', 'desc');
     }
 
     // Relación de Muchos a Uno
