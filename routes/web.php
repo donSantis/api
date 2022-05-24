@@ -34,6 +34,7 @@ Route::post('/user/update-password', [UserController::class, 'updatePassword'])-
 Route::post('/user/update-image', [UserController::class, 'updateImage'])->name('update-image');
 Route::get('/user/avatar/{filename}', [UserController::class, 'getImage'])->name('user.avatar');
 Route::get('/user-card/{id}', [UserController::class, 'showUser'])->name('user-card');
+Route::get('/perfil', [UserController::class, 'perfil'])->name('user-card');
 
 // POST CONTROLLER
 Route::get('/create-post', [PostController::class, 'create'])->name('create-post');

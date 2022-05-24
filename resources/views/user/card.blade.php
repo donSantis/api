@@ -143,6 +143,9 @@
             </div>
         </div>
 
+
+        @include('comment.create-perfil')
     </div>
     @include('includes.sidebar-user-card')
+
 @endsection
