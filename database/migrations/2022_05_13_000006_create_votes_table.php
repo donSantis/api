@@ -17,12 +17,8 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('user_id')->unsigned()->nullable();
             $table->bigInteger('post_id')->unsigned()->nullable();
-            $table->bigInteger('comment_id')->unsigned()->nullable();
-            $table->integer('up_count');
-            $table->integer('down_count');
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('post_id')->references('id')->on('posts');
-            $table->foreign('comment_id')->references('id')->on('comments');
             $table->timestamps();
         });
     }

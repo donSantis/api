@@ -3,84 +3,81 @@
 namespace App\Http\Controllers;
 
 use App\Models\Votes;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoreVotesRequest;
 use App\Http\Requests\UpdateVotesRequest;
 
 class VotesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function __construct()
     {
-        //
+        $this->middleware('auth');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+    public function save($id){
+
+        $user = \Auth::user();
+        $vote = new Votes();
+        $vote->user_id = $user->id;
+        $vote->post_id = $id;
+        $vote->save();
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreVotesRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreVotesRequest $request)
-    {
-        //
+
+    public function like($post_id){
+        // Recoger datos del usuario y la imagen
+        $user = \Auth::user();
+
+        // Condicion para ver si ya existe el like y no duplicarlo
+        $isset_like = Votes::where('user_id', $user->id)
+            ->where('post_id', $post_id)
+            ->count();
+
+        if($isset_like == 0){
+            $like = new Votes();
+            $like->user_id = $user->id;
+            $like->image_id = (int)$post_id;
+
+            // Guardar
+            $like->save();
+
+            return response()->json([
+                'like' => $like
+            ]);
+        }else{
+            return response()->json([
+                'message' => 'El like ya existe'
+            ]);
+        }
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Votes  $votes
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Votes $votes)
-    {
-        //
+    public function dislike($post_id){
+        // Recoger datos del usuario y la imagen
+        $user = \Auth::user();
+
+        // Condicion para ver si ya existe el like y no duplicarlo
+        $like = Like::where('user_id', $user->id)
+            ->where('image_id', $post_id)
+            ->first();
+
+        if($like){
+
+            // Eliminar like
+            $like->delete();
+
+            return response()->json([
+                'like' => $like,
+                'message' => 'Has dado dislike correctamente'
+            ]);
+        }else{
+            return response()->json([
+                'message' => 'El like no existe'
+            ]);
+        }
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Votes  $votes
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Votes $votes)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateVotesRequest  $request
-     * @param  \App\Models\Votes  $votes
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateVotesRequest $request, Votes $votes)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Votes  $votes
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Votes $votes)
-    {
-        //
-    }
 }
