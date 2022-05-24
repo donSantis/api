@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('comment-perfils', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id')->unsigned()->nullable();
-            $table->bigInteger('comment_user_id')->unsigned()->nullable();
+            $table->bigInteger('perfil_id')->unsigned()->nullable();
             $table->string('description');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('comment_user_id')->references('id')->on('users');
+            $table->foreign('perfil_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comment-perfils');
+        //
     }
 };
