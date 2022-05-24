@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('perfilComments', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id')->unsigned()->nullable();
             $table->bigInteger('perfil_id')->unsigned()->nullable();
+            $table->bigInteger('user_id')->unsigned()->nullable();
             $table->string('description');
-            $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('perfil_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

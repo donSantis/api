@@ -147,7 +147,7 @@
         @include('comment.create-perfil')
 
         @foreach($user->perfilComment as $comment)
-                <h1>yyzz</h1>
+            @include('comment.card')
         @endforeach
 
 

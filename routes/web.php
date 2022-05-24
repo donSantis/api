@@ -36,7 +36,6 @@ Route::post('/user/update-image', [UserController::class, 'updateImage'])->name(
 Route::get('/user/avatar/{filename}', [UserController::class, 'getImage'])->name('user.avatar');
 Route::get('/user-card/{id}', [UserController::class, 'showUser'])->name('user-card');
 Route::post('/save-perfil-comment', [PerfilCommentController::class, 'save'])->name('save-perfil-comment');
-Route::post('/list-perfil-comment', [PerfilCommentController::class, 'list'])->name('list-perfil-comment');
 
 // POST CONTROLLER
 Route::get('/create-post', [PostController::class, 'create'])->name('create-post');
@@ -46,7 +45,6 @@ Route::get('/post-card/{id}', [PostController::class, 'showPost'])->name('post-c
 
 //COMMENT CONTROLLER
 Route::post('/save-comment', [CommentController::class, 'save'])->name('save-comment');
-Route::post('/list-comment', [CommentController::class, 'list'])->name('list-comment');
 
 
 

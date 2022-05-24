@@ -15,6 +15,8 @@ class PerfilComment extends Model
 
     // Relación de Muchos a Uno
     public function user(){
-        return $this->belongsTo('App\models\User', 'user_id');
+        return $this->belongsTo('App\models\User', 'perfil_id');
     }
+
+
 }
