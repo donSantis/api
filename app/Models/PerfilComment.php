@@ -11,6 +11,8 @@ class PerfilComment extends Model
 
     protected $table = 'perfilcomments';
 
+
+
     // Relación de Muchos a Uno
     public function user(){
         return $this->belongsTo('App\models\User', 'user_id');

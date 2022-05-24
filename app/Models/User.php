@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
@@ -56,11 +57,7 @@ class User extends Authenticatable
     // Relación One To Many / de uno a muchos
     public function perfilComment(){
         return $this->hasMany('App\Models\PerfilComment')->orderBy('id', 'desc');
-    }
 
-    // Relación de Muchos a Uno
-    public function image(){
-        return $this->belongsTo('App\Models\Image', 'user_id');
     }
 
 }
