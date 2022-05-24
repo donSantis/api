@@ -49,3 +49,4 @@ Route::post('/list-comment', [CommentController::class, 'list'])->name('list-com
 
 //VOTE CONTROLLER
 Route::get('/like/{post_id}',  [VotesController::class, 'like'])->name('save-like');
+Route::get('/dislike/{post_id}',  [VotesController::class, 'dislike'])->name('delete-like');

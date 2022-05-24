@@ -14,4 +14,16 @@ class Votes extends Model
         'user_id',
         'post_id',
     ];
+
+    protected $table = 'votes';
+
+    // Relación de Muchos a Uno
+    public function user(){
+        return $this->belongsTo('App\Models\User', 'user_id');
+    }
+
+    // Relación de Muchos a Uno
+    public function post(){
+        return $this->belongsTo('App\Models\Post', 'post_id');
+    }
 }

@@ -19,8 +19,8 @@ class Post extends Model
     }
 
     // Relación One To Many
-    public function likes(){
-        return $this->hasMany('App\Models\Like');
+    public function votes(){
+        return $this->hasMany('App\Models\Votes');
     }
 
 

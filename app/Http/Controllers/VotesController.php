@@ -37,7 +37,7 @@ class VotesController extends Controller
         if($isset_like == 0){
             $like = new Votes();
             $like->user_id = $user->id;
-            $like->image_id = (int)$post_id;
+            $like->post_id = (int)$post_id;
 
             // Guardar
             $like->save();
@@ -58,8 +58,8 @@ class VotesController extends Controller
         $user = \Auth::user();
 
         // Condicion para ver si ya existe el like y no duplicarlo
-        $like = Like::where('user_id', $user->id)
-            ->where('image_id', $post_id)
+        $like = Votes::where('user_id', $user->id)
+            ->where('post_id', $post_id)
             ->first();
 
         if($like){

@@ -22,7 +22,24 @@
                             </div>
                         </div>
                         <div class="card-footer">
-                            <h6 class="card-text">{{$post->created_at}}</h6>
+                            <div class="likes">
+
+                                <!-- Comprobar si el usuario le dio like a la imagen -->
+                                <?php $user_like = false; ?>
+                                @foreach($post->votes as $like)
+                                    @if($like->user->id == Auth::user()->id)
+                                        <?php $user_like = true; ?>
+                                    @endif
+                                @endforeach
+
+                                @if($user_like)
+                                    <img src="{{asset('img/heart-red.png')}}" data-id="{{$post->id}}" class="btn-dislike"/>
+                                @else
+                                    <img src="{{asset('img/heart-black.png')}}" data-id="{{$post->id}}" class="btn-like"/>
+                                @endif
+
+                                <span class="number_likes">{{count($post->votes)}}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
