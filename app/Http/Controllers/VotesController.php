@@ -24,6 +24,7 @@ class VotesController extends Controller
 
     }
 
+    // CO
 
     public function like($post_id){
         // Recoger datos del usuario y la imagen
