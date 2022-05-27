@@ -41,3 +41,54 @@ form .avatar{
     border: 1px solid #BDBDBD;
     width: 100%;
 }
+
+
+/*    PANEL GENERAL VISTA PRINCIPAL */
+.list-panel{
+    width: 100%;
+    height: 100px;
+
+
+
+}
+
+.imagen-panel{
+    width: 60px;
+    height: 60px;
+}
+.avatar-list-panel{
+    width: 100%;
+    height: 80px;
+}
+.nickname-panel{
+    font-size: 15px;
+}
+
+.tile-card-panel{
+    font-size: 15px;
+}
+.counter-panel,
+.nickname-panel,
+.subtile-card-panel{
+    font-size: 10px;
+    text-align: center;
+}
+
+.avatar-space,
+.content-space,
+.likes-space{
+    border-right: 1px solid grey;
+}
+.icon-panel-count-comment{
+    font-size: 70px;
+}
+.answers-space{
+    right: 10px;
+    bottom: 13px;
+}
+
+.icon-panel-count-comment{
+    width: 35px;
+    height: 35px;
+}
+

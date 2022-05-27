@@ -16,13 +16,13 @@ class HomeController extends Controller
     public function index()
     {
         $rules = DB::table('rules')
-            ->join('users','rules.user_id','=','users.id')
-            ->select('rules.*','users.name as name')
+            ->join('users', 'rules.user_id', '=', 'users.id')
+            ->select('rules.*', 'users.name as name')
             ->get();
 
         $notices = DB::table('notices')
-            ->join('users','notices.user_id','=','users.id')
-            ->select('notices.*','users.name as name')
+            ->join('users', 'notices.user_id', '=', 'users.id')
+            ->select('notices.*', 'users.name as name')
             ->get();
 
         $users = DB::table('users')
@@ -30,14 +30,17 @@ class HomeController extends Controller
             ->get();
 
         $posts = DB::table('posts')
-            ->join('users','posts.user_id','=','users.id')
-            ->select('posts.*','users.name as name','posts.user_id as postUserId')
+            ->join('users', 'posts.user_id', '=', 'users.id')
+            ->select('posts.*', 'users.name as name'
+                , 'users.image as imgUser'
+                , 'users.nickname as nickname'
+                , 'posts.user_id as postUserId')
             ->paginate(10);
 
         $contenido = 'index';
         $titulo = 'Inicio';
 
-        return view('index',[
+        return view('index', [
             'notices' => $notices,
             'rules' => $rules,
             'users' => $users,
