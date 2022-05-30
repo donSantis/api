@@ -72,7 +72,7 @@
 
         <div>
             <div class="row">
-                <a href="create-post" class="btn btn-success btn-sm col-2 p-2 m-2 text-bald" >AGREGAR</a>
+                <div href="create-post" class="btn btn-success btn-sm col-2 p-2 m-2 text-bald" >AGREGAR</div>
 
             </div>
         </div>
@@ -86,26 +86,33 @@
 
 
 
-
 <div class="card mb-4">
+
     <div class="header-cards-all">
-        <div class=" card-header">Posts</div>
+        <div class="row">
+            <div class="col-8 card-header">Posts</div>
+
+
+        </div>
     </div>
+
+
     <div class="card-body">
         @foreach($posts as $p)
             <div class="list-panel p-0 relativa">
                 <div class=" row ">
                     <div class="avatar-space col-2 absolute ">
 
-                        <img src="{{ $p->imgUser }}" class="avatar-list-panel rounded-circle align-middle"
+                        <img src="{{ route('user.avatar',['filename'=>$p->imgUser]) }}"
+                             class="avatar-list-panel rounded-circle align-middle"
                              alt="{{ $p->imgUser }}"/>
 
-                        <h4 class="nickname-panel mt-2"> nickname</h4>
+                        <h4 class="nickname-panel mt-2"> {{$p->nickname}}</h4>
 
                     </div>
                     <div class="content-space col-6">
-                        <a href=""><h1 class="tile-card-panel"> {{$p->title}}</h1></a>
-                        <a href=""><p class="subtile-card-panel"> {{substr($p->title,0,1)}}</p></a>
+                        <a href="{{'post-card/'}}{{$p->id}}"><h1 class="tile-card-panel"> {{$p->title}}</h1></a>
+                        <p class="subtile-card-panel"> {{substr($p->title,0,25)}} ...</p>
 
                     </div>
                     <div class="likes-space d-flex justify-content-center col-2">
@@ -124,4 +131,5 @@
             </div>
         @endforeach
     </div>
+    <div href="create-post" class="btn btn-success btn-sm col-2 p-2 m-2 text-bald" >AGREGAR</div>
 </div>

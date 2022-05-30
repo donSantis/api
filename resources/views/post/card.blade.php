@@ -18,7 +18,7 @@
                             </div>
                             <hr class="line-bottom">
                             <div class="container-img-post pb-2 ">
-                                <img  src="{{ route('post.image',['filename'=>$post->image]) }}" class="" alt="avatar-img"/>
+                                <img  src="{{ route('post.image',['filename'=>$post->image]) }}"  class="img-fluid " alt="avatar-img"/>
                             </div>
                         </div>
                         <div class="card-footer">
@@ -51,7 +51,6 @@
         @foreach($post->comments as $comment)
             @include('comment.card')
         @endforeach
-
 
     </div>
 
