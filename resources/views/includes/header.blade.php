@@ -68,7 +68,7 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a href="{{'/perfil'}}" class="dropdown-item">Mi perfil</a>
+                                <a href="{{'/user-card/'}}{{Auth::user()->id}}" class="dropdown-item">Mi perfil</a>
                                 <a href="{{'/config'}}" class="dropdown-item">Configuración</a>
 
                                 <a class="dropdown-item" href="{{ route('logout') }}"

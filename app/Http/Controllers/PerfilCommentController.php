@@ -29,8 +29,8 @@ class PerfilCommentController extends Controller
 
         // Asigno los valores a mi nuevo objeto a guardar
         $comment = new PerfilComment();
-        $comment->user_id = $user->id;
-        $comment->perfil_id = $perfil_id;
+        $comment->user_id = $perfil_id; // ID DE QUIEN RECIBE EL COMMENT
+        $comment->perfil_id = $user->id; // ID DE QUIEN LO REALIZA
         $comment->description = $description;
 
         // Guardar en la bd
