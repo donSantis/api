@@ -1,16 +1,16 @@
-<div class="card mb-4">
+<div class="card mb-5">
 
     <div class="header-cards-all">
-        <div class="row">
-            <div class="col-8 card-header">Posts</div>
+
+            <div class="col-8 card-header">Preguntas
+            </div>
 
 
-        </div>
     </div>
+
 
     <div class="card-body">
         @foreach($posts as $p)
-            <div class=" p-0 ">
                 <div class=" row rounded-2 shadow-sm mb-3">
 
                         <div class="avatar-space col-2 ">
@@ -27,7 +27,7 @@
                                 <a href="{{'post-card/'}}{{$p->id}}"><h1 class="tile-card-panel "> {{substr($p->title,0,25)}}</h1></a>
                                 <p class="subtile-card-panel"> {{substr($p->description,0,100)}} ...</p>
 
-                                    <small class="align-text-bottom" style="bottom: 0px;position: absolute; font-size: 10px"> {{$p->created_at}}</small>
+                                    <small class="align-text-bottom" style="bottom: 0px;position: absolute; font-size: 10px"> {{$p->created_at}}-{{ date('Y-m-d H:i:s') }}</small>
 
                             </div>
 
@@ -46,11 +46,13 @@
                         </div>
 
                     </div>
-            </div>
+
         @endforeach
+            <a href="{{'/create-post'}}" class="btn rounded-circle align-middle btn-primary btn-sm col-1  text-bald" style="position: absolute; right: 70px" role="button" aria-pressed="true"><i class="bi bi-list-ol" style="font-size: 35px"></i>
+            </a>
+
+            <a href="{{'/create-post'}}" class="btn rounded-circle align-middle btn-success btn-sm col-1  text-bald" style="position: absolute; right: 0px" role="button" aria-pressed="true"><i class="bi bi-plus" style="font-size: 35px"></i></a>
     </div>
-    <div href="create-post" class="btn btn-success btn-sm col-2 p-2 m-2 text-bald">AGREGAR</div>
 </div>
 
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis dolorem est eum expedita iste laudantium saepe veniam? Dignissimos enim fugit maiores tempora ullam. Cumque doloremque iusto molestiae nam veritatis.

@@ -18,12 +18,6 @@ class PostController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
-    {
-        return view('showPosts');
-    }
-
-
     public function showPost($id)
     {
         $post = Post::findOrFail($id);

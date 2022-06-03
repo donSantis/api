@@ -3,15 +3,16 @@
 @section('content')
     @switch($contenido)
         @case('index')
-        @include('post.indexCard')
-        @include('notices.indexCard')
-        @include('rules.indexCard')
-        @break
+            @include('rules.panel-card')
+            @include('notices.panel-card')
+            @include('post.panel-card')
+            @break
         @case('posts')
-        @include('post.showPosts')
-        @break
+            @include('post.showPosts')
+            @break
         @case('users')
-        @include('user.showUsers')
-        @break
+            @include('user.showUsers')
+            @break
     @endswitch
 @endsection()
+

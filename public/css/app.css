@@ -25,8 +25,9 @@ form .avatar{
     height: 55px;
 }
 .navbar .avatar{
-    width: 30px;
-    height: 30px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
 
 }
 

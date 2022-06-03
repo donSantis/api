@@ -17,13 +17,19 @@ class HomeController extends Controller
     {
         $rules = DB::table('rules')
             ->join('users', 'rules.user_id', '=', 'users.id')
-            ->select('rules.*', 'users.name as name')
-            ->get();
+            ->select('rules.*', 'users.name as name'
+                , 'users.image as imgUser'
+                , 'users.nickname as nickname'
+                , 'rules.user_id as rulesUserId')
+            ->paginate(1);
 
         $notices = DB::table('notices')
             ->join('users', 'notices.user_id', '=', 'users.id')
-            ->select('notices.*', 'users.name as name')
-            ->get();
+            ->select('notices.*', 'users.name as name'
+            , 'users.image as imgUser'
+            , 'users.nickname as nickname'
+                , 'notices.user_id as noticeUserId')
+            ->paginate(3);
 
         $users = DB::table('users')
             ->select('*')
@@ -35,7 +41,7 @@ class HomeController extends Controller
                 , 'users.image as imgUser'
                 , 'users.nickname as nickname'
                 , 'posts.user_id as postUserId')
-            ->paginate(10);
+            ->paginate(5);
 
         $contenido = 'index';
         $titulo = 'Inicio';
