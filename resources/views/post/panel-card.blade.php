@@ -57,7 +57,7 @@
 
         @endforeach
         <div class="row">
-            @if($contenido = 'index')
+            @if($contenido == 'index')
 
             @else
                 <div class="d-flex justify-content-center"> {{$posts->links('vendor.pagination.bootstrap-4')}} </div>

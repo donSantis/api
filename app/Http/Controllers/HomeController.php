@@ -37,6 +37,7 @@ class HomeController extends Controller
         $contenido = 'index';
         $titulo = 'Inicio';
 
+
         return view('index', [
             'notices' => $notices,
             'rules' => $rules,
@@ -55,16 +56,18 @@ class HomeController extends Controller
             ->get();
 
         $posts = Post::orderBy('id', 'desc')
-            ->paginate(1);
+            ->paginate(3);
 
         $contenido = 'posts';
         $titulo = 'Todos los Posts';
+        $paginator = true;
 
         return view('index', [
             'users' => $users,
             'posts' => $posts,
             'contenido' => $contenido,
             'titulo' => $titulo,
+
         ]);
 
     }
