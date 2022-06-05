@@ -7,10 +7,10 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="header-cards-all">
-                            <div class="card-header">Crear Post</div>
+                            <div class="card-header">Crear Noticia</div>
                         </div>
                         <div class="card-body">
-                            <form method="POST" action="save-post" enctype="multipart/form-data">
+                            <form method="POST" action="save-notice" enctype="multipart/form-data">
                                 @csrf
 
                                 <div class="row mb-3">
@@ -63,21 +63,6 @@
 
                                 </div>
 
-<!--
-                                <div class="row mb-3">
-
-                                    <label for="image_path" class="col-md-4 col-form-label text-md-right">{{ __('Imagen') }}</label>
-
-                                    <div class="col-md-7">
-                                        <input id="image_path" type="file" class="form-control{{ $errors->has('image_path') ? ' is-invalid' : '' }}" name="image_path">
-
-                                        @if ($errors->has('image_path'))
-                                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('image_path') }}</strong>
-                                    </span>
-                                        @endif
-                                    </div>
-                                </div>-->
 
 
                                 <div class="row mb-0">

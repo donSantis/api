@@ -66,7 +66,7 @@
 
 
         @if( Auth::user()->role == 1)
-            <a href="{{'/create-notices'}}" class="btn rounded-circle align-middle btn-success btn-sm col-1  text-bald"
+            <a href="{{'/create-notice'}}" class="btn rounded-circle align-middle btn-success btn-sm col-1  text-bald"
                style="position: absolute; right: 70px" role="button" aria-pressed="true"><i class="bi bi-plus"
                                                                                             style="font-size: 35px"></i></a>
         @endif
