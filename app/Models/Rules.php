@@ -14,4 +14,18 @@ class Rules extends Model
         'image',
         'description',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User', 'user_id');
+    }
+
+    public function comments(){
+        return $this->hasMany('App\Models\Comment')->orderBy('id', 'desc');
+    }
+
+    // Relación One To Many
+    public function votes(){
+        return $this->hasMany('App\Models\Votes');
+    }
 }

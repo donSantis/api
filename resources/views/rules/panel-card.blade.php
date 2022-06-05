@@ -15,8 +15,8 @@
 
                 <div class="avatar-space col-2 ">
                     <div class="row">
-                        <img href="{{'user-card/'}}{{$r->rulesUserId}}"
-                             src="{{ route('user.avatar',['filename'=>$r->imgUser]) }}"
+                        <img href="{{'user-card/'}}{{$r->user->id}}"
+                             src="{{ route('user.avatar',['filename'=>$r->user->image]) }}"
                              class="avatar-list-panel rounded-circle pt-2 align-middle"
                              alt="{{ $r->imgUser }}"/>
 
@@ -31,7 +31,7 @@
 
                         <small class="align-text-bottom"
                                style="bottom: 0px;position: absolute; font-size: 10px"> {{$r->created_at}}
-                            -{{ date('Y-m-d H:i:s') }}</small>
+                        </small>
 
                     </div>
 

@@ -15,8 +15,8 @@
 
                 <div class="avatar-space col-2 ">
                     <div class="row">
-                        <img href="{{'user-card/'}}{{$n->noticeUserId}}"
-                             src="{{ route('user.avatar',['filename'=>$n->imgUser]) }}"
+                        <img href="{{'user-card/'}}{{$n->user->id}}"
+                             src="{{ route('user.avatar',['filename'=>$n->user->image]) }}"
                              class="avatar-list-panel rounded-circle pt-2 align-middle"
                              alt="{{ $n->imgUser }}"/>
 

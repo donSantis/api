@@ -15,12 +15,13 @@
 
                 <div class="avatar-space col-2 ">
                     <div class="row">
-                        <img href="{{'user-card/'}}{{$p->postUserId}}"
-                             src="{{ route('user.avatar',['filename'=>$p->imgUser]) }}"
+                        <img href="{{'user-card/'}}{{$p->user->id}}"
+                             src="{{ route('user.avatar',['filename'=>$p->user->image]) }}"
                              class="avatar-list-panel rounded-circle pt-2 align-middle"
-                             alt="{{ $p->imgUser }}"/>
+                             alt="{{ $p->user->image }}"/>
 
-                        <a class="nickname-panel mt-2" href="{{'user-card/'}}{{$p->postUserId}}"> {{$p->nickname}}</a>
+                        <a class="nickname-panel mt-2"
+                           href="{{'user-card/'}}{{$p->user->id}}"> {{$p->user->nickname}}</a>
                     </div>
                 </div>
                 <div class="content-space col-6 ">
@@ -40,14 +41,15 @@
                     <div class="row">
                         <a class="icon-panel-count-comment align" href=""> <i class="bi bi-heart-fill"
                                                                               style="color: red"></i></a>
-                        <h4 class="counter-panel mt-5"> 134</h4>
+                        <h4 class="counter-panel mt-5">{{count($p->comments)}}</h4>
+
                     </div>
                 </div>
                 <div class=" col-2">
                     <div class="row">
                         <a class=" icon-panel-count-comment align" href=""> <i class="bi bi-chat-left-dots"
                                                                                style="color: black"></i></a>
-                        <h4 class="counter-panel mt-5"> 134</h4>
+                        <h4 class="counter-panel mt-5">{{count($p->votes)}}</h4>
                     </div>
                 </div>
 

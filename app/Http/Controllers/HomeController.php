@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Rules;
+use App\Models\Notices;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use PHPUnit\Framework\Error\Notice;
 
 class HomeController extends Controller
 {
@@ -15,33 +19,20 @@ class HomeController extends Controller
 
     public function index()
     {
-        $rules = DB::table('rules')
-            ->join('users', 'rules.user_id', '=', 'users.id')
-            ->select('rules.*', 'users.name as name'
-                , 'users.image as imgUser'
-                , 'users.nickname as nickname'
-                , 'rules.user_id as rulesUserId')
+        $rules = Rules::orderBy('id', 'desc')
             ->paginate(1);
 
-        $notices = DB::table('notices')
-            ->join('users', 'notices.user_id', '=', 'users.id')
-            ->select('notices.*', 'users.name as name'
-            , 'users.image as imgUser'
-            , 'users.nickname as nickname'
-                , 'notices.user_id as noticeUserId')
+        $notices = Notices::orderBy('id', 'desc')
             ->paginate(1);
 
         $users = DB::table('users')
             ->select('*')
             ->get();
 
-        $posts = DB::table('posts')
-            ->join('users', 'posts.user_id', '=', 'users.id')
-            ->select('posts.*', 'users.name as name'
-                , 'users.image as imgUser'
-                , 'users.nickname as nickname'
-                , 'posts.user_id as postUserId')
-            ->paginate(5);
+
+        $posts = Post::orderBy('id', 'desc')
+            ->paginate(10);
+
 
         $contenido = 'index';
         $titulo = 'Inicio';
@@ -63,12 +54,7 @@ class HomeController extends Controller
             ->select('*')
             ->get();
 
-        $posts = DB::table('posts')
-            ->join('users', 'posts.user_id', '=', 'users.id')
-            ->select('posts.*', 'users.name as name'
-                , 'users.image as imgUser'
-                , 'users.nickname as nickname'
-                , 'posts.user_id as postUserId')
+        $posts = Post::orderBy('id', 'desc')
             ->paginate(1);
 
         $contenido = 'posts';
