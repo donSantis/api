@@ -18,14 +18,14 @@
                         <img href="{{'user-card/'}}{{$n->user->id}}"
                              src="{{ route('user.avatar',['filename'=>$n->user->image]) }}"
                              class="avatar-list-panel rounded-circle pt-2 align-middle"
-                             alt="{{ $n->imgUser }}"/>
+                             alt="{{ $n->user->image }}"/>
 
-                        <a class="nickname-panel mt-2" href="{{'user-card/'}}{{$n->noticeUserId}}"> {{$n->nickname}}</a>
+                        <a class="nickname-panel mt-2" href="{{'user-card/'}}{{$n->user->id}}"> {{$n->user->nickname}}</a>
                     </div>
                 </div>
                 <div class="content-space col-6 ">
                     <div class="row my-2">
-                        <a href="{{'post-card/'}}{{$n->id}}"><h1
+                        <a href="{{'notice-card/'}}{{$n->id}}"><h1
                                 class="tile-card-panel "> {{substr($n->title,0,25)}}</h1></a>
                         <p class="subtile-card-panel"> {{substr($n->description,0,100)}} ...</p>
 
@@ -34,7 +34,6 @@
                             -{{ date('Y-m-d H:i:s') }}</small>
 
                     </div>
-
                 </div>
                 <div class="end-space col-2">
                     <div class="row">
