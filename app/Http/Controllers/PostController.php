@@ -59,6 +59,8 @@ class PostController extends Controller
 
             // Seteo el nombre de la imagen en el objeto
             $post->image = $image_path_name;
+        }else{
+            $post->image = "sin-imagen";
         }
 
         $post->user_id = $user->id;

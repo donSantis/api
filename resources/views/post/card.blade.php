@@ -13,13 +13,22 @@
                         <div class="card-body">
                             @csrf
 
-                            <div class="post-card-content pb-5" >
+                            <div class="post-card-content pb-5">
                                 <p class="card-text">{{$post->description}}</p>
                             </div>
                             <hr class="line-bottom">
-                            <div class="container-img-post pb-2 ">
-                                <img  src="{{ route('post.image',['filename'=>$post->image]) }}"  class="img-fluid " alt="avatar-img"/>
-                            </div>
+                            @if($post->image = "sin-imagen")
+                                @if($post->image = "sin-imagen")
+                                    <div></div>
+                                @else
+                                <div class="container-img-post pb-2 ">
+                                    <img src="{{ route('post.image',['filename'=>$post->image]) }}" class="img-fluid "/>
+                                </div>
+                                @endif
+                            @else
+
+                            @endif
+
                         </div>
                         <div class="card-footer">
                             <div class="likes">
@@ -33,9 +42,11 @@
                                 @endforeach
 
                                 @if($user_like)
-                                    <img src="{{asset('img/heart-red.png')}}" data-id="{{$post->id}}" class="btn-dislike"/>
+                                    <img src="{{asset('img/heart-red.png')}}" data-id="{{$post->id}}"
+                                         class="btn-dislike"/>
                                 @else
-                                    <img src="{{asset('img/heart-black.png')}}" data-id="{{$post->id}}" class="btn-like"/>
+                                    <img src="{{asset('img/heart-black.png')}}" data-id="{{$post->id}}"
+                                         class="btn-like"/>
                                 @endif
 
                                 <span class="number_likes">{{count($post->votes)}}</span>

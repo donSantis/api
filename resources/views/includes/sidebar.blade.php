@@ -13,7 +13,7 @@
 
                         <div class="list-group list-group-flush border-bottom scrollarea">
                             @foreach($posts as $r)
-                                <a href="#" class="sidebar-card list-group-item list-group-item-action py-3 lh-tight">
+                                <a href="{{'post-card/'}}{{$r->id}}" class="sidebar-card list-group-item list-group-item-action py-3 lh-tight">
                                     <div class="d-flex w-100 align-items-center justify-content-between">
                                         <strong class="mb-1">{{substr($r->title,0,25)}}</strong>
                                         <small>Wed</small>

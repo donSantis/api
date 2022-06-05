@@ -55,16 +55,17 @@
 
         @endforeach
         <div class="row">
-        <div class="d-flex justify-content-center"> {{$posts->links('vendor.pagination.bootstrap-4')}} </div>  <!-- SE LE AGREGA AL PAGINATOR LA RUTA DEL HTML CUSTOMIZADO -->
+            <div class="d-flex justify-content-center"> {{$posts->links('vendor.pagination.bootstrap-4')}} </div>
+            <!-- SE LE AGREGA AL PAGINATOR LA RUTA DEL HTML CUSTOMIZADO -->
 
-        <a href="{{'/all-posts'}}" class="btn rounded-circle align-middle btn-primary btn-sm col-1  text-bald"
-           style="position: absolute; right: 70px" role="button" aria-pressed="true"><i class="bi bi-list-ol"
-                                                                                        style="font-size: 35px"></i>
-        </a>
+            <a href="{{'/all-posts'}}" class="btn rounded-circle align-middle btn-primary btn-sm col-1  text-bald"
+               style="position: absolute; right: 70px" role="button" aria-pressed="true"><i class="bi bi-list-ol"
+                                                                                            style="font-size: 35px"></i>
+            </a>
 
-        <a href="{{'/create-post'}}" class="btn rounded-circle align-middle btn-success btn-sm col-1  text-bald"
-           style="position: absolute; right: 0px" role="button" aria-pressed="true"><i class="bi bi-plus"
-                                                                                       style="font-size: 35px"></i></a>
+            <a href="{{'/create-post'}}" class="btn rounded-circle align-middle btn-success btn-sm col-1  text-bald"
+               style="position: absolute; right: 0px" role="button" aria-pressed="true"><i class="bi bi-plus"
+                                                                                           style="font-size: 35px"></i></a>
         </div>
     </div>
 </div>
