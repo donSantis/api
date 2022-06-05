@@ -23,7 +23,7 @@
                         <a class="nickname-panel mt-2" href="{{'user-card/'}}{{$n->user->id}}"> {{$n->user->nickname}}</a>
                     </div>
                 </div>
-                <div class="content-space col-6 ">
+                <div class="content-space col-8 ">
                     <div class="row my-2">
                         <a href="{{'notice-card/'}}{{$n->id}}"><h1
                                 class="tile-card-panel "> {{substr($n->title,0,25)}}</h1></a>
@@ -35,20 +35,24 @@
 
                     </div>
                 </div>
-                <div class="end-space col-2">
-                    <div class="row">
-                        <a class="icon-panel-count-comment align" href=""> <i class="bi bi-heart-fill"
-                                                                              style="color: red"></i></a>
-                        <h4 class="counter-panel mt-5"> 134</h4>
+
+                @if($contenido == 'index')
+                    <div class=" col-2">
+                        <div class="row">
+                            <a  href="{{'/all-notices'}}" class=" icon-panel-count-comment align" href=""> <i class="bi bi-list-ol"
+                                                                                                            style="font-size: 35px"></i></a>
+                            <h4 class="counter-panel mt-5"> Ver mas</h4>
+                        </div>
                     </div>
-                </div>
-                <div class=" col-2">
-                    <div class="row">
-                        <a class=" icon-panel-count-comment align" href=""> <i class="bi bi-chat-left-dots"
-                                                                               style="color: black"></i></a>
-                        <h4 class="counter-panel mt-5"> 134</h4>
+                @else
+                    <div class=" col-2">
+                        <div class="row">
+                            <a  href="{{'notice-card/'}}{{$n->id}}" class=" icon-panel-count-comment align" href=""> <i class="bi bi-book"
+                                                                                                                      style="font-size: 35px"></i></a>
+                            <h4 class="counter-panel mt-5">Leer</h4>
+                        </div>
                     </div>
-                </div>
+                @endif
 
             </div>
 
@@ -59,10 +63,8 @@
             <div class="d-flex justify-content-center"> {{$notices->links('vendor.pagination.bootstrap-4')}} </div>
             <!-- SE LE AGREGA AL PAGINATOR LA RUTA DEL HTML CUSTOMIZADO -->
         @endif
-        <a href="{{'/all-notices'}}" class="btn rounded-circle align-middle btn-primary btn-sm col-1  text-bald"
-           style="position: absolute; right: 0px" role="button" aria-pressed="true"><i class="bi bi-list-ol"
-                                                                                       style="font-size: 35px"></i>
-        </a>
+
+
         @if( Auth::user()->role == 1)
             <a href="{{'/create-notices'}}" class="btn rounded-circle align-middle btn-success btn-sm col-1  text-bald"
                style="position: absolute; right: 70px" role="button" aria-pressed="true"><i class="bi bi-plus"
