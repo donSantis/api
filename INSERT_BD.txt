@@ -52,29 +52,29 @@ INSERT INTO comments VALUES (4,4,1,'Title prueba4','Description prueba4',sysdate
 
 // NOTICES
 
-INSERT INTO notices VALUES (1,1,'Title Notice prueba1','Description Notice prueba1','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO notices VALUES (2,1,'Title Notice prueba2','Description Notice prueba2','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO notices VALUES (3,1,'Title Notice prueba3','Description Notice prueba3','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO notices VALUES (4,1,'Title Notice prueba4','Description Notice prueba4','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO notices VALUES (5,1,'Title Notice prueba5','Description Notice prueba5','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO notices VALUES (6,1,'Title Notice prueba6','Description Notice prueba6','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO notices VALUES (7,1,'Title Notice prueba7','Description Notice prueba7','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO notices VALUES (8,1,'Title Notice prueba8','Description Notice prueba8','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO notices VALUES (9,1,'Title Notice prueba9','Description Notice prueba9','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO notices VALUES (10,1,'Title Notice prueba10','Description Notice prueba10','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO notices VALUES (11,1,'Title Notice prueba11','Description Notice prueba11','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO notices VALUES (12,1,'Title Notice prueba12','Description Notice prueba12','defaulImage.jpg',sysdate(),sysdate());
+INSERT INTO notices VALUES (1,1,'Title Notice prueba1','Description Notice prueba1','sin-imagen',sysdate(),sysdate());
+INSERT INTO notices VALUES (2,1,'Title Notice prueba2','Description Notice prueba2','sin-imagen',sysdate(),sysdate());
+INSERT INTO notices VALUES (3,1,'Title Notice prueba3','Description Notice prueba3','sin-imagen',sysdate(),sysdate());
+INSERT INTO notices VALUES (4,1,'Title Notice prueba4','Description Notice prueba4','sin-imagen',sysdate(),sysdate());
+INSERT INTO notices VALUES (5,1,'Title Notice prueba5','Description Notice prueba5','sin-imagen',sysdate(),sysdate());
+INSERT INTO notices VALUES (6,1,'Title Notice prueba6','Description Notice prueba6','sin-imagen',sysdate(),sysdate());
+INSERT INTO notices VALUES (7,1,'Title Notice prueba7','Description Notice prueba7','sin-imagen',sysdate(),sysdate());
+INSERT INTO notices VALUES (8,1,'Title Notice prueba8','Description Notice prueba8','sin-imagen',sysdate(),sysdate());
+INSERT INTO notices VALUES (9,1,'Title Notice prueba9','Description Notice prueba9','sin-imagen',sysdate(),sysdate());
+INSERT INTO notices VALUES (10,1,'Title Notice prueba10','Description Notice prueba10','sin-imagen',sysdate(),sysdate());
+INSERT INTO notices VALUES (11,1,'Title Notice prueba11','Description Notice prueba11','sin-imagen',sysdate(),sysdate());
+INSERT INTO notices VALUES (12,1,'Title Notice prueba12','Description Notice prueba12','sin-imagen',sysdate(),sysdate());
 
 // RULES
 
-INSERT INTO rules VALUES (1,1,'Title Rule prueba1','Description Rule prueba1','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO rules VALUES (2,1,'Title Rule prueba2','Description Rule prueba2','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO rules VALUES (3,1,'Title Rule prueba3','Description Rule prueba3','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO rules VALUES (4,1,'Title Rule prueba4','Description Rule prueba4','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO rules VALUES (5,1,'Title Rule prueba5','Description Rule prueba5','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO rules VALUES (6,1,'Title Rule prueba6','Description Rule prueba6','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO rules VALUES (7,1,'Title Rule prueba7','Description Rule prueba7','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO rules VALUES (8,1,'Title Rule prueba8','Description Rule prueba8','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO rules VALUES (9,1,'Title Rule prueba9','Description Rule prueba9','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO rules VALUES (10,1,'Title Rule prueba10','Description Rule prueba10','defaulImage.jpg',sysdate(),sysdate());
-INSERT INTO rules VALUES (11,1,'Title Rule prueba11','Description Rule prueba11','defaulImage.jpg',sysdate(),sysdate());
+INSERT INTO rules VALUES (1,1,'Title Rule prueba1','Description Rule prueba1','sin-imagen',sysdate(),sysdate());
+INSERT INTO rules VALUES (2,1,'Title Rule prueba2','Description Rule prueba2','sin-imagen',sysdate(),sysdate());
+INSERT INTO rules VALUES (3,1,'Title Rule prueba3','Description Rule prueba3','sin-imagen',sysdate(),sysdate());
+INSERT INTO rules VALUES (4,1,'Title Rule prueba4','Description Rule prueba4','sin-imagen',sysdate(),sysdate());
+INSERT INTO rules VALUES (5,1,'Title Rule prueba5','Description Rule prueba5','sin-imagen',sysdate(),sysdate());
+INSERT INTO rules VALUES (6,1,'Title Rule prueba6','Description Rule prueba6','sin-imagen',sysdate(),sysdate());
+INSERT INTO rules VALUES (7,1,'Title Rule prueba7','Description Rule prueba7','sin-imagen',sysdate(),sysdate());
+INSERT INTO rules VALUES (8,1,'Title Rule prueba8','Description Rule prueba8','sin-imagen',sysdate(),sysdate());
+INSERT INTO rules VALUES (9,1,'Title Rule prueba9','Description Rule prueba9','sin-imagen',sysdate(),sysdate());
+INSERT INTO rules VALUES (10,1,'Title Rule prueba10','Description Rule prueba10','sin-imagen',sysdate(),sysdate());
+INSERT INTO rules VALUES (11,1,'Title Rule prueba11','Description Rule prueba11','sin-imagen',sysdate(),sysdate());

@@ -11,10 +11,10 @@
             @include('post.panel-card')
             @break
         @case('notices')
-            @include('post.panel-card')
+            @include('notices.panel-card')
             @break
         @case('rules')
-            @include('post.panel-card')
+            @include('rules.panel-card')
             @break
         @case('users')
             @include('user.showUsers')

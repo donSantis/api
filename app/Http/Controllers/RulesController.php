@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\Rules;
 use App\Http\Requests\StoreRulesRequest;
 use App\Http\Requests\UpdateRulesRequest;
@@ -39,15 +40,13 @@ class RulesController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Rules  $rules
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Rules $rules)
+    public function showRule($id)
     {
-        //
+        $rule = Rules::findOrFail($id);
+
+        return view('rules.card')->with([
+            'rule' => $rule,
+        ]);
     }
 
     /**

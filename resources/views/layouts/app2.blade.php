@@ -37,7 +37,10 @@
                 <div class="col-md-8 float-left">
                     @yield('content')
                 </div>
+                @if($contenido == 'index')
                 @include('includes.sidebar')
+                @else
+                @endif
             </div>
         </div>
     </main>

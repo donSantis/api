@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Notices;
 use App\Http\Requests\StoreNoticesRequest;
 use App\Http\Requests\UpdateNoticesRequest;
+use App\Models\Rules;
 
 class NoticesController extends Controller
 {
@@ -39,15 +40,13 @@ class NoticesController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Notices  $notices
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Notices $notices)
+    public function showNotice($id)
     {
-        //
+        $notice = Notices::findOrFail($id);
+
+        return view('notices.card')->with([
+            'notice' => $notice,
+        ]);
     }
 
     /**

@@ -18,9 +18,16 @@
                             </div>
                             <hr class="line-bottom">
 
-                                <div class="container-img-post pb-2 ">
-                                    <img src="{{ route('post.image',['filename'=>$post->image]) }}" class="img-fluid "/>
-                                </div>
+                            @if($post->image)
+                                @if($post->image == 'sin-imagen')
+
+                                @else
+                                    <div class="container-img-post pb-2 ">
+                                        <img src="{{ route('post.image',['filename'=>$post->image]) }}"
+                                             class="img-fluid "/>
+                                    </div>
+                                @endif
+                            @endif
 
 
                         </div>

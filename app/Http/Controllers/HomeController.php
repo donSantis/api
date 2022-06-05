@@ -51,10 +51,6 @@ class HomeController extends Controller
 
     public function allPosts()
     {
-        $users = DB::table('users')
-            ->select('*')
-            ->get();
-
         $posts = Post::orderBy('id', 'desc')
             ->paginate(3);
 
@@ -63,8 +59,39 @@ class HomeController extends Controller
         $paginator = true;
 
         return view('index', [
-            'users' => $users,
             'posts' => $posts,
+            'contenido' => $contenido,
+            'titulo' => $titulo,
+
+        ]);
+
+    }
+    public function allRules()
+    {
+        $rules = Rules::orderBy('id', 'desc')
+            ->paginate(10);
+
+        $contenido = 'rules';
+        $titulo = 'Todos las reglas';
+
+        return view('index', [
+            'rules' => $rules,
+            'contenido' => $contenido,
+            'titulo' => $titulo,
+
+        ]);
+
+    }
+    public function allNotices()
+    {
+        $notices = Notices::orderBy('id', 'desc')
+            ->paginate(10);
+
+        $contenido = 'notices';
+        $titulo = 'Todas las noticias';
+
+        return view('index', [
+            'notices' => $notices,
             'contenido' => $contenido,
             'titulo' => $titulo,
 
