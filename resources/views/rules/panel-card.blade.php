@@ -23,7 +23,7 @@
                         <a class="nickname-panel mt-2" href="{{'user-card/'}}{{$r->rulesUserId}}"> {{$r->nickname}}</a>
                     </div>
                 </div>
-                <div class="content-space col-6 ">
+                <div class="content-space col-8 ">
                     <div class="row my-2">
                         <a href="{{'post-card/'}}{{$r->id}}"><h1
                                 class="tile-card-panel "> {{substr($r->title,0,25)}}</h1></a>
@@ -36,25 +36,19 @@
                     </div>
 
                 </div>
-                <div class="end-space col-2">
-                    <div class="row">
-                        <a class="icon-panel-count-comment align" href=""> <i class="bi bi-heart-fill"
-                                                                              style="color: red"></i></a>
-                        <h4 class="counter-panel mt-5"> 134</h4>
-                    </div>
-                </div>
+
                 <div class=" col-2">
                     <div class="row">
-                        <a class=" icon-panel-count-comment align" href=""> <i class="bi bi-chat-left-dots"
-                                                                               style="color: black"></i></a>
-                        <h4 class="counter-panel mt-5"> 134</h4>
+                        <a class=" icon-panel-count-comment align" href=""> <i class="bi bi-list-ol"
+                                                                               style="font-size: 35px"></i></a>
+                        <h4 class="counter-panel mt-5"> Ver mas</h4>
                     </div>
                 </div>
 
             </div>
 
         @endforeach
-        @if($contenido = 'index')
+        @if($contenido == 'index')
 
         @else
             <div class="d-flex justify-content-center"> {{$posts->links('vendor.pagination.bootstrap-4')}} </div>
@@ -62,9 +56,7 @@
         @endif
 
 
-        <a href="{{'/all-rules'}}" class="btn rounded-circle align-middle btn-primary btn-sm col-1  text-bald"
-           style="position: absolute; right: 0px" role="button" aria-pressed="true"><i class="bi bi-list-ol"
-                                                                                       style="font-size: 35px"></i></a>
+
         @if( Auth::user()->role == 1)
             <a href="{{'/create-rules'}}" class="btn rounded-circle align-middle btn-success btn-sm col-1  text-bald"
                style="position: absolute; right: 70px" role="button" aria-pressed="true"><i class="bi bi-plus"

@@ -17,17 +17,11 @@
                                 <p class="card-text">{{$post->description}}</p>
                             </div>
                             <hr class="line-bottom">
-                            @if($post->image = "sin-imagen")
-                                @if($post->image = "sin-imagen")
-                                    <div></div>
-                                @else
+
                                 <div class="container-img-post pb-2 ">
                                     <img src="{{ route('post.image',['filename'=>$post->image]) }}" class="img-fluid "/>
                                 </div>
-                                @endif
-                            @else
 
-                            @endif
 
                         </div>
                         <div class="card-footer">

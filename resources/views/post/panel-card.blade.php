@@ -41,7 +41,8 @@
                     <div class="row">
                         <a class="icon-panel-count-comment align" href=""> <i class="bi bi-heart-fill"
                                                                               style="color: red"></i></a>
-                        <h4 class="counter-panel mt-5">{{count($p->comments)}}</h4>
+                        <h4 class="counter-panel mt-5">{{count($p->votes)}}</h4>
+
 
                     </div>
                 </div>
@@ -49,7 +50,8 @@
                     <div class="row">
                         <a class=" icon-panel-count-comment align" href=""> <i class="bi bi-chat-left-dots"
                                                                                style="color: black"></i></a>
-                        <h4 class="counter-panel mt-5">{{count($p->votes)}}</h4>
+
+                        <h4 class="counter-panel mt-5">{{count($p->comments)}}</h4>
                     </div>
                 </div>
 
