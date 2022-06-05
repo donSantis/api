@@ -72,6 +72,22 @@ return [
             'throw' => false,
         ],
 
+        'rule' => [
+            'driver' => 'local',
+            'root' => storage_path('app/post'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
+        'notice' => [
+            'driver' => 'local',
+            'root' => storage_path('app/post'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
 
     ],
 

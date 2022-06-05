@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostController;
@@ -51,12 +52,18 @@ Route::get('/post-card/{id}', [PostController::class, 'showPost'])->name('post-c
 
 //COMMENT CONTROLLER
 Route::post('/save-comment', [CommentController::class, 'save'])->name('save-comment');
+
+
 //RULES CONTROLLER
+Route::get('/create-rule', [RulesController::class, 'create'])->name('create-rule');
+Route::post('/save-rule', [RulesController::class, 'save'])->name('save-rule');
 Route::get('/rule-card/{id}', [RulesController::class, 'showRule'])->name('rule-card');
 //NOTICES CONTROLLER
+Route::get('/create-notice', [NoticesController::class, 'create'])->name('create-notice');
+Route::post('/save-notice', [NoticesController::class, 'save'])->name('save-notice');
 Route::get('/notice-card/{id}', [NoticesController::class, 'showNotice'])->name('notice-card');
 
 
 //VOTE CONTROLLER
-Route::get('/like/{post_id}',  [VotesController::class, 'like'])->name('save-like');
-Route::get('/dislike/{post_id}',  [VotesController::class, 'dislike'])->name('delete-like');
+Route::get('/like/{post_id}', [VotesController::class, 'like'])->name('save-like');
+Route::get('/dislike/{post_id}', [VotesController::class, 'dislike'])->name('delete-like');

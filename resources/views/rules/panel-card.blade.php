@@ -67,7 +67,7 @@
 
 
         @if( Auth::user()->role == 1)
-            <a href="{{'/create-rules'}}" class="btn rounded-circle align-middle btn-success btn-sm col-1  text-bald"
+            <a href="{{'/create-rule'}}" class="btn rounded-circle align-middle btn-success btn-sm col-1  text-bald"
                style="position: absolute; right: 70px" role="button" aria-pressed="true"><i class="bi bi-plus"
                                                                                             style="font-size: 35px"></i></a>
         @endif

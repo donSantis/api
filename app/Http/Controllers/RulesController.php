@@ -6,6 +6,9 @@ use App\Models\Post;
 use App\Models\Rules;
 use App\Http\Requests\StoreRulesRequest;
 use App\Http\Requests\UpdateRulesRequest;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class RulesController extends Controller
 {
@@ -19,25 +22,52 @@ class RulesController extends Controller
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('rules.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreRulesRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreRulesRequest $request)
+
+    public function save(Request $request)
     {
-        //
+        // Validación del formulario
+        $validate = $this->validate($request, [
+            'title' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
+        ]);
+
+        // Recoger datos del formulario
+        $title = $request->input('title');
+        $description = $request->input('description');
+        $image_path = $request->file('image_path');
+
+
+        $user = \Auth::user();
+        $rule = new Rules();
+
+        if ($image_path) {
+            // Poner nombre unico
+            $image_path_name = time() . $image_path->getClientOriginalName();
+
+            // Guardar en la carpeta storage (storage/app/users)
+            Storage::disk('rule')->put($image_path_name, File::get($image_path));
+
+            // Seteo el nombre de la imagen en el objeto
+            $rule->image = $image_path_name;
+        }else{
+            $rule->image = "sin-imagen";
+        }
+
+        $rule->user_id = $user->id;
+        $rule->title = $title;
+        $rule->description = $description;
+
+
+
+
+        $rule->save();
+        return redirect()->route('home')
+            ->with(['message' => 'Usuario actualizado correctamente']);
     }
 
     public function showRule($id)
