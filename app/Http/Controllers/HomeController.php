@@ -10,7 +10,7 @@ class HomeController extends Controller
     //
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth'); // SOLO PUEDEN INGRESAR USUARIOS LOGEADOS A ESTAS FUNCIONES
     }
 
     public function index()
@@ -56,5 +56,33 @@ class HomeController extends Controller
         ]);
 
     }
+
+    public function allPosts()
+    {
+        $users = DB::table('users')
+            ->select('*')
+            ->get();
+
+        $posts = DB::table('posts')
+            ->join('users', 'posts.user_id', '=', 'users.id')
+            ->select('posts.*', 'users.name as name'
+                , 'users.image as imgUser'
+                , 'users.nickname as nickname'
+                , 'posts.user_id as postUserId')
+            ->paginate(1);
+
+        $contenido = 'posts';
+        $titulo = 'Todos los Posts';
+
+        return view('index', [
+            'users' => $users,
+            'posts' => $posts,
+            'contenido' => $contenido,
+            'titulo' => $titulo,
+        ]);
+
+    }
+
+
 
 }

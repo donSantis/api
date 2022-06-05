@@ -48,10 +48,10 @@
             </div>
 
         @endforeach
-        <a href="{{'/create-post'}}" class="btn rounded-circle align-middle btn-primary btn-sm col-1  text-bald" style="position: absolute; right: 70px" role="button" aria-pressed="true"><i class="bi bi-list-ol" style="font-size: 35px"></i>
+        <a href="{{'/all-notices'}}" class="btn rounded-circle align-middle btn-primary btn-sm col-1  text-bald" style="position: absolute; right: 70px" role="button" aria-pressed="true"><i class="bi bi-list-ol" style="font-size: 35px"></i>
         </a>
 
-        <a href="{{'/create-post'}}" class="btn rounded-circle align-middle btn-success btn-sm col-1  text-bald" style="position: absolute; right: 0px" role="button" aria-pressed="true"><i class="bi bi-plus" style="font-size: 35px"></i></a>
+        <a href="{{'/create-notices'}}" class="btn rounded-circle align-middle btn-success btn-sm col-1  text-bald" style="position: absolute; right: 0px" role="button" aria-pressed="true"><i class="bi bi-plus" style="font-size: 35px"></i></a>
     </div>
 </div>
 

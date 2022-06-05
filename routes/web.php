@@ -27,6 +27,10 @@ Auth::routes();
 
 // HOME CONTROLLER
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/all-posts', [HomeController::class, 'allPosts'])->name('all-posts');
+Route::get('/all-rules', [HomeController::class, 'allRules'])->name('all-rules');
+Route::get('/all-notices', [HomeController::class, 'allNotices'])->name('all-notices');
+Route::get('/all-users', [HomeController::class, 'allUsers'])->name('all-users');
 
 // USER CONTROLLER
 Route::get('/config', [UserController::class, 'config'])->name('config');
