@@ -34,7 +34,6 @@
                         </small>
 
                     </div>
-
                 </div>
                 @if($contenido == 'index')
                 <div class=" col-2">

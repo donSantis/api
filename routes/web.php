@@ -48,11 +48,13 @@ Route::get('/create-post', [PostController::class, 'create'])->name('create-post
 Route::post('/save-post', [PostController::class, 'save'])->name('save-post');
 Route::get('/post/image/{filename}', [PostController::class, 'getImagePost'])->name('post.image');
 Route::get('/post-card/{id}', [PostController::class, 'showPost'])->name('post-card');
-Route::get('/rule-card/{id}', [RulesController::class, 'showRule'])->name('rule-card');
-Route::get('/notice-card/{id}', [NoticesController::class, 'showNotice'])->name('notice-card');
+
 //COMMENT CONTROLLER
 Route::post('/save-comment', [CommentController::class, 'save'])->name('save-comment');
-
+//RULES CONTROLLER
+Route::get('/rule-card/{id}', [RulesController::class, 'showRule'])->name('rule-card');
+//NOTICES CONTROLLER
+Route::get('/notice-card/{id}', [NoticesController::class, 'showNotice'])->name('notice-card');
 
 
 //VOTE CONTROLLER
