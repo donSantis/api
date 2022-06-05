@@ -54,15 +54,21 @@
             </div>
 
         @endforeach
+        @if($contenido = 'index')
+
+        @else
+            <div class="d-flex justify-content-center"> {{$posts->links('vendor.pagination.bootstrap-4')}} </div>
+            <!-- SE LE AGREGA AL PAGINATOR LA RUTA DEL HTML CUSTOMIZADO -->
+        @endif
 
 
-            <a href="{{'/all-rules'}}" class="btn rounded-circle align-middle btn-primary btn-sm col-1  text-bald"
-               style="position: absolute; right: 0px" role="button" aria-pressed="true"><i class="bi bi-list-ol"
-                                                                                            style="font-size: 35px"></i></a>
+        <a href="{{'/all-rules'}}" class="btn rounded-circle align-middle btn-primary btn-sm col-1  text-bald"
+           style="position: absolute; right: 0px" role="button" aria-pressed="true"><i class="bi bi-list-ol"
+                                                                                       style="font-size: 35px"></i></a>
         @if( Auth::user()->role == 1)
             <a href="{{'/create-rules'}}" class="btn rounded-circle align-middle btn-success btn-sm col-1  text-bald"
                style="position: absolute; right: 70px" role="button" aria-pressed="true"><i class="bi bi-plus"
-                                                                                           style="font-size: 35px"></i></a>
+                                                                                            style="font-size: 35px"></i></a>
         @endif
     </div>
 </div>

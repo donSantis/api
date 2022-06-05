@@ -69,7 +69,7 @@ class HomeController extends Controller
                 , 'users.image as imgUser'
                 , 'users.nickname as nickname'
                 , 'posts.user_id as postUserId')
-            ->paginate(10);
+            ->paginate(1);
 
         $contenido = 'posts';
         $titulo = 'Todos los Posts';

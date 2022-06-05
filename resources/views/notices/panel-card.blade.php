@@ -54,6 +54,12 @@
             </div>
 
         @endforeach
+        @if($contenido = 'index')
+
+        @else
+            <div class="d-flex justify-content-center"> {{$posts->links('vendor.pagination.bootstrap-4')}} </div>
+            <!-- SE LE AGREGA AL PAGINATOR LA RUTA DEL HTML CUSTOMIZADO -->
+        @endif
         <a href="{{'/all-notices'}}" class="btn rounded-circle align-middle btn-primary btn-sm col-1  text-bald"
            style="position: absolute; right: 0px" role="button" aria-pressed="true"><i class="bi bi-list-ol"
                                                                                        style="font-size: 35px"></i>
