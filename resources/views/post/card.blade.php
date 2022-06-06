@@ -52,6 +52,11 @@
 
                                 <span class="number_likes">{{count($post->votes)}}</span>
                             </div>
+
+                            @if(Auth::user()->id == $post->user->id )
+                                <a href="{{'/post-delete/'}}{{$post->id}}"><i class="bi bi-trash" style="color: red; font-size: 20px"></i></a>
+                            @endif
+
                         </div>
                     </div>
                 </div>

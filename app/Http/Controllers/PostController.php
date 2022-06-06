@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Post;
+use App\Models\Votes;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -79,6 +81,59 @@ class PostController extends Controller
     {
         $file = Storage::disk('post')->get($filename);
         return new Response($file, 200);
+    }
+
+    /* public function delete($id)
+    {
+        // Conseguir datos del usuario logueado
+
+        // Conseguir objeto del comentario
+        $post = Post::find($id);
+
+        // Comprobar si soy el dueño del comentario o de la publicación
+        $post->comments->delete();
+        $post->delete();
+
+        return redirect()->route('post-card', [$post->id])
+            ->with([
+                'message' => 'Pregunta eliminada correctamente!!'
+            ]);
+    }  */
+
+    public function delete($id){
+        $user = \Auth::user();
+        $post = Post::find($id);
+        $comments = Comment::where('post_id', $id)->get();
+        $likes = Votes::where('post_id', $id)->get();
+
+        if($user && $post && $post->user->id == $user->id){
+
+            // Eliminar comentarios
+            if($comments && count($comments) >= 1){
+                foreach($comments as $comment){
+                    $comment->delete();
+                }
+            }
+
+            // Eliminar los likes
+            if($likes && count($likes) >= 1){
+                foreach($likes as $like){
+                    $like->delete();
+                }
+            }
+
+            // Eliminar ficheros de Post
+            Storage::disk('post')->delete($post->image);
+
+            // Eliminar registro Post
+            $post->delete();
+
+            $message = array('message' => 'La post se ha borrado correctamente.');
+        }else{
+            $message = array('message' => 'La post no se ha borrado.');
+        }
+
+        return redirect()->route('home')->with($message);
     }
 
 

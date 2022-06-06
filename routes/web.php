@@ -49,6 +49,7 @@ Route::get('/create-post', [PostController::class, 'create'])->name('create-post
 Route::post('/save-post', [PostController::class, 'save'])->name('save-post');
 Route::get('/post/image/{filename}', [PostController::class, 'getImagePost'])->name('post.image');
 Route::get('/post-card/{id}', [PostController::class, 'showPost'])->name('post-card');
+Route::get('/post-delete/{id}', [PostController::class, 'delete'])->name('post-delete');
 
 //COMMENT CONTROLLER
 Route::post('/save-comment', [CommentController::class, 'save'])->name('save-comment');
