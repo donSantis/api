@@ -53,7 +53,7 @@
         @include('comment.create-perfil')
 
         @foreach($user->perfilComment as $comment)
-            @include('comment.card')
+            @include('comment.card-perfil')
         @endforeach
 
 

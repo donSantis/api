@@ -54,6 +54,9 @@ Route::get('/post-delete/{id}', [PostController::class, 'delete'])->name('post-d
 //COMMENT CONTROLLER
 Route::post('/save-comment', [CommentController::class, 'save'])->name('save-comment');
 Route::get('/comment-delete/{id}', [CommentController::class, 'delete'])->name('comment-delete');
+//PERFIL COMMENT CONTROLLER
+Route::get('/perfil-comment-delete/{id}', [PerfilCommentController::class, 'delete'])->name('perfil-comment-delete');
+
 
 //RULES CONTROLLER
 Route::get('/create-rule', [RulesController::class, 'create'])->name('create-rule');
