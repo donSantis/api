@@ -20,7 +20,7 @@
                             <p class="card-text">{{$comment->description}}</p>
                         </div>
                     </div>
-                    @if(Auth::user()->id == $comment->user->id)
+                    @if(Auth::user()->id == $comment->user->id || $comment->posts->user_id == Auth::user()->id)
                     <a href="{{'/comment-delete/'}}{{$comment->id}}"><i class="bi bi-trash" style="color: red; font-size: 20px"></i></a>
                     @endif
                 </div>
