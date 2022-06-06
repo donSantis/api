@@ -16,8 +16,8 @@
                         <h6 class="card-subtitle mb-2 text-muted">{{$post->user->email}}</h6>
                         <h6 class="card-subtitle mb-2 text-muted">Se unio: {{$post->user->created_at}}</h6>
                         <h6 class="card-subtitle mb-2 text-muted">Role: {{$post->user->role}}</h6>
-                        <h6 class="card-subtitle mb-2 text-muted">Posts: Countposts</h6>
-                        <h6 class="card-subtitle mb-2 text-muted">Comentarios: Countcomments</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Posts: {{count($post->user->post)}}</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Comentarios: {{count($post->user->comment)}}</h6>
 
 
                     </div>
