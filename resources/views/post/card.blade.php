@@ -32,32 +32,37 @@
 
                         </div>
                         <div class="card-footer">
-                            <div class="likes">
+                            <div class="row">
+                                <div class="likes col-6">
 
-                                <!-- Comprobar si el usuario le dio like a la imagen -->
-                                <?php $user_like = false; ?>
-                                @foreach($post->votes as $like)
-                                    @if($like->user->id == Auth::user()->id)
-                                        <?php $user_like = true; ?>
+                                    <!-- Comprobar si el usuario le dio like a la imagen -->
+                                    <?php $user_like = false; ?>
+                                    @foreach($post->votes as $like)
+                                        @if($like->user->id == Auth::user()->id)
+                                            <?php $user_like = true; ?>
+                                        @endif
+                                    @endforeach
+
+                                    @if($user_like)
+                                        <img src="{{asset('img/heart-red.png')}}" data-id="{{$post->id}}"
+                                             class="btn-dislike"/>
+                                    @else
+                                        <img src="{{asset('img/heart-black.png')}}" data-id="{{$post->id}}"
+                                             class="btn-like"/>
                                     @endif
-                                @endforeach
 
-                                @if($user_like)
-                                    <img src="{{asset('img/heart-red.png')}}" data-id="{{$post->id}}"
-                                         class="btn-dislike"/>
-                                @else
-                                    <img src="{{asset('img/heart-black.png')}}" data-id="{{$post->id}}"
-                                         class="btn-like"/>
+                                    <span class="number_likes">{{count($post->votes)}}</span>
+
+
+                                </div>
+
+                                @if(Auth::user()->id == $post->user->id )
+                                    <a class=" col-2" href="{{'/post-delete/'}}{{$post->id}}"><i class="bi bi-trash"
+                                                                                                 style="color: red; font-size: 40px"></i></a>
+                                    <a class=" col-2" href="{{'/post-edit/'}}{{$post->id}}"><i
+                                            class="bi bi-pencil-square" style="color: green; font-size: 40px"></i></a>
                                 @endif
-
-                                <span class="number_likes">{{count($post->votes)}}</span>
                             </div>
-
-                            @if(Auth::user()->id == $post->user->id )
-                                <a href="{{'/post-delete/'}}{{$post->id}}"><i class="bi bi-trash" style="color: red; font-size: 20px"></i></a>
-                            @endif
-                            <a href="{{'/post-edit/'}}{{$post->id}}"><i class="bi bi-trash" style="color: green; font-size: 20px"></i></a>
-
                         </div>
                     </div>
                 </div>
