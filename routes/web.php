@@ -52,7 +52,7 @@ Route::get('/post-card/{id}', [PostController::class, 'showPost'])->name('post-c
 
 //COMMENT CONTROLLER
 Route::post('/save-comment', [CommentController::class, 'save'])->name('save-comment');
-
+Route::get('/comment-delete/{id}', [CommentController::class, 'delete'])->name('comment-delete');
 
 //RULES CONTROLLER
 Route::get('/create-rule', [RulesController::class, 'create'])->name('create-rule');

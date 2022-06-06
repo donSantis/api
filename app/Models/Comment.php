@@ -15,7 +15,7 @@ class Comment extends Model
 
     // Relación One To Many / de uno a muchos
     public function posts(){
-        return $this->hasMany('App\models\Comment')->orderBy('id', 'desc');
+        return $this->belongsTo('App\models\Post', 'post_id');
     }
 
     // Relación One To Many

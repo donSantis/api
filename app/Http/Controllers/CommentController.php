@@ -4,9 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Comment;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Http\Response;
 
 class CommentController extends Controller
 {
@@ -39,7 +36,27 @@ class CommentController extends Controller
         $comment->save();
 
         // Redirección
-        return redirect()->route('home');
+        return redirect()->route('post-card', [$comment->posts->id])
+            ->with([
+                'message' => 'Comentario agregado correctamente!!'
+            ]);
+    }
+
+    public function delete($id)
+    {
+        // Conseguir datos del usuario logueado
+
+        // Conseguir objeto del comentario
+        $comment = Comment::find($id);
+
+        // Comprobar si soy el dueño del comentario o de la publicación
+
+        $comment->delete();
+
+        return redirect()->route('post-card', [$comment->posts->id])
+            ->with([
+                'message' => 'Comentario eliminado correctamente!!'
+            ]);
     }
 
 
