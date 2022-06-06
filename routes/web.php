@@ -50,7 +50,8 @@ Route::post('/save-post', [PostController::class, 'save'])->name('save-post');
 Route::get('/post/image/{filename}', [PostController::class, 'getImagePost'])->name('post.image');
 Route::get('/post-card/{id}', [PostController::class, 'showPost'])->name('post-card');
 Route::get('/post-delete/{id}', [PostController::class, 'delete'])->name('post-delete');
-
+Route::get('/post-edit/{id}', [PostController::class, 'edit'])->name('post-edit');
+Route::post('/post/update', [PostController::class, 'update'])->name('post-update');
 //COMMENT CONTROLLER
 Route::post('/save-comment', [CommentController::class, 'save'])->name('save-comment');
 Route::get('/comment-delete/{id}', [CommentController::class, 'delete'])->name('comment-delete');

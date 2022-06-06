@@ -5,12 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Comment;
 use App\Models\Post;
 use App\Models\Votes;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Response;
 
 class PostController extends Controller
@@ -33,7 +30,6 @@ class PostController extends Controller
     {
         return view('post.create');
     }
-
 
     public function save(Request $request)
     {
@@ -83,23 +79,6 @@ class PostController extends Controller
         return new Response($file, 200);
     }
 
-    /* public function delete($id)
-    {
-        // Conseguir datos del usuario logueado
-
-        // Conseguir objeto del comentario
-        $post = Post::find($id);
-
-        // Comprobar si soy el dueño del comentario o de la publicación
-        $post->comments->delete();
-        $post->delete();
-
-        return redirect()->route('post-card', [$post->id])
-            ->with([
-                'message' => 'Pregunta eliminada correctamente!!'
-            ]);
-    }  */
-
     public function delete($id){
         $user = \Auth::user();
         $post = Post::find($id);
@@ -134,6 +113,57 @@ class PostController extends Controller
         }
 
         return redirect()->route('home')->with($message);
+    }
+
+
+    public function edit($id){
+        $user = \Auth::user();
+        $post = Post::find($id);
+
+        if($user && $post && $post->user->id == $user->id){
+            return view('post.post-edit', [
+                'post' => $post
+            ]);
+        }else{
+            return redirect()->route('home');
+        }
+    }
+
+    public function update(Request $request)
+    {
+        // Validación del formulario
+        $validate = $this->validate($request, [
+            'title' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
+        ]);
+
+        // Recoger datos del formulario
+        $post_id = $request->input('post_id');
+        $title = $request->input('title');
+        $description = $request->input('description');
+        $image_path = $request->file('image_path');
+
+        $post = Post::find($post_id);
+
+        $post->title = $title;
+        $post->description = $description;
+
+        if ($image_path) {
+            // Poner nombre unico
+            $image_path_name = time() . $image_path->getClientOriginalName();
+            // Guardar en la carpeta storage (storage/app/users)
+            Storage::disk('post')->put($image_path_name, File::get($image_path));
+            // Seteo el nombre de la imagen en el objeto
+            $post->image = $image_path_name;
+        }
+
+
+
+        // Ejecutar consulta y cambios en la base de datos
+        $post->update();
+
+        return redirect()->route('home')
+            ->with(['message' => 'Post actualizado correctamente']);
     }
 
 

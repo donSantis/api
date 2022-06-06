@@ -56,6 +56,7 @@
                             @if(Auth::user()->id == $post->user->id )
                                 <a href="{{'/post-delete/'}}{{$post->id}}"><i class="bi bi-trash" style="color: red; font-size: 20px"></i></a>
                             @endif
+                            <a href="{{'/post-edit/'}}{{$post->id}}"><i class="bi bi-trash" style="color: green; font-size: 20px"></i></a>
 
                         </div>
                     </div>
