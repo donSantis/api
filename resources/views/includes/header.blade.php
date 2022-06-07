@@ -10,8 +10,8 @@
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                <span class="navbar-toggler-icon"></span>
+                    aria-expanded="false" aria-label="{{ __('Toggle navigation') }}" style="background-color: #FFFFFF;">
+                <span class="navbar-toggler-icon" ></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -105,5 +105,39 @@
             </div>
         </div>
     </div>
-    <!-- Background image -->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #FFFFFF;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+                <ul class="navbar-nav mr-auto col-12">
+                    <li class="nav-item col-2 ">
+                        <a class="nav-link " href="#" >Inicio </a>
+                    </li>
+                    <li class="nav-item col-2 ">
+                        <a class="nav-link" href="#"> Seccion</a>
+                    </li>
+                    <li class="nav-item col-2 ">
+                        <a class="nav-link" href="#">Escuela</a>
+                    </li>
+                    <li class="nav-item col-2 ">
+                        <a class="nav-link" href="#">Profesores</a>
+                    </li>
+                    <li class="nav-item col-2 ">
+                        <a class="nav-link" href="#">Compañeros</a>
+                    </li>
+                    <li class="nav-item col-2 ">
+                        <a class="nav-link" href="#">Nosotros</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
 </div>
