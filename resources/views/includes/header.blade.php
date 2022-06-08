@@ -131,7 +131,7 @@
                         <a class="nav-link" href="#">Compañeros</a>
                     </li>
                     <li class="nav-item col-2 ">
-                        <a class="nav-link" href="#">Nosotros</a>
+                        <a class="nav-link" href="/all-users">Nosotros</a>
                     </li>
 
 

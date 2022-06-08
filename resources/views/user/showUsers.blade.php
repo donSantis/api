@@ -11,9 +11,10 @@
 
         <div class="row">
             @foreach ($users as $u)
+                @if($u->role == 2 && $u->school == Auth::user()->school)
 
                 <div class="card col-sm-5 d-flex m-4 shadow" style="width: 18rem; border-radius: 20px">
-                    <img class="card-img-top rounded-circle "
+                    <img class="card-img-top mt-3 rounded-circle "
                          src="{{ route('user.avatar',['filename'=>$u->image]) }}"
                          alt="Card image cap"
                          style="height: 200px">
@@ -22,6 +23,7 @@
                         <h5 class="card-title">{{$u->name}}</h5>
                         <div class="row">
 
+                            <small> {{$u->nickname}}</small>
                             <small> {{$u->email}}</small>
                             <small> {{$u->school->description}}</small>
 
@@ -43,10 +45,10 @@
 
                         </div>
 
-                        <a href="#" class="btn btn-primary m-2">Ir a perfil</a>
+                        <a href="#" class="btn   btn-primary m-2">Ir a perfil</a>
                     </div>
                 </div>
-
+                @endif
             @endforeach
         </div>
     </div>
