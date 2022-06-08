@@ -31,16 +31,27 @@ INSERT INTO careers VALUES (9,9,'Turismo y Hotelería','Turismo y Hotelería',sy
 INSERT INTO users VALUES (1,'admin',6,'Admin','Admin',12345,'admin@admin.com',12345786,'001V',1,'defaultImage.jpg',sysdate(),sysdate());
 INSERT INTO users VALUES (2,'iv.santis',6,'donSantis','Santis',12345,'iv.santis@duocuc.com',123448201,'002V',1,'defaultImage.jpg',sysdate(),sysdate());
 INSERT INTO users VALUES (3,'di.jacques',6,'donJacques','Jacques',12345,'di.jacques@duocuc.com',33345786,'003V',1,'defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO users VALUES (4,'di.retamal',6,'donRetamal','Retamal',12345,'di.retamal@duocuc.com',12345786,'004V',1,'defaultImage.jpg',sysdate(),sysdate());
-
+INSERT INTO users VALUES (4,'fr.espinosa',6,'donEspinosa','Espinosa',12345,'fr.espinosa@duocuc.com',12345786,'004V',1,'defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (5,'ca.donoso',6,'donaDonoso','Donoso',12345,'ca.donoso@duocuc.com',12345786,'001V',1,'defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (6,'la.gutierrez',6,'donGutierrez','Gutierrez',12345,'la.gutierrez@duocuc.com',12345786,'002V',1,'defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (7,'lc.godoy',6,'donChani','Godoy',12345,'lc.godoy@duocuc.com',12345786,'003V',1,'defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (8,'am.donoso',6,'donaAmali','Donoso',12345,'am.donoso@duocuc.com',12345786,'004V',1,'defaultImage.jpg',sysdate(),sysdate());
 
 
 // POSTS
 
-INSERT INTO posts VALUES (1,2,'Title prueba','Description prueba','defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (1,2,'Title prueba1','Description prueba1','defaultImage.jpg',sysdate(),sysdate());
 INSERT INTO posts VALUES (2,2,'Title prueba2','Description prueba2','defaultImage.jpg',sysdate(),sysdate());
 INSERT INTO posts VALUES (3,3,'Title prueba3','Description prueba3','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO posts VALUES (4,4,'Title prueba4','Description prueba4','defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (4,3,'Title prueba4','Description prueba4','defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (5,4,'Title prueba5','Description prueba5','defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (6,4,'Title prueba6','Description prueba6','defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (7,5,'Title prueba7','Description prueba7','defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (8,5,'Title prueba8','Description prueba8','defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (9,6,'Title prueba9','Description prueba9','defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (10,6,'Title prueba10','Description prueba10','defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (11,7,'Title prueba11','Description prueba11','defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (12,7,'Title prueba12','Description prueba12','defaultImage.jpg',sysdate(),sysdate());
 
 
 // COMMENTARYS

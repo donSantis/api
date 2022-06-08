@@ -16,6 +16,15 @@
         @case('rules')
             @include('rules.panel-card')
             @break
+        @case('teachers')
+            @include('home.teachers')
+            @break
+        @case('devs')
+            @include('home.devs')
+            @break
+        @case('sectionPartners')
+            @include('home.section-partners')
+            @break
         @case('users')
             @include('user.showUsers')
             @break

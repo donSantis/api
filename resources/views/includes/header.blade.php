@@ -119,19 +119,19 @@
                         <a class="nav-link " href="/" >Inicio </a>
                     </li>
                     <li class="nav-item col-2 ">
-                        <a class="nav-link" href="#"> Seccion</a>
+                        <a class="nav-link" href="/section-partners"> Seccion</a>
                     </li>
                     <li class="nav-item col-2 ">
                         <a class="nav-link" href="#">Escuela</a>
                     </li>
                     <li class="nav-item col-2 ">
-                        <a class="nav-link" href="#">Profesores</a>
+                        <a class="nav-link" href="/teachers">Profesores</a>
                     </li>
                     <li class="nav-item col-2 ">
-                        <a class="nav-link" href="#">Compañeros</a>
+                        <a class="nav-link" href="/">Compañeros</a>
                     </li>
                     <li class="nav-item col-2 ">
-                        <a class="nav-link" href="/all-users">Nosotros</a>
+                        <a class="nav-link" href="/devs">Nosotros</a>
                     </li>
 
 
