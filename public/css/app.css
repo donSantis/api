@@ -15,7 +15,7 @@
 }
 
 
-.header-cards-all a{
+.header-cards-all .nav-link{
     color: #ffffff;
 }
 
@@ -87,6 +87,13 @@ form .avatar{
 
 
 .icon-panel-count-comment{
+    width: 30px;
+    height: 30px;
+    font-size: 50px;
+    text-align: center;
+
+}
+.icon-panel-count-comment-card{
     width: 30px;
     height: 30px;
     font-size: 50px;

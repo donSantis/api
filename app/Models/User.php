@@ -2,12 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
@@ -57,6 +55,16 @@ class User extends Authenticatable
     // Relación One To Many / de uno a muchos
     public function comment(){
         return $this->hasMany('App\Models\Comment')->orderBy('id', 'desc');
+    }
+    public function perfilcomment(){
+        return $this->hasMany('App\Models\PerfilComment')->orderBy('id', 'desc');
+    }
+
+    public function school(){
+        return $this->hasOne(School::class, 'id');
+    }
+    public function career(){
+        return $this->hasOne(Career::class, 'id');
     }
 
 }

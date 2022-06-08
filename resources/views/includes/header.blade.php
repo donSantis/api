@@ -116,7 +116,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent2">
                 <ul class="navbar-nav mr-auto col-12">
                     <li class="nav-item col-2 ">
-                        <a class="nav-link " href="#" >Inicio </a>
+                        <a class="nav-link " href="/" >Inicio </a>
                     </li>
                     <li class="nav-item col-2 ">
                         <a class="nav-link" href="#"> Seccion</a>

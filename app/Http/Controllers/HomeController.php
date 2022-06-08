@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Rules;
 use App\Models\Notices;
 use App\Models\Post;
-use Illuminate\Http\Request;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
-use PHPUnit\Framework\Error\Notice;
 
 class HomeController extends Controller
 {
@@ -92,6 +91,23 @@ class HomeController extends Controller
 
         return view('index', [
             'notices' => $notices,
+            'contenido' => $contenido,
+            'titulo' => $titulo,
+
+        ]);
+
+    }
+
+    public function allUsers()
+    {
+        $users = User::orderBy('id', 'desc')
+            ->paginate(5);
+
+        $contenido = 'users';
+        $titulo = 'Todos los usuarios';
+
+        return view('index', [
+            'users' => $users,
             'contenido' => $contenido,
             'titulo' => $titulo,
 

@@ -1,51 +1,56 @@
+<div class="card">
+    <div class="header-cards-all">
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                        Usuarios registrados
-                    </div>
-                    <div class="card-body">
-                        <div class="col-md-12">
-                            <table class="table table-bordered" style="align-content: center">
-                                <thead>
-                                    <tr>
-                                        <th>Username</th>
-                                        <th>Lastname</th>
-                                        <th>Mail</th>
-                                        <th>Phone</th>
-                                        <th>Rol</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
+        <div class="col-8 card-header">Profesores
+        </div>
 
-                                <tbody>
-                                    @foreach ($users as $u)
-                                        <tr>
-                                            <td>{{ $u->username }}</td>
-                                            <td>{{ $u->lastname }}</td>
-                                            <td>{{ $u->mail }}</td>
-                                            <td>{{ $u->phone }}</td>
-                                            <td>{{ $u->role }}</td>
-                                            <td>
-                                                <a class="bi bi-eye"
-                                                    href="">
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-    <div class="row">
-                    <button class="btn btn-success btn-sm col-2 p-2 m-2" >AGREGAR</button>
-                    <button class="btn btn-primary btn-sm col-2 p-2 m-2" >EDITAR</button>
-                    <button class="btn btn-danger btn-sm col-2 p-2 m-2" >ELIMINAR</button>
+
     </div>
+    <div class="card-body">
+
+
+        <div class="row">
+            @foreach ($users as $u)
+
+                <div class="card col-sm-5 d-flex m-4 shadow" style="width: 18rem; border-radius: 20px">
+                    <img class="card-img-top rounded-circle "
+                         src="{{ route('user.avatar',['filename'=>$u->image]) }}"
+                         alt="Card image cap"
+                         style="height: 200px">
+
+                    <div class="card-body" >
+                        <h5 class="card-title">{{$u->name}}</h5>
+                        <div class="row">
+
+                            <small> {{$u->email}}</small>
+                            <small> {{$u->school->description}}</small>
+
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <a class="icon-panel-count-comment  col-6" href=""> <i class="bi bi-chat-left-dots"
+                                                                                  style="color: blue"></i></a>
+
+
+
+                            <a class=" icon-panel-count-comment col-6" href=""> <i class="bi bi-stickies"
+                                                                                   style="color: black"></i></a>
+
+                            <h4 class="counter-panel mt-5  mb-3 col-6">{{count($u->comment)}}</h4>
+
+                            <h4 class="counter-panel mt-5 mb-3 col-6">{{count($u->post)}}</h4>
+
+
+                        </div>
+
+                        <a href="#" class="btn btn-primary m-2">Ir a perfil</a>
+                    </div>
                 </div>
-            </div>
+
+            @endforeach
         </div>
     </div>
+</div>
+
+
 
