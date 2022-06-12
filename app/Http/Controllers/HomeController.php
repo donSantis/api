@@ -18,10 +18,10 @@ class HomeController extends Controller
 
     public function index()
     {
-        $rules = Rules::orderBy('id', 'desc')
+        $rules = Rules::orderBy('id', 'asc')
             ->paginate(1);
 
-        $notices = Notices::orderBy('id', 'desc')
+        $notices = Notices::orderBy('id', 'asc')
             ->paginate(1);
 
         $users = DB::table('users')
@@ -51,7 +51,7 @@ class HomeController extends Controller
     public function allPosts()
     {
         $posts = Post::orderBy('id', 'desc')
-            ->paginate(3);
+            ->paginate(10);
 
         $contenido = 'posts';
         $titulo = 'Todos los Posts';

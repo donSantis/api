@@ -2,7 +2,7 @@
 
 <div class="col-md-3  float-rigth ">
 
-    <div class=" card">
+    <div class=" card ">
         <div class="header-cards-all">
             <div class="card-header">{{ __('Últimos Post') }}
         </div>
