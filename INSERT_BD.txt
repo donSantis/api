@@ -2,6 +2,18 @@ drop database portafolio
 Create database portafolio
 use portafolio
 
+// COMO CORRER EL PROJECT
+
+1) DESCARGAR DESDE EL REPOSITORY
+2) Rename .env.example file to .env y cambiar los valores en laravel, ingresar su mysql y contraseña
+3) composer install/update
+4) php artisan clear-compiled
+5) composer dump-autoload
+6) php artisan key:generate
+7) php artisan migrate
+8) poblar base de datos (INSERT_BD)
+9) php artisan serve
+
 // SCHOOLS
 
 INSERT INTO schools VALUES (1,'Administración y Negocios','Escuela de Administración y Negocios',sysdate(),sysdate());

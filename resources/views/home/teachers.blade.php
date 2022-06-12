@@ -11,7 +11,7 @@
 
         <div class="row">
             @foreach ($users as $u)
-                @if($u->role == 3 && $u->career_id == Auth::user()->career_id)
+                @if($u->role == 2 && $u->career_id == Auth::user()->career_id)
 
                     <div class="card col-sm-5 d-flex m-4 shadow" style="width: 18rem; border-radius: 20px">
                         <img class="card-img-top mt-3 rounded-circle "

@@ -101,7 +101,7 @@ class HomeController extends Controller
     public function allUsers()
     {
         $users = User::orderBy('id', 'desc')
-            ->paginate(5);
+            ->paginate(10);
 
         $contenido = 'users';
         $titulo = 'Todos los usuarios';
@@ -118,7 +118,7 @@ class HomeController extends Controller
     public function teachers()
     {
         $users = User::orderBy('id', 'desc')
-            ->paginate(5);
+            ->paginate(10);
 
         $contenido = 'teachers';
         $titulo = 'Profesores';
@@ -135,7 +135,7 @@ class HomeController extends Controller
     public function sectionPartners()
     {
         $users = User::orderBy('id', 'desc')
-            ->paginate(5);
+            ->paginate(10);
 
         $contenido = 'sectionPartners';
         $titulo = 'Todos los compañeros de seccion';
@@ -151,7 +151,7 @@ class HomeController extends Controller
     public function partnerCareer()
     {
         $users = User::orderBy('id', 'desc')
-            ->paginate(5);
+            ->paginate(10);
 
         $contenido = 'users';
         $titulo = 'Todos los compañeros de carrera';
@@ -168,7 +168,7 @@ class HomeController extends Controller
     public function devs()
     {
         $users = User::orderBy('id', 'desc')
-            ->paginate(5);
+            ->paginate(10);
 
         $contenido = 'devs';
         $titulo = 'Desarrolladores';

@@ -105,6 +105,7 @@
             </div>
         </div>
     </div>
+    @if(Auth::user())
     <nav class="navbar navbar-expand-lg ">
         <div class="container">
 
@@ -140,4 +141,5 @@
             </div>
         </div>
     </nav>
+    @endif
 </div>

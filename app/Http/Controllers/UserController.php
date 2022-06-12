@@ -52,7 +52,7 @@ class UserController extends Controller
             'nickname' => 'required|string|max:255|unique:users,nickname,' . $id,
             'lastname' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users,email,' . $id,
-            'phone' => 'required|integer|',
+            'phone' => 'required|digits:8',
         ]);
 
         // Recoger datos del formulario

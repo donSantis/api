@@ -91,9 +91,9 @@
                                            class="col-md-4 col-form-label text-md-end">{{ __('Telefono (+569)') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="phone" type="phone"
+                                        <input id="phone" type="text"
                                                class="form-control @error('phone') is-invalid @enderror" name="phone"
-                                               value="{{ Auth::user()->phone }}" required autocomplete="phone">
+                                               value="{{ Auth::user()->phone }}" required >
 
                                         @error('phone')
                                         <span class="invalid-feedback" role="alert">
