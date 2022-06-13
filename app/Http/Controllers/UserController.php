@@ -105,6 +105,9 @@ class UserController extends Controller
         $id = $user->id;
         $image_path = $request->file('image_path');
         if ($image_path) {
+            if($user->image != 'defaultImage.jpg'){
+                Storage::disk('users')->delete($user->image);
+            }
             // Poner nombre unico
             $image_path_name = time() . $image_path->getClientOriginalName();
 
