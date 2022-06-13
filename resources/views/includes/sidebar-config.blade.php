@@ -11,11 +11,14 @@
                             @csrf
                             <div class="row mb-3">
 
-                                <label for="image_path" class="col-md-4 col-form-label text-md-right">{{ __('Avatar') }}</label>
+                                <label for="image_path"
+                                       class="col-md-4 col-form-label text-md-right">{{ __('Avatar') }}</label>
 
                                 <div class="col-md-7">
                                     @include('includes.avatar')
-                                    <input id="image_path" type="file" class="form-control{{ $errors->has('image_path') ? ' is-invalid' : '' }}" name="image_path">
+                                    <input id="image_path" type="file"
+                                           class="form-control{{ $errors->has('image_path') ? ' is-invalid' : '' }}"
+                                           name="image_path">
 
                                     @if ($errors->has('image_path'))
                                         <span class="invalid-feedback" role="alert">
@@ -24,7 +27,6 @@
                                     @endif
                                 </div>
                             </div>
-
 
 
                             <div class="row mb-0">
@@ -55,10 +57,13 @@
 
 
                             <div class="row mb-3">
-                                <label for="new_password" class="col-md-4 col-form-label text-md-end">{{ __('Nuevo Password') }}</label>
+                                <label for="new_password"
+                                       class="col-md-4 col-form-label text-md-end">{{ __('Nuevo Password') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="new_password"  class="form-control @error('new_password') is-invalid @enderror" name="new_password" required autocomplete="new-password">
+                                    <input id="new_password"
+                                           class="form-control @error('new_password') is-invalid @enderror"
+                                           name="new_password" required autocomplete="new-password">
 
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -69,10 +74,12 @@
                             </div>
 
                             <div class="row mb-3">
-                                <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirmar Password') }}</label>
+                                <label for="password-confirm"
+                                       class="col-md-4 col-form-label text-md-end">{{ __('Confirmar Password') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password-confirm"  class="form-control" name="password-confirm" required autocomplete="password-confirm">
+                                    <input id="password-confirm" class="form-control" name="password-confirm" required
+                                           autocomplete="password-confirm">
                                 </div>
                             </div>
 

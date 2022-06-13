@@ -10,7 +10,7 @@
                             <div class="card-header">Actualizar Post</div>
                         </div>
                         <div class="card-body">
-                            <form method="POST" action="{{ route('post-update') }}">
+                            <form method="POST"  enctype="multipart/form-data" action="{{ route('post-update') }}">
                                 @csrf
                                 <input type="hidden" name="post_id" value="{{$post->id}}" />
 

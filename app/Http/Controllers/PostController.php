@@ -131,30 +131,23 @@ class PostController extends Controller
 
     public function update(Request $request)
     {
-        // Validación del formulario
-        $validate = $this->validate($request, [
-            'title' => 'required|string|max:255',
-            'description' => 'required|string|max:255',
-        ]);
 
         // Recoger datos del formulario
         $post_id = $request->input('post_id');
-        $title = $request->input('title');
-        $description = $request->input('description');
         $image_path = $request->file('image_path');
-
         $post = Post::find($post_id);
-
-        $post->title = $title;
-        $post->description = $description;
 
         if ($image_path) {
             // Poner nombre unico
             $image_path_name = time() . $image_path->getClientOriginalName();
+
             // Guardar en la carpeta storage (storage/app/users)
             Storage::disk('post')->put($image_path_name, File::get($image_path));
+
             // Seteo el nombre de la imagen en el objeto
             $post->image = $image_path_name;
+        }else{
+            $post->image = "sin-imagen";
         }
         // Ejecutar consulta y cambios en la base de datos
         $post->update();
