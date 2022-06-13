@@ -52,18 +52,18 @@ INSERT INTO users VALUES (8,'am.donoso',6,'donaAmali','Donoso',12345,'am.donoso@
 
 // POSTS
 
-INSERT INTO posts VALUES (1,2,'Title prueba1','Description prueba1','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO posts VALUES (2,2,'Title prueba2','Description prueba2','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO posts VALUES (3,3,'Title prueba3','Description prueba3','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO posts VALUES (4,3,'Title prueba4','Description prueba4','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO posts VALUES (5,4,'Title prueba5','Description prueba5','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO posts VALUES (6,4,'Title prueba6','Description prueba6','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO posts VALUES (7,5,'Title prueba7','Description prueba7','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO posts VALUES (8,5,'Title prueba8','Description prueba8','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO posts VALUES (9,6,'Title prueba9','Description prueba9','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO posts VALUES (10,6,'Title prueba10','Description prueba10','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO posts VALUES (11,7,'Title prueba11','Description prueba11','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO posts VALUES (12,7,'Title prueba12','Description prueba12','defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (1,2,'Title prueba1','Description prueba1','sin-imagen',sysdate(),sysdate());
+INSERT INTO posts VALUES (2,2,'Title prueba2','Description prueba2','sin-imagen',sysdate(),sysdate());
+INSERT INTO posts VALUES (3,3,'Title prueba3','Description prueba3','sin-imagen',sysdate(),sysdate());
+INSERT INTO posts VALUES (4,3,'Title prueba4','Description prueba4','sin-imagen',sysdate(),sysdate());
+INSERT INTO posts VALUES (5,4,'Title prueba5','Description prueba5','sin-imagen',sysdate(),sysdate());
+INSERT INTO posts VALUES (6,4,'Title prueba6','Description prueba6','sin-imagen',sysdate(),sysdate());
+INSERT INTO posts VALUES (7,5,'Title prueba7','Description prueba7','sin-imagen',sysdate(),sysdate());
+INSERT INTO posts VALUES (8,5,'Title prueba8','Description prueba8','sin-imagen',sysdate(),sysdate());
+INSERT INTO posts VALUES (9,6,'Title prueba9','Description prueba9','sin-imagen',sysdate(),sysdate());
+INSERT INTO posts VALUES (10,6,'Title prueba10','Description prueba10','sin-imagen',sysdate(),sysdate());
+INSERT INTO posts VALUES (11,7,'Title prueba11','Description prueba11','sin-imagen',sysdate(),sysdate());
+INSERT INTO posts VALUES (12,7,'Title prueba12','Description prueba12','sin-imagen',sysdate(),sysdate());
 
 
 // COMMENTARYS
@@ -89,7 +89,6 @@ INSERT INTO comments VALUES (18,6,6,'Description prueba18',sysdate(),sysdate());
 INSERT INTO comments VALUES (19,7,7,'Description prueba19',sysdate(),sysdate());
 INSERT INTO comments VALUES (20,8,8,'Description prueba20',sysdate(),sysdate());
 INSERT INTO comments VALUES (21,9,9,'Description prueba21',sysdate(),sysdate());
-
 INSERT INTO comments VALUES (22,3,1,'Description prueba22',sysdate(),sysdate());
 INSERT INTO comments VALUES (23,4,2,'Description prueba23',sysdate(),sysdate());
 INSERT INTO comments VALUES (24,5,3,'Description prueba24',sysdate(),sysdate());
@@ -234,3 +233,71 @@ INSERT INTO perfilcomments VALUES (60,6,6,'Description prueba60',sysdate(),sysda
 INSERT INTO perfilcomments VALUES (61,7,5,'Description prueba61',sysdate(),sysdate());
 INSERT INTO perfilcomments VALUES (62,8,4,'Description prueba62',sysdate(),sysdate());
 INSERT INTO perfilcomments VALUES (63,9,3,'Description prueba63',sysdate(),sysdate());
+
+
+
+// PROFILE LIKES/VOTES
+
+INSERT INTO votes VALUES (1,3,9,sysdate(),sysdate());
+INSERT INTO votes VALUES (2,4,8,sysdate(),sysdate());
+INSERT INTO votes VALUES (3,5,7,sysdate(),sysdate());
+INSERT INTO votes VALUES (4,6,6,sysdate(),sysdate());
+INSERT INTO votes VALUES (5,7,5,sysdate(),sysdate());
+INSERT INTO votes VALUES (6,8,4,sysdate(),sysdate());
+INSERT INTO votes VALUES (7,9,3,sysdate(),sysdate());
+INSERT INTO votes VALUES (8,3,9,sysdate(),sysdate());
+INSERT INTO votes VALUES (9,4,8,sysdate(),sysdate());
+INSERT INTO votes VALUES (10,5,7,sysdate(),sysdate());
+INSERT INTO votes VALUES (11,6,6,sysdate(),sysdate());
+INSERT INTO votes VALUES (12,7,5,sysdate(),sysdate());
+INSERT INTO votes VALUES (13,8,4,sysdate(),sysdate());
+INSERT INTO votes VALUES (14,9,3,sysdate(),sysdate());
+INSERT INTO votes VALUES (15,3,9,sysdate(),sysdate());
+INSERT INTO votes VALUES (16,4,8,sysdate(),sysdate());
+INSERT INTO votes VALUES (17,5,7,sysdate(),sysdate());
+INSERT INTO votes VALUES (18,6,6,sysdate(),sysdate());
+INSERT INTO votes VALUES (19,7,5,sysdate(),sysdate());
+INSERT INTO votes VALUES (20,8,4,sysdate(),sysdate());
+INSERT INTO votes VALUES (21,9,3,sysdate(),sysdate());
+INSERT INTO votes VALUES (22,3,9,sysdate(),sysdate());
+INSERT INTO votes VALUES (23,4,8,sysdate(),sysdate());
+INSERT INTO votes VALUES (24,5,7,sysdate(),sysdate());
+INSERT INTO votes VALUES (25,6,6,sysdate(),sysdate());
+INSERT INTO votes VALUES (26,7,5,sysdate(),sysdate());
+INSERT INTO votes VALUES (27,8,4,sysdate(),sysdate());
+INSERT INTO votes VALUES (28,9,3,sysdate(),sysdate());
+INSERT INTO votes VALUES (29,3,9,sysdate(),sysdate());
+INSERT INTO votes VALUES (30,4,8,sysdate(),sysdate());
+INSERT INTO votes VALUES (31,5,7,sysdate(),sysdate());
+INSERT INTO votes VALUES (32,6,6,sysdate(),sysdate());
+INSERT INTO votes VALUES (33,7,4,sysdate(),sysdate());
+INSERT INTO votes VALUES (34,8,3,sysdate(),sysdate());
+INSERT INTO votes VALUES (35,9,3,sysdate(),sysdate());
+INSERT INTO votes VALUES (36,3,9,sysdate(),sysdate());
+INSERT INTO votes VALUES (37,4,8,sysdate(),sysdate());
+INSERT INTO votes VALUES (38,5,7,sysdate(),sysdate());
+INSERT INTO votes VALUES (39,6,6,sysdate(),sysdate());
+INSERT INTO votes VALUES (40,7,5,sysdate(),sysdate());
+INSERT INTO votes VALUES (41,8,4,sysdate(),sysdate());
+INSERT INTO votes VALUES (42,9,3,sysdate(),sysdate());
+INSERT INTO votes VALUES (43,3,9,sysdate(),sysdate());
+INSERT INTO votes VALUES (44,4,8,sysdate(),sysdate());
+INSERT INTO votes VALUES (45,5,7,sysdate(),sysdate());
+INSERT INTO votes VALUES (46,6,6,sysdate(),sysdate());
+INSERT INTO votes VALUES (47,7,5,sysdate(),sysdate());
+INSERT INTO votes VALUES (48,8,4,sysdate(),sysdate());
+INSERT INTO votes VALUES (49,9,3,sysdate(),sysdate());
+INSERT INTO votes VALUES (50,3,9,sysdate(),sysdate());
+INSERT INTO votes VALUES (51,4,8,sysdate(),sysdate());
+INSERT INTO votes VALUES (52,5,7,sysdate(),sysdate());
+INSERT INTO votes VALUES (53,6,6,sysdate(),sysdate());
+INSERT INTO votes VALUES (54,7,5,sysdate(),sysdate());
+INSERT INTO votes VALUES (55,8,4,sysdate(),sysdate());
+INSERT INTO votes VALUES (56,9,3,sysdate(),sysdate());
+INSERT INTO votes VALUES (57,3,9,sysdate(),sysdate());
+INSERT INTO votes VALUES (58,4,8,sysdate(),sysdate());
+INSERT INTO votes VALUES (59,5,7,sysdate(),sysdate());
+INSERT INTO votes VALUES (60,6,6,sysdate(),sysdate());
+INSERT INTO votes VALUES (61,7,5,sysdate(),sysdate());
+INSERT INTO votes VALUES (62,8,4,sysdate(),sysdate());
+INSERT INTO votes VALUES (63,9,3,sysdate(),sysdate());
