@@ -156,9 +156,6 @@ class PostController extends Controller
             // Seteo el nombre de la imagen en el objeto
             $post->image = $image_path_name;
         }
-
-
-
         // Ejecutar consulta y cambios en la base de datos
         $post->update();
 

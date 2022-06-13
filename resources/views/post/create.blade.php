@@ -15,10 +15,13 @@
 
                                 <div class="row mb-3">
 
-                                    <label for="image_path" class="col-md-4 col-form-label text-md-right">{{ __('Imagen') }}</label>
+                                    <label for="image_path"
+                                           class="col-md-4 col-form-label text-md-right">{{ __('Imagen') }}</label>
 
                                     <div class="col-md-7">
-                                        <input id="image_path" type="file" class="form-control{{ $errors->has('image_path') ? ' is-invalid' : '' }}" name="image_path">
+                                        <input id="image_path" type="file"
+                                               class="form-control{{ $errors->has('image_path') ? ' is-invalid' : '' }}"
+                                               name="image_path">
 
                                         @if ($errors->has('image_path'))
                                             <span class="invalid-feedback" role="alert">
@@ -35,7 +38,7 @@
                                     <div class="col-md-6">
                                         <input id="title" type="text"
                                                class="form-control @error('title') is-invalid @enderror" name="title"
-                                                required autocomplete="title" autofocus>
+                                               required autocomplete="title" autofocus>
 
                                         @error('title')
                                         <span class="invalid-feedback" role="alert">
@@ -50,9 +53,10 @@
                                            class="col-md-4 col-form-label text-md-end">{{ __('Descripción') }}</label>
 
                                     <div class="col-md-6">
-                                        <textarea  name="description"
+                                        <textarea name="description"
                                                   required autocomplete="description"
-                                                  autofocus id="description" cols="30" rows="10" class="form-control @error('description') is-invalid @enderror"></textarea>
+                                                  autofocus id="description" cols="30" rows="10"
+                                                  class="form-control @error('description') is-invalid @enderror"></textarea>
 
                                         @error('description')
                                         <span class="invalid-feedback" role="alert">
@@ -63,7 +67,7 @@
 
                                 </div>
 
-<!--
+                                <!--
                                 <div class="row mb-3">
 
                                     <label for="image_path" class="col-md-4 col-form-label text-md-right">{{ __('Imagen') }}</label>
@@ -72,12 +76,13 @@
                                         <input id="image_path" type="file" class="form-control{{ $errors->has('image_path') ? ' is-invalid' : '' }}" name="image_path">
 
                                         @if ($errors->has('image_path'))
-                                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('image_path') }}</strong>
+                                    <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('image_path') }}</strong>
                                     </span>
-                                        @endif
-                                    </div>
-                                </div>-->
+
+                                @endif
+                                </div>
+                            </div>-->
 
 
                                 <div class="row mb-0">

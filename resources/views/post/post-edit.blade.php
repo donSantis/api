@@ -24,6 +24,11 @@
                                                class="form-control{{ $errors->has('image_path') ? ' is-invalid' : '' }}"
                                                name="image_path">
 
+                                        @if ($errors->has('image_path'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('image_path') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
                                 </div>
 
