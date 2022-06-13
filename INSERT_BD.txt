@@ -64,7 +64,7 @@ INSERT INTO posts VALUES (9,6,'Title prueba9','Description prueba9','sin-imagen'
 INSERT INTO posts VALUES (10,6,'Title prueba10','Description prueba10','sin-imagen',sysdate(),sysdate());
 INSERT INTO posts VALUES (11,7,'Title prueba11','Description prueba11','sin-imagen',sysdate(),sysdate());
 INSERT INTO posts VALUES (12,7,'Title prueba12','Description prueba12','sin-imagen',sysdate(),sysdate());
-
+INSERT INTO posts VALUES (13,11,'Title prueba12','Description prueba12','sin-imagen',sysdate(),sysdate());
 
 // COMMENTARYS
 

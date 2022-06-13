@@ -31,7 +31,7 @@
                         <p class="subtile-card-panel"> {{substr($p->description,0,100)}} ...</p>
 
                         <small class="align-text-bottom"
-                               style="bottom: 0px;position: absolute; font-size: 10px"> Creado : {{$p->created_at}}
+                               style="bottom: 0px;position: absolute; font-size: 10px">{{\FormatTime::LongTimeFilter($p->created_at)}}
                             </small>
 
                     </div>

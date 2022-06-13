@@ -73,8 +73,14 @@ class RegisterController extends Controller
             'lastname' => substr($data['email'],3,-10),
             'phone' => '',
             'section' => '1',
-            'role' => '1',
+            'role' => $data['role'],
             'image' => 'defaultImage.jpg',
+            'phrase' => '',
+            'interest' => '',
+            'description' => '',
+            'info1' => '',
+            'info2' => '',
+            'info3' => '',
 
         ]);
     }

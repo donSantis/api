@@ -41,6 +41,13 @@
                                 <small for="nickname"
                                     class="col-md-12  text-md-center">{{$user->nickname}}</small>
                             </div>
+                            @if($user->role == 2)
+                                <div class="row mb-3">
+                                    <small for="nickname"
+                                           class="col-md-12  text-md-center">es {{$user->phrase}}</small>
+                                </div>
+                            @endif
+
 
 
                         </div>

@@ -30,7 +30,7 @@
                         <p class="subtile-card-panel"> {{substr($r->description,0,100)}} ...</p>
 
                         <small class="align-text-bottom"
-                               style="bottom: 0px;position: absolute; font-size: 10px"> {{$r->created_at}}
+                               style="bottom: 0px;position: absolute; font-size: 10px"> {{\FormatTime::LongTimeFilter($r->created_at)}}
                         </small>
 
                     </div>

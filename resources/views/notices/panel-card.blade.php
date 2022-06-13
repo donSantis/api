@@ -30,8 +30,8 @@
                         <p class="subtile-card-panel"> {{substr($n->description,0,100)}} ...</p>
 
                         <small class="align-text-bottom"
-                               style="bottom: 0px;position: absolute; font-size: 10px"> {{$n->created_at}}
-                            -{{ date('Y-m-d H:i:s') }}</small>
+                               style="bottom: 0px;position: absolute; font-size: 10px"> {{\FormatTime::LongTimeFilter($n->created_at)}}
+                            </small>
 
                     </div>
                 </div>

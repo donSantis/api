@@ -28,6 +28,12 @@ class User extends Authenticatable
         'section',
         'role',
         'image',
+        'phrase',
+        'interest',
+        'description',
+        'info1',
+        'info2',
+        'info3',
     ];
 
     /**

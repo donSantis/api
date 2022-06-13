@@ -24,6 +24,12 @@ return new class extends Migration
             $table->string('phone');
             $table->string('section');
             $table->integer('role');
+            $table->string('phrase');
+            $table->string('interest');
+            $table->string('description');
+            $table->string('info1');
+            $table->string('info2');
+            $table->string('info3');
             $table->string('image');
             $table->timestamps();
             $table->foreign('career_id')->references('id')->on('careers');

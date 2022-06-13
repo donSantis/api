@@ -25,7 +25,6 @@
 
                                 <small> {{$u->nickname}}</small>
                                 <small> {{$u->email}}</small>
-                                <small> {{$u->school->description}}</small>
 
                             </div>
                             <hr>
