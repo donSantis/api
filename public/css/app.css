@@ -111,9 +111,21 @@ form .avatar{
         height: 150px;
         width: 150px;
     }
+    .avatar-user-post{
+        width: 100px;
+        height: 100px;
+    }
 }
+@media (max-width: 800px) {
+    .card-user-posts{
+        display: none;
+    }
+
+}
+
 @media (max-width: 600px) {
     .banner-a-img{
         display: none;
     }
+
 }

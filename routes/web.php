@@ -37,8 +37,8 @@ Route::get('/teachers', [HomeController::class, 'teachers'])->name('teachers');
 Route::get('/section-partners', [HomeController::class, 'sectionPartners'])->name('section-partners');
 Route::get('/career-partners', [HomeController::class, 'allUsers'])->name('career-partners');
 Route::get('/devs', [HomeController::class, 'devs'])->name('devs');
-Route::get('/partnerPosts', [HomeController::class, 'partnerPosts'])->name('partner-posts');
-
+Route::get('/partner-posts', [HomeController::class, 'partnerPosts'])->name('partner-posts');
+Route::get('/career-posts', [HomeController::class, 'careerPosts'])->name('career-posts');
 
 // USER CONTROLLER
 Route::get('/config', [UserController::class, 'config'])->name('config');

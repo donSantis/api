@@ -28,8 +28,11 @@
         @case('users')
             @include('user.showUsers')
             @break
-        @case('partnerPosts)
+        @case('partnerPosts')
             @include('home.partnerPosts')
+            @break
+        @case('careerPosts')
+            @include('home.careerPosts')
             @break
     @endswitch
 @endsection()

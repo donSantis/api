@@ -82,7 +82,7 @@
 
                                 <div class="row mb-3">
                                     <label for="phone"
-                                           class="col-md-4 col-form-label text-md-end">{{ __('Telefono (+569)') }}</label>
+                                           class="col-md-4 col-form-label text-md-end">{{ __('Teléfono (+569)') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="phone" type="text"
@@ -111,7 +111,7 @@
 
                                 <div class="row mb-3">
                                     <label for="description"
-                                           class="col-md-4 col-form-label text-md-end">{{ __('Description') }}</label>
+                                           class="col-md-4 col-form-label text-md-end">{{ __('Descripción') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="description" type="text"
@@ -146,7 +146,7 @@
 
                                 <div class="row mb-3">
                                     <label for="interest"
-                                           class="col-md-4 col-form-label text-md-end">{{ __('Interes') }}</label>
+                                           class="col-md-4 col-form-label text-md-end">{{ __('Interés') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="interest" type="text"

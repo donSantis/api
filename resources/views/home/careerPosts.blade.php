@@ -11,7 +11,7 @@
 
     <div class="card-body">
         @foreach($posts as $p)
-            @if($p->user->section == Auth::user()->section)
+            @if($p->user->career_id == Auth::user()->career_id)
             <div class=" row rounded-2 shadow-sm mb-3">
 
                 <div class="avatar-space col-2 ">

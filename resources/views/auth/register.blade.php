@@ -39,7 +39,7 @@
 
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>Este correo ya existe</strong>
                                     </span>
                                     @enderror
                                 </div>

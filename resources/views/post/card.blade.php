@@ -7,8 +7,8 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="header-cards-all">
-                            <label class="card-header">#{{$post->title}}</label>
-                            <label class="text-rigth">{{$post->created_at}}</label>
+                            <label class="card-header">#{{$post->id}}</label>
+                            <label class="text-rigth">{{\FormatTime::LongTimeFilter($post->created_at)}}</label>
                         </div>
                         <div class="card-body">
                             @csrf

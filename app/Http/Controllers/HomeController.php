@@ -166,6 +166,24 @@ class HomeController extends Controller
 
     }
 
+    public function careerPosts()
+    {
+        $posts = Post::orderBy('id', 'desc')
+            ->paginate(10);
+
+        $contenido = 'careerPosts';
+        $titulo = 'Todos los Posts de tus compañeros de carrera';
+
+
+        return view('index', [
+            'posts' => $posts,
+            'contenido' => $contenido,
+            'titulo' => $titulo,
+
+        ]);
+
+    }
+
     public function devs()
     {
         $users = User::orderBy('id', 'desc')
