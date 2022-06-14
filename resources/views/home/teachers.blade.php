@@ -13,7 +13,7 @@
             @foreach ($users as $u)
                 @if($u->role == 2 && $u->career_id == Auth::user()->career_id)
 
-                    <div class="card col-sm-5 d-flex m-4 shadow" style="width: 18rem; border-radius: 20px">
+                    <div class="card col-10 col-sm-4 col-md-4 col-lg-5 col-xl-5 d-flex m-4 shadow" style="width: 18rem; border-radius: 20px">
                         <img class="card-img-top mt-3 rounded-circle "
                              src="{{ route('user.avatar',['filename'=>$u->image]) }}"
                              alt="Card image cap"

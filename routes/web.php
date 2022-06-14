@@ -37,6 +37,7 @@ Route::get('/teachers', [HomeController::class, 'teachers'])->name('teachers');
 Route::get('/section-partners', [HomeController::class, 'sectionPartners'])->name('section-partners');
 Route::get('/career-partners', [HomeController::class, 'allUsers'])->name('career-partners');
 Route::get('/devs', [HomeController::class, 'devs'])->name('devs');
+Route::get('/partnerPosts', [HomeController::class, 'partnerPosts'])->name('partner-posts');
 
 
 // USER CONTROLLER

@@ -28,6 +28,9 @@
         @case('users')
             @include('user.showUsers')
             @break
+        @case('partnerPosts)
+            @include('home.partnerPosts')
+            @break
     @endswitch
 @endsection()
 

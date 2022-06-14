@@ -32,7 +32,7 @@
 
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Registro') }}</a>
                             </li>
                         @endif
                     @else
@@ -120,16 +120,17 @@
                         <a class="nav-link " href="/" >Inicio </a>
                     </li>
                     <li class="nav-item col-2 ">
-                        <a class="nav-link" href="/section-partners"> Seccion</a>
+                        <a class="nav-link" href="#">Escuela</a>
                     </li>
                     <li class="nav-item col-2 ">
-                        <a class="nav-link" href="#">Escuela</a>
+
+                        <a class="nav-link" href="/">Compañeros</a>
                     </li>
                     <li class="nav-item col-2 ">
                         <a class="nav-link" href="/teachers">Profesores</a>
                     </li>
                     <li class="nav-item col-2 ">
-                        <a class="nav-link" href="/">Compañeros</a>
+                        <a class="nav-link" href="/section-partners"> Sección</a>
                     </li>
                     <li class="nav-item col-2 ">
                         <a class="nav-link" href="/devs">Nosotros</a>

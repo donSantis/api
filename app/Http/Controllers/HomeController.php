@@ -148,16 +148,17 @@ class HomeController extends Controller
         ]);
 
     }
-    public function partnerCareer()
+    public function partnerPosts()
     {
-        $users = User::orderBy('id', 'desc')
+        $posts = Post::orderBy('id', 'desc')
             ->paginate(10);
 
-        $contenido = 'users';
-        $titulo = 'Todos los compañeros de carrera';
+        $contenido = 'partnerPosts';
+        $titulo = 'Todos los Posts de tus compañeros';
+
 
         return view('index', [
-            'users' => $users,
+            'posts' => $posts,
             'contenido' => $contenido,
             'titulo' => $titulo,
 
