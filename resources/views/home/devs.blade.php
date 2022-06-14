@@ -45,7 +45,7 @@
 
                             </div>
 
-                            <a href="#" class="btn   btn-primary m-2">Ir a perfil</a>
+                            <a href="{{'user-card/'}}{{$u->id}}" class="btn   btn-primary m-2">Ir a perfil</a>
                         </div>
                     </div>
                 @endif

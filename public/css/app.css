@@ -100,5 +100,20 @@ form .avatar{
     text-align: center;
 
 }
-
-
+.banner-a-img{
+    height: 250px;
+    width: 250px;
+    border: solid 5px white;
+}
+@media (max-width: 992px) {
+   .banner-a-img{
+       margin-top: 10px;
+        height: 150px;
+        width: 150px;
+    }
+}
+@media (max-width: 600px) {
+    .banner-a-img{
+        display: none;
+    }
+}

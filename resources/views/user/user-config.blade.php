@@ -29,9 +29,29 @@
                                         @enderror
                                     </div>
                                 </div>
+
+                                <div class="row mb-3">
+                                    <label for="lastname"
+                                           class="col-md-4 col-form-label text-md-end">{{ __('Apellido') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="lastname" type="text"
+                                               class="form-control @error('lastname') is-invalid @enderror"
+                                               name="lastname"
+                                               value="{{ Auth::user()->lastname }}" required autocomplete="lastname"
+                                               autofocus>
+
+                                        @error('lastname')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+
+                                </div>
                                 <div class="row mb-3">
                                     <label for="nickname"
-                                           class="col-md-4 col-form-label text-md-end">{{ __('Nickname') }}</label>
+                                           class="col-md-4 col-form-label text-md-end">{{ __('Apodo') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="nickname" type="text"
@@ -49,40 +69,14 @@
 
                                 </div>
 
-                                <div class="row mb-3">
-                                    <label for="lastname"
-                                           class="col-md-4 col-form-label text-md-end">{{ __('lastname') }}</label>
 
-                                    <div class="col-md-6">
-                                        <input id="lastname" type="text"
-                                               class="form-control @error('lastname') is-invalid @enderror"
-                                               name="lastname"
-                                               value="{{ Auth::user()->lastname }}" required autocomplete="lastname"
-                                               autofocus>
-
-                                        @error('lastname')
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                        @enderror
-                                    </div>
-
-                                </div>
 
                                 <div class="row mb-3">
                                     <label for="email"
                                            class="col-md-4 col-form-label text-md-end">{{ __('Email') }}</label>
 
-                                    <div class="col-md-6">
-                                        <input id="email" type="email"
-                                               class="form-control @error('email') is-invalid @enderror" name="email"
-                                               value="{{ Auth::user()->email }}" required autocomplete="email">
+                                    <div class="col-md-6 mt-2">{{ Auth::user()->email }}
 
-                                        @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                        @enderror
                                     </div>
                                 </div>
 
@@ -107,13 +101,42 @@
                                     <label for="section"
                                            class="col-md-4 col-form-label text-md-end">{{ __('Sección') }}</label>
 
-                                    <div class="col-md-6">
-                                        <input id="section" type="section"
-                                               class="form-control @error('section') is-invalid @enderror"
-                                               name="section"
-                                               value="{{ Auth::user()->section }}" required autocomplete="section">
+                                    <div class="col-md-6 mt-2">
+                                        {{ Auth::user()->section }}
+                                    </div>
+                                </div>
 
-                                        @error('section')
+
+
+
+                                <div class="row mb-3">
+                                    <label for="description"
+                                           class="col-md-4 col-form-label text-md-end">{{ __('Description') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="description" type="text"
+                                               class="form-control @error('description') is-invalid @enderror" name="description"
+                                               value="{{ Auth::user()->description }}" required autocomplete="description">
+
+                                        @error('description')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+
+                                <div class="row mb-3">
+                                    <label for="phrase"
+                                           class="col-md-4 col-form-label text-md-end">{{ __('Frase') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="phrase" type="text"
+                                               class="form-control @error('phrase') is-invalid @enderror" name="phrase"
+                                               value="{{ Auth::user()->phrase }}" autocomplete="phrase">
+
+                                        @error('phrase')
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -122,15 +145,66 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="role"
-                                           class="col-md-4 col-form-label text-md-end">{{ __('Rol') }}</label>
+                                    <label for="interest"
+                                           class="col-md-4 col-form-label text-md-end">{{ __('Interes') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="role" type="role"
-                                               class="form-control @error('role') is-invalid @enderror" name="role"
-                                               value="{{ Auth::user()->role }}" required autocomplete="role">
+                                        <input id="interest" type="text"
+                                               class="form-control @error('interest') is-invalid @enderror" name="interest"
+                                               value="{{ Auth::user()->interest }}"  autocomplete="interest">
 
-                                        @error('role')
+                                        @error('interest')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="info1"
+                                           class="col-md-4 col-form-label text-md-end">{{ __('info1') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="info1" type="text"
+                                               class="form-control @error('info1') is-invalid @enderror" name="info1"
+                                               value="{{ Auth::user()->info1 }}"  autocomplete="info1">
+
+                                        @error('info1')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="info2"
+                                           class="col-md-4 col-form-label text-md-end">{{ __('info2') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="info2" type="text"
+                                               class="form-control @error('info2') is-invalid @enderror" name="info2"
+                                               value="{{ Auth::user()->info2 }}"  autocomplete="info2">
+
+                                        @error('info1')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="info3"
+                                           class="col-md-4 col-form-label text-md-end">{{ __('info3') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="info3" type="text"
+                                               class="form-control @error('info3') is-invalid @enderror" name="info3"
+                                               value="{{ Auth::user()->info3 }}"  autocomplete="info3">
+
+                                        @error('info3')
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

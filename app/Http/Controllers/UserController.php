@@ -48,10 +48,15 @@ class UserController extends Controller
 
         // Validación del formulario
         $validate = $this->validate($request, [
-            'name' => 'required|string|max:255',
-            'nickname' => 'required|string|max:255|unique:users,nickname,' . $id,
-            'lastname' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users,email,' . $id,
+            'name' => 'required|string|max:50',
+            'nickname' => 'required|string|max:25|unique:users,nickname,' . $id,
+            'lastname' => 'required|string|max:50',
+            'description' => 'required|string|max:255',
+            'phrase' => 'required|string|max:155',
+            'interest' => 'required|string|max:155',
+            'info1' => 'required|string|max:155',
+            'info2' => 'required|string|max:155',
+            'info3' => 'required|string|max:155',
             'phone' => 'required|digits:8',
         ]);
 
@@ -59,19 +64,26 @@ class UserController extends Controller
         $name = $request->input('name');
         $nickname = $request->input('nickname');
         $lastname = $request->input('lastname');
-        $email = $request->input('email');
         $phone = $request->input('phone');
-        $section = $request->input('section');
-        $role = $request->input('role');
+        $description = $request->input('description');
+        $info1 = $request->input('info1');
+        $info2 = $request->input('info2');
+        $info3 = $request->input('info3');
+        $phrase = $request->input('phrase');
+        $interest = $request->input('interest');
 
         // Asignar nuevos valores al objeto del usuario
         $user->name = $name;
         $user->nickname = $nickname;
         $user->lastname = $lastname;
-        $user->email = $email;
         $user->phone = $phone;
-        $user->section = $section;
-        $user->role = $role;
+        $user->description = $description;
+        $user->phrase = $phrase;
+        $user->interest = $interest;
+        $user->info1 = $info1;
+        $user->info2 = $info2;
+        $user->info3 = $info3;
+
 
 
         // Ejecutar consulta y cambios en la base de datos
