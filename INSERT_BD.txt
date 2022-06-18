@@ -43,7 +43,7 @@ INSERT INTO careers VALUES (9,9,'Turismo y Hotelería','Turismo y Hotelería',sy
 INSERT INTO users VALUES (1,'admin',6,'Admin','Admin',12345,'admin@admin.com',12345786,'001V',1,'','','','','','','defaultImage.jpg',sysdate(),sysdate());
 INSERT INTO users VALUES (2,'iv.santis',6,'donSantis','Santis',12345,'iv.santis@duocuc.com',123448201,'002V',1,'','','','','','','defaultImage.jpg',sysdate(),sysdate());
 INSERT INTO users VALUES (3,'di.jacques',6,'donJacques','Jacques',12345,'di.jacques@duocuc.com',33345786,'003V',1,'','','','','','','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO users VALUES (4,'fr.espinosa',6,'donEspinosa','Espinosa',12345,'fr.espinosa@duocuc.com',12345786,'004V',1,'','','','','','','defaultImage.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (4,'fr.espinosa',6,'donEspinosa','Espinosa',12345,'fr.espinosa@duocuc.com',12345786,'004V',1,'','','','','','','francofoto.jpg',sysdate(),sysdate());
 INSERT INTO users VALUES (5,'ca.donoso',6,'donaDonoso','Donoso',12345,'ca.donoso@duocuc.com',12345786,'001V',1,'','','','','','','defaultImage.jpg',sysdate(),sysdate());
 INSERT INTO users VALUES (6,'la.gutierrez',6,'donGutierrez','Gutierrez',12345,'la.gutierrez@duocuc.com',12345786,'002V',1,'','','','','','','defaultImage.jpg',sysdate(),sysdate());
 INSERT INTO users VALUES (7,'lc.godoy',6,'donChani','Godoy',12345,'lc.godoy@duocuc.com',12345786,'003V',1,'','','','','','','defaultImage.jpg',sysdate(),sysdate());
@@ -52,8 +52,8 @@ INSERT INTO users VALUES (8,'am.donoso',6,'donaAmali','Donoso',12345,'am.donoso@
 
 // POSTS
 
-INSERT INTO posts VALUES (1,2,'Title prueba1','Description prueba1','sin-imagen',sysdate(),sysdate());
-INSERT INTO posts VALUES (2,2,'Title prueba2','Description prueba2','sin-imagen',sysdate(),sysdate());
+INSERT INTO posts VALUES (1,2,'Como se usa python?','Hola a todos , mi consulta es la siguiente: como se usa python?','sin-imagen',sysdate(),sysdate());
+INSERT INTO posts VALUES (2,2,'asi se hace una tarjeta de usuario','este es el codigo para mostrar una tarjeta de usuario','sin-imagen',sysdate(),sysdate());
 INSERT INTO posts VALUES (3,3,'Title prueba3','Description prueba3','sin-imagen',sysdate(),sysdate());
 INSERT INTO posts VALUES (4,3,'Title prueba4','Description prueba4','sin-imagen',sysdate(),sysdate());
 INSERT INTO posts VALUES (5,4,'Title prueba5','Description prueba5','sin-imagen',sysdate(),sysdate());
@@ -68,7 +68,7 @@ INSERT INTO posts VALUES (13,11,'Title prueba12','Description prueba12','sin-ima
 
 // COMMENTARYS
 
-INSERT INTO comments VALUES (1,3,1,'Description prueba1',sysdate(),sysdate());
+INSERT INTO comments VALUES (1,3,1,'que bacan es python',sysdate(),sysdate());
 INSERT INTO comments VALUES (2,4,2,'Description prueba2',sysdate(),sysdate());
 INSERT INTO comments VALUES (3,5,3,'Description prueba3',sysdate(),sysdate());
 INSERT INTO comments VALUES (4,6,4,'Description prueba4',sysdate(),sysdate());
@@ -133,7 +133,7 @@ INSERT INTO comments VALUES (62,8,8,'Description prueba62',sysdate(),sysdate());
 INSERT INTO comments VALUES (63,9,9,'Description prueba63',sysdate(),sysdate());
 // NOTICES
 
-INSERT INTO notices VALUES (1,2,'Title Notice prueba1','Description Notice prueba1','sin-imagen',sysdate(),sysdate());
+INSERT INTO notices VALUES (1,2,'Madre, trabajadora y estudiante','Se trata de un formato flexible, ágil y enfocado en personas que necesiten compatibilizar las actividades académicas con las laborales o familiares.','sin-imagen',sysdate(),sysdate());
 INSERT INTO notices VALUES (2,2,'Title Notice prueba2','Description Notice prueba2','sin-imagen',sysdate(),sysdate());
 INSERT INTO notices VALUES (3,2,'Title Notice prueba3','Description Notice prueba3','sin-imagen',sysdate(),sysdate());
 INSERT INTO notices VALUES (4,2,'Title Notice prueba4','Description Notice prueba4','sin-imagen',sysdate(),sysdate());
@@ -148,7 +148,7 @@ INSERT INTO notices VALUES (12,2,'Title Notice prueba12','Description Notice pru
 
 // RULES
 
-INSERT INTO rules VALUES (1,2,'Title Rule prueba1','Description Rule prueba1','sin-imagen',sysdate(),sysdate());
+INSERT INTO rules VALUES (1,2,'Reglas de convivencia','No se debe insultar a las demas personas','sin-imagen',sysdate(),sysdate());
 INSERT INTO rules VALUES (2,2,'Title Rule prueba2','Description Rule prueba2','sin-imagen',sysdate(),sysdate());
 INSERT INTO rules VALUES (3,2,'Title Rule prueba3','Description Rule prueba3','sin-imagen',sysdate(),sysdate());
 INSERT INTO rules VALUES (4,2,'Title Rule prueba4','Description Rule prueba4','sin-imagen',sysdate(),sysdate());
@@ -160,17 +160,10 @@ INSERT INTO rules VALUES (9,2,'Title Rule prueba9','Description Rule prueba9','s
 INSERT INTO rules VALUES (10,2,'Title Rule prueba10','Description Rule prueba10','sin-imagen',sysdate(),sysdate());
 INSERT INTO rules VALUES (11,2,'Title Rule prueba11','Description Rule prueba11','sin-imagen',sysdate(),sysdate());2
 
-
-
-
-
-
-
-
 // PROFILE COMMENT
 
 
-INSERT INTO perfilcomments VALUES (1,3,9,'Description prueba1',sysdate(),sysdate());
+INSERT INTO perfilcomments VALUES (1,3,9,'Excelente profesor, explica muy bien la materia',sysdate(),sysdate());
 INSERT INTO perfilcomments VALUES (2,4,8,'Description prueba2',sysdate(),sysdate());
 INSERT INTO perfilcomments VALUES (3,5,7,'Description prueba3',sysdate(),sysdate());
 INSERT INTO perfilcomments VALUES (4,6,6,'Description prueba4',sysdate(),sysdate());
