@@ -28,7 +28,7 @@ Luego, si ya hay imagen del inicio de la pag:
     2)storage/app/public
     3)storage/app/users
 11) Recomiendo registrar el usuario que ud utilizara manualmente desde "Registro"
-    10.2) Luego utilizar alguna herramienta de gestion de base de datos(ej DBeaver) para cambiar los valores de su usuario
+    10.2) Luego utilizar alguna herramienta de gestion de base de datos(ej DBeaver) para cambiar los valores de su usuario en caso de
     10.3) Cambiar career_id y section, para ver como filtra la informacion la pag
 12) php artisan serve
 
