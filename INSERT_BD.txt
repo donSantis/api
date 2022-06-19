@@ -1,18 +1,38 @@
+con mysql{
 drop database portafolio
 Create database portafolio
-use portafolio
+use portafolio}
 
 // COMO CORRER EL PROJECT
 
-1) DESCARGAR DESDE EL REPOSITORY
-2) Rename .env.example file to .env y cambiar los valores en laravel, ingresar su mysql y contraseña
+1) DESCARGAR DESDE EL REPOSITORY (nro Iván Santis +56967183831)
+2) Rename .env.example file to .env y cambiar los valores; En laravel, ingresar su mysql y contraseña
+Abrir la consola desde la carpeta del poryecto e ingresar :
 3) composer install/update
 4) php artisan clear-compiled
 5) composer dump-autoload
 6) php artisan key:generate
 7) php artisan migrate
-8) poblar base de datos (INSERT_BD)
-9) php artisan serve
+8) php artisan serve -> correr el project
+Luego, si ya hay imagen del inicio de la pag:
+9) poblar base de datos
+    1) schools
+    2)careers
+    3) users
+    4)posts
+    5)comments
+    6)perfil comments
+    7)likes
+10) cambiar imagenes desde la carpeta IMAGENES_CAMBIAR a :
+    1)storage/app/post
+    2)storage/app/public
+    3)storage/app/users
+11) Recomiendo registrar el usuario que ud utilizara manualmente desde "Registro"
+    10.2) Luego utilizar alguna herramienta de gestion de base de datos(ej DBeaver) para cambiar los valores de su usuario
+    10.3) Cambiar career_id y section, para ver como filtra la informacion la pag
+12) php artisan serve
+
+* ROL 1 = ADMIN 2 = PROFESOR 3= ALUMNO
 
 // SCHOOLS
 
