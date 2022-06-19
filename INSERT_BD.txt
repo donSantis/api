@@ -59,9 +59,9 @@ INSERT INTO careers VALUES (8,8,'Técnico en Enfermería','Técnico en Enfermer�
 INSERT INTO careers VALUES (9,9,'Turismo y Hotelería','Turismo y Hotelería',sysdate(),sysdate());
 
 // USERS
-INSERT INTO users VALUES (2,'iv.santis',6,'donSantis','Santis',12345,'iv.santis@duocuc.com',123448201,'001V',3,'','','','','','','userperfil.jpg',sysdate(),sysdate());
-INSERT INTO users VALUES (3,'di.jacques',6,'donJacques','Jacques',12345,'di.jacques@duocuc.com',33345786,'001V',3,'','','','','','','userperfil.jpg',sysdate(),sysdate());
-INSERT INTO users VALUES (4,'fr.espinosa',6,'donEspinosa','Espinosa',12345,'fr.espinosa@duocuc.com',12345786,'001V',3,'','','','','','','userperfil.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (2,'iv.santis',6,'donSantis','Santis',12345,'iv.santis@duocuc.com',123448201,'001V',3,'','','','','','','Ivan.png',sysdate(),sysdate());
+INSERT INTO users VALUES (3,'di.jacques',6,'donJacques','Jacques',12345,'di.jacques@duocuc.com',33345786,'001V',3,'','','','','','','Dimitry.png',sysdate(),sysdate());
+INSERT INTO users VALUES (4,'fr.espinosa',6,'donEspinosa','Espinosa',12345,'fr.espinosa@duocuc.com',12345786,'001V',3,'','','','','','','Franco.png',sysdate(),sysdate());
 INSERT INTO users VALUES (5,'ca.donoso',6,'donaDonoso','Donoso',12345,'ca.donoso@duocuc.com',12345786,'001V',3,'','','','','','','userperfil.jpg',sysdate(),sysdate());
 INSERT INTO users VALUES (6,'la.gutierrez',6,'donGutierrez','Gutierrez',12345,'la.gutierrez@duocuc.com',12345786,'001V',3,'','','','','','','userperfil.jpg',sysdate(),sysdate());
 INSERT INTO users VALUES (7,'lc.godoy',6,'donChani','Godoy',12345,'lc.godoy@duocuc.com',12345786,'001V',3,'','','','','','','userperfil.jpg',sysdate(),sysdate());
