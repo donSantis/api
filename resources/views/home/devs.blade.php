@@ -11,7 +11,7 @@
 
         <div class="row">
             @foreach ($users as $u)
-                @if( $u->id == 5 || $u->id == 4 || $u->id == 3   )
+                @if( $u->id == 2 || $u->id == 4 || $u->id == 3   )
 
                     <div class="card col-10 col-sm-4 col-md-4 col-lg-5 col-xl-5 d-flex m-4 shadow" style="width: 18rem; border-radius: 20px">
                         <img class="card-img-top mt-3 rounded-circle "

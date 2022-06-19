@@ -39,193 +39,104 @@ INSERT INTO careers VALUES (8,8,'Técnico en Enfermería','Técnico en Enfermer�
 INSERT INTO careers VALUES (9,9,'Turismo y Hotelería','Turismo y Hotelería',sysdate(),sysdate());
 
 // USERS
+INSERT INTO users VALUES (2,'iv.santis',6,'donSantis','Santis',12345,'iv.santis@duocuc.com',123448201,'001V',3,'','','','','','','Ivan.png',sysdate(),sysdate());
+INSERT INTO users VALUES (3,'di.jacques',6,'donJacques','Jacques',12345,'di.jacques@duocuc.com',33345786,'001V',3,'','','','','','','Dimitry.png',sysdate(),sysdate());
+INSERT INTO users VALUES (4,'fr.espinosa',6,'donEspinosa','Espinosa',12345,'fr.espinosa@duocuc.com',12345786,'001V',3,'','','','','','','Franco.png',sysdate(),sysdate());
+INSERT INTO users VALUES (5,'ca.donoso',6,'donaDonoso','Donoso',12345,'ca.donoso@duocuc.com',12345786,'001V',3,'','','','','','','userperfil.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (6,'la.gutierrez',6,'donGutierrez','Gutierrez',12345,'la.gutierrez@duocuc.com',12345786,'001V',3,'','','','','','','userperfil.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (7,'lc.godoy',6,'donChani','Godoy',12345,'lc.godoy@duocuc.com',12345786,'001V',3,'','','','','','','userperfil.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (8,'am.donoso',6,'donaAmali','Donoso',12345,'am.donoso@duocuc.com',12345786,'001V',3,'','','','','','','userperfil.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (9,'a.david',6,'davidAmali','David',12345,'a.david@duocuc.com',12345786,'001V',3,'','','','','','','userperfil.jpg',sysdate(),sysdate());
 
-INSERT INTO users VALUES (1,'admin',6,'Admin','Admin',12345,'admin@admin.com',12345786,'001V',1,'','','','','','','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO users VALUES (2,'iv.santis',6,'donSantis','Santis',12345,'iv.santis@duocuc.com',123448201,'002V',1,'','','','','','','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO users VALUES (3,'di.jacques',6,'donJacques','Jacques',12345,'di.jacques@duocuc.com',33345786,'003V',1,'','','','','','','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO users VALUES (4,'fr.espinosa',6,'donEspinosa','Espinosa',12345,'fr.espinosa@duocuc.com',12345786,'004V',1,'','','','','','','francofoto.jpg',sysdate(),sysdate());
-INSERT INTO users VALUES (5,'ca.donoso',6,'donaDonoso','Donoso',12345,'ca.donoso@duocuc.com',12345786,'001V',1,'','','','','','','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO users VALUES (6,'la.gutierrez',6,'donGutierrez','Gutierrez',12345,'la.gutierrez@duocuc.com',12345786,'002V',1,'','','','','','','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO users VALUES (7,'lc.godoy',6,'donChani','Godoy',12345,'lc.godoy@duocuc.com',12345786,'003V',1,'','','','','','','defaultImage.jpg',sysdate(),sysdate());
-INSERT INTO users VALUES (8,'am.donoso',6,'donaAmali','Donoso',12345,'am.donoso@duocuc.com',12345786,'004V',1,'','','','','','','defaultImage.jpg',sysdate(),sysdate());
 
-
+INSERT INTO users VALUES (10,'Jo.Marcelo',6,'Jose Marcelo','Carrasco',12345,'Jo.Marcelo@profesor.duoc.cl',12345786,'003V',2,'','','','','','','userperfil.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (11,'w.bascunan',6,'Willy Francisco','Buscanan Silva',12345,'w.buscanan@profesor.duoc.cl',12345786,'004V',2,'','','','','','','userperfil.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (12,'Carl.martinez',6,'Carlos Ernesto','Martinez Galvez',12345,'Carl.martinez@profesor.duoc.cl',12345786,'004V',2,'','','','','','','userperfil.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (13,'f.cortez',6,'Fernando Simon','Cortez Rivera',12345,'f.cortez@profesor.duoc.cl',12345786,'004V',2,'','','','','','','userperfil.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (14,'a.reyes',6,'Ariel Renan ','Reyes Zuleta',12345,'a.reyes@profesor.duoc.cl',12345786,'004V',2,'','','','','','','userperfil.jpg',sysdate(),sysdate());
 // POSTS
 
-INSERT INTO posts VALUES (1,2,'Como se usa python?','Hola a todos , mi consulta es la siguiente: como se usa python?','sin-imagen',sysdate(),sysdate());
-INSERT INTO posts VALUES (2,2,'asi se hace una tarjeta de usuario','este es el codigo para mostrar una tarjeta de usuario','sin-imagen',sysdate(),sysdate());
-INSERT INTO posts VALUES (3,3,'Title prueba3','Description prueba3','sin-imagen',sysdate(),sysdate());
-INSERT INTO posts VALUES (4,3,'Title prueba4','Description prueba4','sin-imagen',sysdate(),sysdate());
-INSERT INTO posts VALUES (5,4,'Title prueba5','Description prueba5','sin-imagen',sysdate(),sysdate());
-INSERT INTO posts VALUES (6,4,'Title prueba6','Description prueba6','sin-imagen',sysdate(),sysdate());
-INSERT INTO posts VALUES (7,5,'Title prueba7','Description prueba7','sin-imagen',sysdate(),sysdate());
-INSERT INTO posts VALUES (8,5,'Title prueba8','Description prueba8','sin-imagen',sysdate(),sysdate());
-INSERT INTO posts VALUES (9,6,'Title prueba9','Description prueba9','sin-imagen',sysdate(),sysdate());
-INSERT INTO posts VALUES (10,6,'Title prueba10','Description prueba10','sin-imagen',sysdate(),sysdate());
-INSERT INTO posts VALUES (11,7,'Title prueba11','Description prueba11','sin-imagen',sysdate(),sysdate());
-INSERT INTO posts VALUES (12,7,'Title prueba12','Description prueba12','sin-imagen',sysdate(),sysdate());
-INSERT INTO posts VALUES (13,11,'Title prueba12','Description prueba12','sin-imagen',sysdate(),sysdate());
+INSERT INTO posts VALUES (1,2,'Como se usa python?','Hola a todos , mi consulta es la siguiente: como se usa python?','Python.png',sysdate(),sysdate());
+INSERT INTO posts VALUES (2,2,'asi se hace una tarjeta de usuario','este es el codigo para mostrar una tarjeta de usuario','Tarjeta.png',sysdate(),sysdate());
+INSERT INTO posts VALUES (3,3,'Configurar Java','Buenas,Como configurar java en mi computador','Java.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (4,3,'Error','No se porque me sale este error','foto/error.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (5,4,'SQL Developer','Hola ,Alguien sabe como usar SQL Developer','SQL.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (6,4,'MySQL Workbench','Hola , como se usa MYSQL Workbench','MySQL.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (7,5,'Fin semestre','Buenas ,  Cuando termina el semestre','Duoc.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (8,5,'Corte de Luz','Hola , es cierto que no hay Luz en el Duoc San bernardo','Duoc.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (9,6,'Ionic','Buenas tardes ; como se instala Ionic','ionic.png',sysdate(),sysdate());
+INSERT INTO posts VALUES (10,6,'SQLlite','Buenas , Para que se usa SQLlite','SQLlite.jpg',sysdate(),sysdate());
 
 // COMMENTARYS
 
 INSERT INTO comments VALUES (1,3,1,'que bacan es python',sysdate(),sysdate());
-INSERT INTO comments VALUES (2,4,2,'Description prueba2',sysdate(),sysdate());
-INSERT INTO comments VALUES (3,5,3,'Description prueba3',sysdate(),sysdate());
-INSERT INTO comments VALUES (4,6,4,'Description prueba4',sysdate(),sysdate());
-INSERT INTO comments VALUES (5,7,5,'Description prueba5',sysdate(),sysdate());
-INSERT INTO comments VALUES (6,8,6,'Description prueba6',sysdate(),sysdate());
-INSERT INTO comments VALUES (7,9,7,'Description prueba7',sysdate(),sysdate());
-INSERT INTO comments VALUES (8,3,8,'Description prueba8',sysdate(),sysdate());
-INSERT INTO comments VALUES (9,4,9,'Description prueba9',sysdate(),sysdate());
-INSERT INTO comments VALUES (10,5,10,'Description prueba10',sysdate(),sysdate());
-INSERT INTO comments VALUES (11,6,10,'Description prueba11',sysdate(),sysdate());
-INSERT INTO comments VALUES (12,7,4,'Description prueba12',sysdate(),sysdate());
-INSERT INTO comments VALUES (13,8,1,'Description prueba13',sysdate(),sysdate());
-INSERT INTO comments VALUES (14,9,2,'Description prueba14',sysdate(),sysdate());
-INSERT INTO comments VALUES (15,3,3,'Description prueba15',sysdate(),sysdate());
-INSERT INTO comments VALUES (16,4,4,'Description prueba16',sysdate(),sysdate());
-INSERT INTO comments VALUES (17,5,5,'Description prueba17',sysdate(),sysdate());
-INSERT INTO comments VALUES (18,6,6,'Description prueba18',sysdate(),sysdate());
-INSERT INTO comments VALUES (19,7,7,'Description prueba19',sysdate(),sysdate());
-INSERT INTO comments VALUES (20,8,8,'Description prueba20',sysdate(),sysdate());
-INSERT INTO comments VALUES (21,9,9,'Description prueba21',sysdate(),sysdate());
-INSERT INTO comments VALUES (22,3,1,'Description prueba22',sysdate(),sysdate());
-INSERT INTO comments VALUES (23,4,2,'Description prueba23',sysdate(),sysdate());
-INSERT INTO comments VALUES (24,5,3,'Description prueba24',sysdate(),sysdate());
-INSERT INTO comments VALUES (25,6,4,'Description prueba25',sysdate(),sysdate());
-INSERT INTO comments VALUES (26,7,5,'Description prueba26',sysdate(),sysdate());
-INSERT INTO comments VALUES (27,8,6,'Description prueba27',sysdate(),sysdate());
-INSERT INTO comments VALUES (28,9,7,'Description prueba28',sysdate(),sysdate());
-INSERT INTO comments VALUES (29,3,8,'Description prueba29',sysdate(),sysdate());
-INSERT INTO comments VALUES (30,4,9,'Description prueba30',sysdate(),sysdate());
-INSERT INTO comments VALUES (31,5,10,'Description prueba31',sysdate(),sysdate());
-INSERT INTO comments VALUES (32,6,10,'Description prueba32',sysdate(),sysdate());
-INSERT INTO comments VALUES (33,7,4,'Description prueba33',sysdate(),sysdate());
-INSERT INTO comments VALUES (34,8,1,'Description prueba34',sysdate(),sysdate());
-INSERT INTO comments VALUES (35,9,2,'Description prueba35',sysdate(),sysdate());
-INSERT INTO comments VALUES (36,3,3,'Description prueba36',sysdate(),sysdate());
-INSERT INTO comments VALUES (37,4,4,'Description prueba37',sysdate(),sysdate());
-INSERT INTO comments VALUES (38,5,5,'Description prueba38',sysdate(),sysdate());
-INSERT INTO comments VALUES (39,6,6,'Description prueba39',sysdate(),sysdate());
-INSERT INTO comments VALUES (40,7,7,'Description prueba40',sysdate(),sysdate());
-INSERT INTO comments VALUES (41,8,8,'Description prueba41',sysdate(),sysdate());
-INSERT INTO comments VALUES (42,9,9,'Description prueba42',sysdate(),sysdate());
-INSERT INTO comments VALUES (43,3,1,'Description prueba43',sysdate(),sysdate());
-INSERT INTO comments VALUES (44,4,2,'Description prueba44',sysdate(),sysdate());
-INSERT INTO comments VALUES (45,5,3,'Description prueba45',sysdate(),sysdate());
-INSERT INTO comments VALUES (46,6,4,'Description prueba46',sysdate(),sysdate());
-INSERT INTO comments VALUES (47,7,5,'Description prueba47',sysdate(),sysdate());
-INSERT INTO comments VALUES (48,8,6,'Description prueba48',sysdate(),sysdate());
-INSERT INTO comments VALUES (49,9,7,'Description prueba49',sysdate(),sysdate());
-INSERT INTO comments VALUES (50,3,8,'Description prueba50',sysdate(),sysdate());
-INSERT INTO comments VALUES (51,4,9,'Description prueba51',sysdate(),sysdate());
-INSERT INTO comments VALUES (52,5,10,'Description prueba52',sysdate(),sysdate());
-INSERT INTO comments VALUES (53,6,10,'Description prueba53',sysdate(),sysdate());
-INSERT INTO comments VALUES (54,7,4,'Description prueba54',sysdate(),sysdate());
-INSERT INTO comments VALUES (55,8,1,'Description prueba55',sysdate(),sysdate());
-INSERT INTO comments VALUES (56,9,2,'Description prueba56',sysdate(),sysdate());
-INSERT INTO comments VALUES (57,3,3,'Description prueba57',sysdate(),sysdate());
-INSERT INTO comments VALUES (58,4,4,'Description prueba58',sysdate(),sysdate());
-INSERT INTO comments VALUES (59,5,5,'Description prueba59',sysdate(),sysdate());
-INSERT INTO comments VALUES (60,6,6,'Description prueba60',sysdate(),sysdate());
-INSERT INTO comments VALUES (61,7,7,'Description prueba61',sysdate(),sysdate());
-INSERT INTO comments VALUES (62,8,8,'Description prueba62',sysdate(),sysdate());
-INSERT INTO comments VALUES (63,9,9,'Description prueba63',sysdate(),sysdate());
+INSERT INTO comments VALUES (2,4,2,'Justo lo que estaba buscando',sysdate(),sysdate());
+INSERT INTO comments VALUES (3,5,3,'Hay un video en Youtube que te puede Ayudar , se llama "Java desde zero"',sysdate(),sysdate());
+INSERT INTO comments VALUES (4,6,4,'No se ve muy bien',sysdate(),sysdate());
+INSERT INTO comments VALUES (5,7,5,'Si yo se como , te Ayudo?',sysdate(),sysdate());
+INSERT INTO comments VALUES (6,8,6,'Yo no pero demas si bsucas en youtube te sale algo',sysdate(),sysdate());
+INSERT INTO comments VALUES (7,9,7,'El primero de Julio',sysdate(),sysdate());
+INSERT INTO comments VALUES (8,3,8,'Si compañero',sysdate(),sysdate());
+INSERT INTO comments VALUES (9,4,9,'Usas windows ?',sysdate(),sysdate());
+INSERT INTO comments VALUES (10,5,10,'Es un motor de base de datos',sysdate(),sysdate());
+
+INSERT INTO comments VALUES (11,8,1,'A mi igual me gusta',sysdate(),sysdate());
+INSERT INTO comments VALUES (12,9,2,'Gracias compañero',sysdate(),sysdate());
+INSERT INTO comments VALUES (13,3,3,'En youtube hay video que te enseñan desde zero',sysdate(),sysdate());
+INSERT INTO comments VALUES (14,4,4,'La vista ya existe compañero',sysdate(),sysdate());
+INSERT INTO comments VALUES (15,5,5,'Yo tambien se como',sysdate(),sysdate());
+INSERT INTO comments VALUES (16,6,6,'Compañero busca en youtube',sysdate(),sysdate());
+INSERT INTO comments VALUES (17,6,7,'Primero de julio compañero',sysdate(),sysdate());
+INSERT INTO comments VALUES (18,7,8,'Si no hay clase',sysdate(),sysdate());
+INSERT INTO comments VALUES (19,8,9,'Te ayudo si quieres',sysdate(),sysdate());
+INSERT INTO comments VALUES (20,9,10,'Se usa para realizar operaciones de base de datos',sysdate(),sysdate());
+INSERT INTO comments VALUES (21,8,1,'Tienes algun libro de Python ?',sysdate(),sysdate());
+INSERT INTO comments VALUES (22,9,2,'Necesitaba hacer hacer una',sysdate(),sysdate());
+INSERT INTO comments VALUES (23,3,3,'busca "Java basico"',sysdate(),sysdate());
+INSERT INTO comments VALUES (24,4,4,'Que version de PHP esta usando',sysdate(),sysdate());
+INSERT INTO comments VALUES (25,5,5,'Si quieres te enseño',sysdate(),sysdate());
+INSERT INTO comments VALUES (26,6,6,'Tengo un pdf que te puede ayudar',sysdate(),sysdate());
+INSERT INTO comments VALUES (27,7,7,'En Julio , segun lo que he escuchado ',sysdate(),sysdate());
+INSERT INTO comments VALUES (28,8,8,'Si no hay , Evacuaron la sede',sysdate(),sysdate());
+INSERT INTO comments VALUES (29,9,9,'Busca el canal de fernando Herrera en Youtube ',sysdate(),sysdate());
+INSERT INTO comments VALUES (30,5,10,'Description prueba52',sysdate(),sysdate());
+
+
 // NOTICES
 
-INSERT INTO notices VALUES (1,2,'Madre, trabajadora y estudiante','Se trata de un formato flexible, ágil y enfocado en personas que necesiten compatibilizar las actividades académicas con las laborales o familiares.','sin-imagen',sysdate(),sysdate());
-INSERT INTO notices VALUES (2,2,'Title Notice prueba2','Description Notice prueba2','sin-imagen',sysdate(),sysdate());
-INSERT INTO notices VALUES (3,2,'Title Notice prueba3','Description Notice prueba3','sin-imagen',sysdate(),sysdate());
-INSERT INTO notices VALUES (4,2,'Title Notice prueba4','Description Notice prueba4','sin-imagen',sysdate(),sysdate());
-INSERT INTO notices VALUES (5,2,'Title Notice prueba5','Description Notice prueba5','sin-imagen',sysdate(),sysdate());
-INSERT INTO notices VALUES (6,2,'Title Notice prueba6','Description Notice prueba6','sin-imagen',sysdate(),sysdate());
-INSERT INTO notices VALUES (7,2,'Title Notice prueba7','Description Notice prueba7','sin-imagen',sysdate(),sysdate());
-INSERT INTO notices VALUES (8,2,'Title Notice prueba8','Description Notice prueba8','sin-imagen',sysdate(),sysdate());
-INSERT INTO notices VALUES (9,2,'Title Notice prueba9','Description Notice prueba9','sin-imagen',sysdate(),sysdate());
-INSERT INTO notices VALUES (10,2,'Title Notice prueba10','Description Notice prueba10','sin-imagen',sysdate(),sysdate());
-INSERT INTO notices VALUES (11,2,'Title Notice prueba11','Description Notice prueba11','sin-imagen',sysdate(),sysdate());
-INSERT INTO notices VALUES (12,2,'Title Notice prueba12','Description Notice prueba12','sin-imagen',sysdate(),sysdate());
+INSERT INTO notices VALUES (1,11,'Madre, trabajadora y estudiante','Se trata de un formato flexible, ágil y enfocado en personas que necesiten compatibilizar las actividades académicas con las laborales o familiares.','Madre.png',sysdate(),sysdate());
+INSERT INTO notices VALUES (2,11,'Proyectos de investigación','El encuentro fue una instancia para que investigadores de toda América Latina compartieran experiencias innovadoras en procesos formativos, curriculares, de investigación y de emprendimiento','Proyecto.png',sysdate(),sysdate());
+INSERT INTO notices VALUES (3,11,'Lider digital 2022','El evento busca generar reflexión sobre la transformación digital y el impacto que ha generado en la forma cómo nos comunicamos, hacemos negocios, nos relacionamos y aprendemos','Lider.png',sysdate(),sysdate());
+INSERT INTO notices VALUES (4,11,'Robo-One World','Jóvenes de todo el país se la jugaron por un cupo para la Robo-One World Championship que se llevará a cabo en Japón','Robot.png',sysdate(),sysdate());
+INSERT INTO notices VALUES (5,11,'Sana Convivencia: Educación libre de violencia','Las Jornadas de “Sana Convivencia: Educación libre de violencia”, fue un espacio en donde se compartieron reflexiones y lineamientos para abordar la violencia que afecta al entorno estudiantil como a la sociedad en su conjunto.','Convivencia.png',sysdate(),sysdate());
 
 // RULES
 
 INSERT INTO rules VALUES (1,2,'Reglas de convivencia','No se debe insultar a las demas personas','sin-imagen',sysdate(),sysdate());
-INSERT INTO rules VALUES (2,2,'Title Rule prueba2','Description Rule prueba2','sin-imagen',sysdate(),sysdate());
-INSERT INTO rules VALUES (3,2,'Title Rule prueba3','Description Rule prueba3','sin-imagen',sysdate(),sysdate());
-INSERT INTO rules VALUES (4,2,'Title Rule prueba4','Description Rule prueba4','sin-imagen',sysdate(),sysdate());
-INSERT INTO rules VALUES (5,2,'Title Rule prueba5','Description Rule prueba5','sin-imagen',sysdate(),sysdate());
-INSERT INTO rules VALUES (6,2,'Title Rule prueba6','Description Rule prueba6','sin-imagen',sysdate(),sysdate());
-INSERT INTO rules VALUES (7,2,'Title Rule prueba7','Description Rule prueba7','sin-imagen',sysdate(),sysdate());
-INSERT INTO rules VALUES (8,2,'Title Rule prueba8','Description Rule prueba8','sin-imagen',sysdate(),sysdate());
-INSERT INTO rules VALUES (9,2,'Title Rule prueba9','Description Rule prueba9','sin-imagen',sysdate(),sysdate());
-INSERT INTO rules VALUES (10,2,'Title Rule prueba10','Description Rule prueba10','sin-imagen',sysdate(),sysdate());
-INSERT INTO rules VALUES (11,2,'Title Rule prueba11','Description Rule prueba11','sin-imagen',sysdate(),sysdate());2
+INSERT INTO rules VALUES (2,2,'Cuida tu ortografía y gramática ','El sentido de las palabras y la forma en que escribes puede interpretarse de diversas formas. Evita usar mayúsculas, éstas representan un tono de voz alzada.
+                                                                  Sigue en el chat tus estándares de comportamiento como los son en la vida real. Mantén la cortesía con los otros miembros.','sin-imagen',sysdate(),sysdate());
+INSERT INTO rules VALUES (3,2,'Responde','Si te intentan localizar o se dirigen específicamente a ti, corresponde de vuelta en cuanto puedas.','sin-imagen',sysdate(),sysdate());
+INSERT INTO rules VALUES (4,2,'Respeta la privacidad','Respeta la privacidad y la rutina de los miembros. Evita usar el chat en horas inhábiles o inapropiadas','sin-imagen',sysdate(),sysdate());
+INSERT INTO rules VALUES (5,2,'Mantener la discreción ','Procura mantener la discreción en lo que compartes, recuerda que la información llega a todos los miembros al mismo tiempo','sin-imagen',sysdate(),sysdate());
 
 // PROFILE COMMENT
 
 
-INSERT INTO perfilcomments VALUES (1,3,9,'Excelente profesor, explica muy bien la materia',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (2,4,8,'Description prueba2',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (3,5,7,'Description prueba3',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (4,6,6,'Description prueba4',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (5,7,5,'Description prueba5',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (6,8,4,'Description prueba6',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (7,9,3,'Description prueba7',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (8,3,9,'Description prueba8',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (9,4,8,'Description prueba9',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (10,5,7,'Description prueba10',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (11,6,6,'Description prueba11',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (12,7,5,'Description prueba12',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (13,8,4,'Description prueba13',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (14,9,3,'Description prueba14',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (15,3,9,'Description prueba15',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (16,4,8,'Description prueba16',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (17,5,7,'Description prueba17',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (18,6,6,'Description prueba18',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (19,7,5,'Description prueba19',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (20,8,4,'Description prueba20',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (21,9,3,'Description prueba21',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (22,3,9,'Description prueba22',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (23,4,8,'Description prueba23',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (24,5,7,'Description prueba24',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (25,6,6,'Description prueba25',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (26,7,5,'Description prueba26',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (27,8,4,'Description prueba27',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (28,9,3,'Description prueba28',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (29,3,9,'Description prueba29',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (30,4,8,'Description prueba30',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (31,5,7,'Description prueba31',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (32,6,6,'Description prueba32',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (33,7,4,'Description prueba33',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (34,8,3,'Description prueba34',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (35,9,3,'Description prueba35',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (36,3,9,'Description prueba36',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (37,4,8,'Description prueba37',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (38,5,7,'Description prueba38',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (39,6,6,'Description prueba39',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (40,7,5,'Description prueba40',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (41,8,4,'Description prueba41',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (42,9,3,'Description prueba42',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (43,3,9,'Description prueba43',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (44,4,8,'Description prueba44',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (45,5,7,'Description prueba45',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (46,6,6,'Description prueba46',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (47,7,5,'Description prueba47',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (48,8,4,'Description prueba48',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (49,9,3,'Description prueba49',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (50,3,9,'Description prueba50',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (51,4,8,'Description prueba51',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (52,5,7,'Description prueba52',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (53,6,6,'Description prueba53',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (54,7,5,'Description prueba54',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (55,8,4,'Description prueba55',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (56,9,3,'Description prueba56',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (57,3,9,'Description prueba57',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (58,4,8,'Description prueba58',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (59,5,7,'Description prueba59',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (60,6,6,'Description prueba60',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (61,7,5,'Description prueba61',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (62,8,4,'Description prueba62',sysdate(),sysdate());
-INSERT INTO perfilcomments VALUES (63,9,3,'Description prueba63',sysdate(),sysdate());
+INSERT INTO perfilcomments VALUES (1,9,10,'Excelente profesor, explica muy bien la materia',sysdate(),sysdate());
+INSERT INTO perfilcomments VALUES (2,8,10,'Es un poco estricto , pero se preocupa de que todos los alumnos entiendan lo que esta expplicando',sysdate(),sysdate());
+INSERT INTO perfilcomments VALUES (3,7,11,'Mi profesor favorito , siempreatento a las dudas de sus estudiante',sysdate(),sysdate());
+INSERT INTO perfilcomments VALUES (4,6,11,'Al principio no me gustaba su forma de enseñar pero al final puedo decir que es uno de los mejor profesores de Duoc',sysdate(),sysdate());
+INSERT INTO perfilcomments VALUES (5,5,12,'Me encanta su forma de enseñar , explica muy bien',sysdate(),sysdate());
+INSERT INTO perfilcomments VALUES (6,4,12,'El profesor con mas paciencia del Duoc',sysdate(),sysdate());
+INSERT INTO perfilcomments VALUES (7,3,13,'Me gusta su metodo de hacer clases , con ejemplo reales',sysdate(),sysdate());
+INSERT INTO perfilcomments VALUES (8,9,14,'Siempre esta disponible para los alumnos ',sysdate(),sysdate());
+INSERT INTO perfilcomments VALUES (9,4,14,'Excelente profesor, explica muy bien la materia',sysdate(),sysdate());
+INSERT INTO perfilcomments VALUES (10,5,13,'Es un poco estricto , pero se preocupa de que todos los alumnos entiendan lo que esta expplicando',sysdate(),sysdate());
+INSERT INTO perfilcomments VALUES (11,6,12,'Mi profesor favorito , siempreatento a las dudas de sus estudiante',sysdate(),sysdate());
+INSERT INTO perfilcomments VALUES (12,7,12,'Siempre esta disponible para los alumnos ',sysdate(),sysdate());
+INSERT INTO perfilcomments VALUES (13,8,11,'Es un profesor muy apasionado',sysdate(),sysdate());
+INSERT INTO perfilcomments VALUES (14,9,11,'Me gusta su metodo de hacer clases , con ejemplo reales',sysdate(),sysdate());
+INSERT INTO perfilcomments VALUES (15,3,10,'Me encanta su forma de enseñar , explica muy bien',sysdate(),sysdate());
 
 
 

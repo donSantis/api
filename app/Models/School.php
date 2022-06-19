@@ -12,9 +12,7 @@ class School extends Model
         'description',
     ];
     use HasFactory;
-    public function user(){
-        return $this->hasMany('App\Models\User')->orderBy('id', 'desc');
-    }
+
 
 
 }

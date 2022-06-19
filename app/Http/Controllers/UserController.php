@@ -23,6 +23,21 @@ class UserController extends Controller
 
     }
 
+    public function docentes()
+    {
+        $users = User::all();
+
+
+        return view('user.docentes', compact('users'));
+    }
+    public function docente($id)
+    {
+        $user = User::findOrFail($id);
+
+
+        return view('user.docente', compact('user'));
+    }
+
     public function config()
     {
 
