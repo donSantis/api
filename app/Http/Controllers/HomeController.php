@@ -186,8 +186,7 @@ class HomeController extends Controller
 
     public function devs()
     {
-        $users = User::orderBy('id', 'desc')
-            ->paginate(10);
+        $users = DB::table('users')->get();
 
         $contenido = 'devs';
         $titulo = 'Desarrolladores';
