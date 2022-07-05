@@ -63,6 +63,8 @@ form .avatar{
     height: 60px;
 }
 .avatar-list-panel{
+    height: 100px;
+    width: 100px;
 }
 .nickname-panel{
     font-size: 15px;

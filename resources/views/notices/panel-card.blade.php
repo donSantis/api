@@ -25,9 +25,8 @@
                 </div>
                 <div class="content-space col-8 ">
                     <div class="row my-2">
-                        <a href="{{'notice-card/'}}{{$n->id}}"><h1
-                                class="tile-card-panel "> {{substr($n->title,0,25)}}</h1></a>
-                        <p class="subtile-card-panel"> {{substr($n->description,0,100)}} ...</p>
+                        <a href="{{'rule-card/'}}{{$n->id}}"><h1
+                                class="tile-card-panel "> {{substr($n->title,0,35)}}</h1></a>
 
                         <small class="align-text-bottom"
                                style="bottom: 0px;position: absolute; font-size: 10px"> {{\FormatTime::LongTimeFilter($n->created_at)}}

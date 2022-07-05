@@ -50,12 +50,12 @@
 
                             <div class="row mb-3">
                                 <small for="nickname"
-                                       class="col-md-12  text-md-center">{{$user->nickname}}</small>
+                                       class="col-md-12  text-md-center">Nickname: {{$user->nickname}}</small>
                             </div>
 
                             <div class="row mb-3">
-                                <small for="phrase"
-                                       class="col-md-12  text-md-center">{{$user->phrase}}</small>
+                                <small for="interest"
+                                       class="col-md-12  text-md-center">{{$user->interest}}</small>
                             </div>
 
                             <div class="row mb-3">
@@ -75,7 +75,7 @@
 
                             <div class="row mb-3">
                                 <small for="info3"
-                                       class="col-md-12  text-md-center">{{$user->info3}}</small>
+                                       class="col-md-12  text-md-center">Idiomas: {{$user->info3}}</small>
                             </div>
 
                             <div class="row">

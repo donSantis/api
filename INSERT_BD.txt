@@ -66,7 +66,7 @@ INSERT INTO users VALUES (5,'ca.donoso',6,'donaDonoso','Donoso',12345,'ca.donoso
 INSERT INTO users VALUES (6,'la.gutierrez',6,'donGutierrez','Gutierrez',12345,'la.gutierrez@duocuc.com',12345786,'001V',3,'','','','','','','userperfil.jpg',sysdate(),sysdate());
 INSERT INTO users VALUES (7,'lc.godoy',6,'donChani','Godoy',12345,'lc.godoy@duocuc.com',12345786,'001V',3,'','','','','','','userperfil.jpg',sysdate(),sysdate());
 INSERT INTO users VALUES (8,'am.donoso',6,'donaAmali','Donoso',12345,'am.donoso@duocuc.com',12345786,'001V',3,'','','','','','','userperfil.jpg',sysdate(),sysdate());
-INSERT INTO users VALUES (9,'a.david',6,'davidAmali','David',12345,'a.david@duocuc.com',12345786,'001V',3,'','','','','','','userperfil.jpg',sysdate(),sysdate());
+INSERT INTO users VALUES (9,'a.david',6,'Davidi','David',12345,'a.david@duocuc.com',12345786,'001V',3,'','','','','','','userperfil.jpg',sysdate(),sysdate());
 
 
 INSERT INTO users VALUES (10,'Jo.Marcelo',6,'Jose Marcelo','Carrasco',12345,'Jo.Marcelo@profesor.duoc.cl',12345786,'003V',2,'','','','','','','userperfil.jpg',sysdate(),sysdate());
@@ -87,6 +87,19 @@ INSERT INTO posts VALUES (8,5,'Corte de Luz','Hola , es cierto que no hay Luz en
 INSERT INTO posts VALUES (9,6,'Ionic','Buenas tardes ; como se instala Ionic','ionic.png',sysdate(),sysdate());
 INSERT INTO posts VALUES (10,6,'SQLlite','Buenas , Para que se usa SQLlite','SQLlite.jpg',sysdate(),sysdate());
 
+INSERT INTO posts VALUES (11,7,'Como se instala python?','Hola a todos , mi consulta es la siguiente: como se usa python?','Python.png',sysdate(),sysdate());
+INSERT INTO posts VALUES (12,8,'Boostrap?','este es el codigo para mostrar una tarjeta de usuario','Tarjeta.png',sysdate(),sysdate());
+INSERT INTO posts VALUES (13,9,'Configurar Ionic','Buenas,Como configurar java en mi computador','Java.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (14,10,'Error 401','No se porque me sale este error','foto/error.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (15,4,'No puedo abir este archivo','Hola ,Alguien sabe como usar SQL Developer','SQL.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (16,10,'Urgente!','Hola , como se usa MYSQL Workbench','MySQL.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (17,8,'Que es un framework?','Buenas ,  Cuando termina el semestre','Duoc.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (18,5,'Que es un push?','Hola , es cierto que no hay Luz en el Duoc San bernardo','Duoc.jpg',sysdate(),sysdate());
+INSERT INTO posts VALUES (19,7,'Como hago commit en vsc?','Buenas tardes ; como se instala Ionic','ionic.png',sysdate(),sysdate());
+INSERT INTO posts VALUES (20,6,'Consejos para un novato','Buenas , Para que se usa SQLlite','SQLlite.jpg',sysdate(),sysdate());
+
+
+
 // COMMENTARYS
 
 INSERT INTO comments VALUES (1,3,1,'que bacan es python',sysdate(),sysdate());
@@ -100,26 +113,26 @@ INSERT INTO comments VALUES (8,3,8,'Si compañero',sysdate(),sysdate());
 INSERT INTO comments VALUES (9,4,9,'Usas windows ?',sysdate(),sysdate());
 INSERT INTO comments VALUES (10,5,10,'Es un motor de base de datos',sysdate(),sysdate());
 
-INSERT INTO comments VALUES (11,8,1,'A mi igual me gusta',sysdate(),sysdate());
-INSERT INTO comments VALUES (12,9,2,'Gracias compañero',sysdate(),sysdate());
-INSERT INTO comments VALUES (13,3,3,'En youtube hay video que te enseñan desde zero',sysdate(),sysdate());
-INSERT INTO comments VALUES (14,4,4,'La vista ya existe compañero',sysdate(),sysdate());
-INSERT INTO comments VALUES (15,5,5,'Yo tambien se como',sysdate(),sysdate());
-INSERT INTO comments VALUES (16,6,6,'Compañero busca en youtube',sysdate(),sysdate());
-INSERT INTO comments VALUES (17,6,7,'Primero de julio compañero',sysdate(),sysdate());
-INSERT INTO comments VALUES (18,7,8,'Si no hay clase',sysdate(),sysdate());
-INSERT INTO comments VALUES (19,8,9,'Te ayudo si quieres',sysdate(),sysdate());
-INSERT INTO comments VALUES (20,9,10,'Se usa para realizar operaciones de base de datos',sysdate(),sysdate());
-INSERT INTO comments VALUES (21,8,1,'Tienes algun libro de Python ?',sysdate(),sysdate());
-INSERT INTO comments VALUES (22,9,2,'Necesitaba hacer hacer una',sysdate(),sysdate());
-INSERT INTO comments VALUES (23,3,3,'busca "Java basico"',sysdate(),sysdate());
-INSERT INTO comments VALUES (24,4,4,'Que version de PHP esta usando',sysdate(),sysdate());
-INSERT INTO comments VALUES (25,5,5,'Si quieres te enseño',sysdate(),sysdate());
-INSERT INTO comments VALUES (26,6,6,'Tengo un pdf que te puede ayudar',sysdate(),sysdate());
-INSERT INTO comments VALUES (27,7,7,'En Julio , segun lo que he escuchado ',sysdate(),sysdate());
-INSERT INTO comments VALUES (28,8,8,'Si no hay , Evacuaron la sede',sysdate(),sysdate());
-INSERT INTO comments VALUES (29,9,9,'Busca el canal de fernando Herrera en Youtube ',sysdate(),sysdate());
-INSERT INTO comments VALUES (30,5,10,'Description prueba52',sysdate(),sysdate());
+INSERT INTO comments VALUES (31,8,11,'A mi igual me gusta',sysdate(),sysdate());
+INSERT INTO comments VALUES (32,9,12,'Gracias compañero',sysdate(),sysdate());
+INSERT INTO comments VALUES (33,3,13,'En youtube hay video que te enseñan desde zero',sysdate(),sysdate());
+INSERT INTO comments VALUES (34,4,14,'La vista ya existe compañero',sysdate(),sysdate());
+INSERT INTO comments VALUES (35,5,15,'Yo tambien se como',sysdate(),sysdate());
+INSERT INTO comments VALUES (36,6,16,'Compañero busca en youtube',sysdate(),sysdate());
+INSERT INTO comments VALUES (37,6,17,'Primero de julio compañero',sysdate(),sysdate());
+INSERT INTO comments VALUES (38,7,18,'Si no hay clase',sysdate(),sysdate());
+INSERT INTO comments VALUES (39,8,19,'Te ayudo si quieres',sysdate(),sysdate());
+INSERT INTO comments VALUES (30,9,20,'Se usa para realizar operaciones de base de datos',sysdate(),sysdate());
+INSERT INTO comments VALUES (41,8,1,'Tienes algun libro de Python ?',sysdate(),sysdate());
+INSERT INTO comments VALUES (42,9,2,'Necesitaba hacer hacer una',sysdate(),sysdate());
+INSERT INTO comments VALUES (43,3,3,'busca "Java basico"',sysdate(),sysdate());
+INSERT INTO comments VALUES (44,4,4,'Que version de PHP esta usando',sysdate(),sysdate());
+INSERT INTO comments VALUES (45,5,5,'Si quieres te enseño',sysdate(),sysdate());
+INSERT INTO comments VALUES (46,6,6,'Tengo un pdf que te puede ayudar',sysdate(),sysdate());
+INSERT INTO comments VALUES (47,7,7,'En Julio , segun lo que he escuchado ',sysdate(),sysdate());
+INSERT INTO comments VALUES (48,8,8,'Si no hay , Evacuaron la sede',sysdate(),sysdate());
+INSERT INTO comments VALUES (49,9,9,'Busca el canal de fernando Herrera en Youtube ',sysdate(),sysdate());
+INSERT INTO comments VALUES (40,5,10,'Description prueba52',sysdate(),sysdate());
 
 
 // NOTICES
@@ -225,3 +238,16 @@ INSERT INTO votes VALUES (60,6,6,sysdate(),sysdate());
 INSERT INTO votes VALUES (61,7,5,sysdate(),sysdate());
 INSERT INTO votes VALUES (62,8,4,sysdate(),sysdate());
 INSERT INTO votes VALUES (63,9,3,sysdate(),sysdate());
+
+
+INSERT INTO votes VALUES (70,3,12,sysdate(),sysdate());
+INSERT INTO votes VALUES (71,4,13,sysdate(),sysdate());
+INSERT INTO votes VALUES (72,5,14,sysdate(),sysdate());
+INSERT INTO votes VALUES (73,6,15,sysdate(),sysdate());
+INSERT INTO votes VALUES (74,7,16,sysdate(),sysdate());
+INSERT INTO votes VALUES (75,8,17,sysdate(),sysdate());
+INSERT INTO votes VALUES (76,9,18,sysdate(),sysdate());
+INSERT INTO votes VALUES (77,3,19,sysdate(),sysdate());
+INSERT INTO votes VALUES (78,4,20,sysdate(),sysdate());
+INSERT INTO votes VALUES (79,5,21,sysdate(),sysdate());
+INSERT INTO votes VALUES (80,6,22,sysdate(),sysdate());

@@ -11,7 +11,7 @@
 
         <div class="row">
             @foreach ($users as $u)
-                @if( $u->section == Auth::user()->section)
+                @if( $u->section == Auth::user()->section && $u->role == 2 )
 
                     <div class="card col-10 col-sm-4 col-md-4 col-lg-5 col-xl-5 d-flex m-4 shadow" style=" border-radius: 20px">
                         <img class="card-img-top mt-3 rounded-circle "
@@ -44,7 +44,7 @@
 
                             </div>
 
-                            <a href="#" class="btn   btn-primary m-2">Ir a perfil</a>
+                            <a href="{{'user-card/'}}{{$u->id}}" class="btn   btn-primary m-2">Ir a perfil</a>
                         </div>
                     </div>
                 @endif
