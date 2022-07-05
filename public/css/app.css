@@ -30,6 +30,11 @@ form .avatar{
     width: 55px;
     height: 55px;
 }
+.avatar{
+    width: 55px;
+    height: 55px;
+}
+
 .navbar .avatar{
     position: absolute;
     width: 40px;

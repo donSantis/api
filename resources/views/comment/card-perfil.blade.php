@@ -3,7 +3,7 @@
         <div class="col-md-12">
             <div class="card w-100 rounded">
                 <div class="header-cards-all p-2">
-                    <p class="card-text">{{$comment->created_at}}</p>
+                    <label class="text-rigth">{{\FormatTime::LongTimeFilter($comment->created_at)}}</label>
 
                 </div>
                 <div class="card-body">

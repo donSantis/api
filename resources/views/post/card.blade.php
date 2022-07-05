@@ -44,7 +44,7 @@
                                     @endforeach
 
                                     @if($user_like)
-                                        <img src="{{asset('img/heart-red.png')}}" data-id="{{$post->id}}"
+                                        <img onclick="updateCount()" src="{{asset('img/heart-red.png')}}" data-id="{{$post->id}}"
                                              class="btn-dislike"/>
                                     @else
                                         <img src="{{asset('img/heart-black.png')}}" data-id="{{$post->id}}"
@@ -78,5 +78,7 @@
     </div>
 
     @include('includes.sidebar-user-post')
+
+
 
 @endsection

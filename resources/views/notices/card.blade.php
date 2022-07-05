@@ -8,7 +8,7 @@
                     <div class="card">
                         <div class="header-cards-all">
                             <label class="card-header">#{{$notice->title}}</label>
-                            <label class="text-rigth">{{$notice->created_at}}</label>
+                            <label class="text-rigth">{{\FormatTime::LongTimeFilter($notice->created_at)}}</label>
                         </div>
                         <div class="card-body">
                             @csrf

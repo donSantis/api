@@ -25,7 +25,7 @@
                 </div>
                 <div class="content-space col-8 ">
                     <div class="row my-2">
-                        <a href="{{'rule-card/'}}{{$n->id}}"><h1
+                        <a href="{{'notice-card/'}}{{$n->id}}"><h1
                                 class="tile-card-panel "> {{substr($n->title,0,35)}}</h1></a>
 
                         <small class="align-text-bottom"

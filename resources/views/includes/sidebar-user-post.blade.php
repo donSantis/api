@@ -14,7 +14,7 @@
                         </div>
                         <h5 class="card-title">{{$post->user->name}}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">{{$post->user->email}}</h6>
-                        <h6 class="card-subtitle mb-2 text-muted">Se unio: {{\FormatTime::LongTimeFilter($post->user->created_at)}}</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Se unió: {{\FormatTime::LongTimeFilter($post->user->created_at)}}</h6>
                         @if($post->user->role == 3)
                         <h6 class="card-subtitle mb-2 text-muted">Sección: {{$post->user->section}}</h6>
                         @endif

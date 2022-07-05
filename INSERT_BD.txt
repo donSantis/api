@@ -122,16 +122,16 @@ INSERT INTO comments VALUES (36,6,16,'Compañero busca en youtube',sysdate(),sys
 INSERT INTO comments VALUES (37,6,17,'Primero de julio compañero',sysdate(),sysdate());
 INSERT INTO comments VALUES (38,7,18,'Si no hay clase',sysdate(),sysdate());
 INSERT INTO comments VALUES (39,8,19,'Te ayudo si quieres',sysdate(),sysdate());
-INSERT INTO comments VALUES (30,9,20,'Se usa para realizar operaciones de base de datos',sysdate(),sysdate());
-INSERT INTO comments VALUES (41,8,1,'Tienes algun libro de Python ?',sysdate(),sysdate());
-INSERT INTO comments VALUES (42,9,2,'Necesitaba hacer hacer una',sysdate(),sysdate());
-INSERT INTO comments VALUES (43,3,3,'busca "Java basico"',sysdate(),sysdate());
-INSERT INTO comments VALUES (44,4,4,'Que version de PHP esta usando',sysdate(),sysdate());
-INSERT INTO comments VALUES (45,5,5,'Si quieres te enseño',sysdate(),sysdate());
-INSERT INTO comments VALUES (46,6,6,'Tengo un pdf que te puede ayudar',sysdate(),sysdate());
-INSERT INTO comments VALUES (47,7,7,'En Julio , segun lo que he escuchado ',sysdate(),sysdate());
-INSERT INTO comments VALUES (48,8,8,'Si no hay , Evacuaron la sede',sysdate(),sysdate());
-INSERT INTO comments VALUES (49,9,9,'Busca el canal de fernando Herrera en Youtube ',sysdate(),sysdate());
+INSERT INTO comments VALUES (50,9,20,'Se usa para realizar operaciones de base de datos',sysdate(),sysdate());
+INSERT INTO comments VALUES (51,8,20,'Tienes algun libro de Python ?',sysdate(),sysdate());
+INSERT INTO comments VALUES (52,9,20,'Necesitaba hacer hacer una',sysdate(),sysdate());
+INSERT INTO comments VALUES (53,3,17,'busca "Java basico"',sysdate(),sysdate());
+INSERT INTO comments VALUES (54,4,17,'Que version de PHP esta usando',sysdate(),sysdate());
+INSERT INTO comments VALUES (55,5,17,'Si quieres te enseño',sysdate(),sysdate());
+INSERT INTO comments VALUES (56,6,6,'Tengo un pdf que te puede ayudar',sysdate(),sysdate());
+INSERT INTO comments VALUES (57,7,7,'En Julio , segun lo que he escuchado ',sysdate(),sysdate());
+INSERT INTO comments VALUES (58,8,8,'Si no hay , Evacuaron la sede',sysdate(),sysdate());
+INSERT INTO comments VALUES (59,9,9,'Busca el canal de fernando Herrera en Youtube ',sysdate(),sysdate());
 INSERT INTO comments VALUES (40,5,10,'Description prueba52',sysdate(),sysdate());
 
 
@@ -240,14 +240,13 @@ INSERT INTO votes VALUES (62,8,4,sysdate(),sysdate());
 INSERT INTO votes VALUES (63,9,3,sysdate(),sysdate());
 
 
-INSERT INTO votes VALUES (70,3,12,sysdate(),sysdate());
-INSERT INTO votes VALUES (71,4,13,sysdate(),sysdate());
-INSERT INTO votes VALUES (72,5,14,sysdate(),sysdate());
-INSERT INTO votes VALUES (73,6,15,sysdate(),sysdate());
-INSERT INTO votes VALUES (74,7,16,sysdate(),sysdate());
-INSERT INTO votes VALUES (75,8,17,sysdate(),sysdate());
-INSERT INTO votes VALUES (76,9,18,sysdate(),sysdate());
-INSERT INTO votes VALUES (77,3,19,sysdate(),sysdate());
-INSERT INTO votes VALUES (78,4,20,sysdate(),sysdate());
-INSERT INTO votes VALUES (79,5,21,sysdate(),sysdate());
-INSERT INTO votes VALUES (80,6,22,sysdate(),sysdate());
+INSERT INTO votes VALUES (90,3,17,sysdate(),sysdate());
+INSERT INTO votes VALUES (91,4,17,sysdate(),sysdate());
+INSERT INTO votes VALUES (92,5,17,sysdate(),sysdate());
+INSERT INTO votes VALUES (93,6,17,sysdate(),sysdate());
+INSERT INTO votes VALUES (94,7,19,sysdate(),sysdate());
+INSERT INTO votes VALUES (95,8,19,sysdate(),sysdate());
+INSERT INTO votes VALUES (96,9,19,sysdate(),sysdate());
+INSERT INTO votes VALUES (97,3,20,sysdate(),sysdate());
+INSERT INTO votes VALUES (98,4,20,sysdate(),sysdate());
+INSERT INTO votes VALUES (99,5,20,sysdate(),sysdate());
